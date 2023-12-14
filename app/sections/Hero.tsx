@@ -1,0 +1,29 @@
+"use client";
+
+import { Button } from "@/app/components/Button";
+
+export function Hero() {
+  return (
+    <div className="w-full h-[800px] rounded-bl-[80px] flex items-end  relative overflow-hidden">
+      <video
+        muted
+        loop
+        autoPlay
+        id="promo-video"
+        className="absolute right-0 bottom-0 min-w-full min-h-full z-[-1] rounded-bl-[80px] aspect-[9/16] object-cover"
+      >
+        <source src="/promo.mp4" type="video/mp4" />
+      </video>
+
+      <div className="space-y-8 mx-8 mb-14 max-w-xs md:max-w-sm">
+        <h1 className="text-xl lg:text-2xl text-pink-mid">
+          Build your dream body with luck
+        </h1>
+        <p className="text-md text-white font-bold">
+          100+ women helped to reach their fitness goals
+        </p>
+        <Button>Sign up now</Button>
+      </div>
+    </div>
+  );
+}
