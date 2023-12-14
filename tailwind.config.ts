@@ -20,6 +20,7 @@ const config: Config = {
         "3xl": ["60px", "64px"],
       },
       colors: {
+        light: "#808080",
         "light-grey": "#F5F5F7",
         "mid-grey": "#747474",
         "dark-grey": "#270511",
@@ -33,7 +34,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "radial-pink":
-          "radial-gradient(1000px circle at 10% center,rgba(255, 168, 201, 0.4),transparent 80%)",
+          "radial-gradient(1000px circle at var(--position, 10%) center,rgba(255, 168, 201, 0.4),transparent 80%)",
       },
       keyframes: {
         "enter-dot": {

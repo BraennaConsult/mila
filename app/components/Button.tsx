@@ -8,16 +8,17 @@ import { cva, type VariantProps } from "cva";
 import { forwardRef } from "react";
 
 const buttonProps = cva({
-  base: "rounded-[100px] border py-[20px] px-[80px] transition-color duration-100 ease text-[16px] lg:text-[30px] font-semibold",
+  base: "rounded-[100px] border transition-color duration-100 ease font-semibold inline-flex shadow-sm",
   variants: {
     variant: {
       primary:
-        "text-pink-mid border-pink-mid bg-pink-light disabled:text-pink-disabled disabled:border-pink-disabled disabled:bg-white hover:text-white hover:bg-pink-intense",
+        "border-pink-intense outline-none hover:text-white hover:border-pink-mid hover:bg-pink-mid focus:text-white focus:border-pink-mid focus:bg-pink-light disabled:text-pink-disabled disabled:border-pink-disabled disabled:bg-white text-white bg-pink-intense",
       secondary:
         "border-black disabled:border-mid-grey disabled:text-mid-grey text-black focus:ouline-2 hover:bg-black hover:text-white",
     },
     size: {
-      default: "",
+      sm: "text-sm lg:text-md py-[2px] px-4",
+      default: "text-md lg:text-lg py-3 px-5 lg:py-5 lg:px-10 ",
     },
     fullWidth: {
       true: "w-full",

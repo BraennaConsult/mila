@@ -33,7 +33,7 @@ export function ProgressBar({ progress, setProgress }: Props) {
 
   return (
     <Progress.Root
-      className="relative overflow-hidden bg-white rounded-full w-full h-[25px] border-mid-grey border"
+      className="relative overflow-hidden bg-white rounded-[4px] w-full h-[25px] border-mid-grey border"
       style={{
         // Fix overflow clipping in Safari
         // https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0
@@ -45,7 +45,7 @@ export function ProgressBar({ progress, setProgress }: Props) {
         <motion.div
           ref={ref}
           animate={controls}
-          className="bg-black w-full h-full"
+          className="bg-black w-full h-full animate-pulse"
           initial={{ width: "0%" }} // initially hidden
         />
       </Progress.Indicator>

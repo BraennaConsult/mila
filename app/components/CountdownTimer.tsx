@@ -51,14 +51,14 @@ const CountdownTimer = ({ targetDate }: Props) => {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-2 lg:mb-1 text-[#808080]">
-        <span className="">Sales close in</span>
-        <span className="">Available slots left</span>
+      <div className="flex justify-between items-center mb-2 lg:mb-4 text-light">
+        <span>Sales close in</span>
+        <span>Available slots left</span>
       </div>
       <div className="flex justify-between items-center mb-4 font-serif text-xl lg:text-[50px] space-x-0 tracking-[0px] lg:mb-8">
-        <div className="space-x-2">
+        <div className="space-x-2 lg:space-x-3">
           <span suppressHydrationWarning>{timeLeft.days}d</span>
-          <span suppressHydrationWarning>{timeLeft.hours}h</span>
+          <span suppressHydrationWarning>{timeLeft.hours}t</span>
           <span suppressHydrationWarning>{timeLeft.minutes}m</span>
           <span suppressHydrationWarning>{timeLeft.seconds}s</span>
         </div>

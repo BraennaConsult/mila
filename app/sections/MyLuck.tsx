@@ -31,14 +31,24 @@ export function MyLuck() {
 
   return (
     <Section>
-      <Container>You are so lucky</Container>
+      <Container>
+        <h2 className="max-w-lg">
+          &ldquo;You are so lucky to have the body that you have&ldquo;
+        </h2>
+      </Container>
       <div ref={ref} className="keen-slider ml-8">
-        <div className="rounded-[30px] aspect-square keen-slider__slide number-slide-1 bg-[red]">
+        <div className="aspect-square keen-slider__slide number-slide-1 bg-pink-light shadow-sm rounded-[30px]">
           1
         </div>
-        <div className="keen-slider__slide number-slide-2 bg-[green]">2</div>
-        <div className="keen-slider__slide number-slide-3 bg-[blue]">3</div>
-        <div className="keen-slider__slide number-slide-4 bg-[pink]">4</div>
+        <div className="keen-slider__slide number-slide-2 bg-pink-light shadow-sm rounded-[30px]">
+          2
+        </div>
+        <div className="keen-slider__slide number-slide-3 bg-pink-light shadow-sm rounded-[30px]">
+          3
+        </div>
+        <div className="keen-slider__slide number-slide-4 bg-pink-light shadow-sm rounded-[30px]">
+          4
+        </div>
       </div>
       {loaded && instanceRef.current && (
         <div className="flex space-x-2 items-center justify-end pr-8 mt-8">

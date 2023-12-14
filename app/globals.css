@@ -11,4 +11,7 @@
   h3 {
     @apply font-serif font-normal;
   }
+  h2 {
+    @apply text-xl lg:text-2xl mb-20;
+  }
 }

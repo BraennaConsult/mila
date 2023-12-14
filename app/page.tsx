@@ -8,13 +8,15 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      <div className="bg-radial-pink bg-left border-[red]">
+      <div className="bg-radial-pink bg-left">
         <MyLuck />
         <CTA />
       </div>
       <Testimonials />
-      <CTA />
-      <FAQ />
+      <div className="bg-radial-pink [--position:90%]">
+        <CTA />
+        <FAQ />
+      </div>
     </main>
   );
 }
