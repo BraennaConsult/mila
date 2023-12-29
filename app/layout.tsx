@@ -1,14 +1,7 @@
-import type { Metadata } from "next";
-import { Inter, Libre_Baskerville } from "next/font/google";
-import "./globals.css";
-import { CursorBackgroundGradient } from "@/app/components/CursorBackgroundGradient";
 import { Header } from "@/app/components/Header";
-
-const inter = Inter({ subsets: ["latin"] });
-export const libreBaskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { hindVadodara } from "@/fonts";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="min-h-screen bg-white">
-      <body className={inter.className}>
+      <body className={hindVadodara.className}>
         <Header />
         {children}
       </body>

@@ -18,12 +18,12 @@ export function FeatureCard({ title, description, className, image }: Props) {
   return (
     <div
       className={cn(
-        "px-6 py-14 flex flex-col justify-between rounded-project relative",
+        "px-6 py-14 flex flex-col justify-between rounded-project relative border border-light-grey hover:border-mid-grey ",
         className
       )}
     >
       <div className="flex flex-col space-y-4">
-        <h3 className="text-[20px] font-semibold">{title}</h3>
+        <h3 className="text-[20px] font-semibold font-sans">{title}</h3>
         <p className="text-[20px] font-light text-balance">{description}</p>
       </div>
       <div className="flex justify-end">

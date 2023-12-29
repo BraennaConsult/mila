@@ -3,15 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --container-size: 1200px;
+  }
   html {
     @apply antialiased text-dark-grey;
   }
   h1,
   h2,
   h3 {
-    @apply font-serif font-normal;
+    @apply font-serif;
   }
   h2 {
     @apply text-xl lg:text-2xl mb-20;
+  }
+}
+
+@layer utilities {
+  .carousel-center {
+    transform: translateX(
+      calc(
+        max(var(--container-size), 100vw) / 2 - calc(var(--container-size) / 2)
+      )
+    );
   }
 }

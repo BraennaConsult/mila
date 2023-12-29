@@ -41,7 +41,7 @@ export function FeaturesCarousel() {
 
   return (
     <div>
-      <div ref={ref} className="keen-slider pl-4 mb-8">
+      <div ref={ref} className="keen-slider pl-4 mb-8 carousel-center relative">
         <FeatureCard
           className="keen-slider__slide number-slide-1 border border-mid-grey"
           title="Du vet alltid hva du skal gjøre"

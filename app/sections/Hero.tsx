@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/app/components/Button";
+import { Container } from "@/app/components/Container";
 
 export function Hero() {
   return (
@@ -14,15 +15,17 @@ export function Hero() {
       >
         <source src="/promo.mp4" type="video/mp4" />
       </video>
-      <div className="space-y-4 lg:space-y-6 mx-8 mb-14 max-w-xs md:max-w-md">
-        <h1 className="text-xl lg:text-2xl text-pink-mid font-bold">
-          Vær med å bygg din drømmekropp og skap din egen lykke!
-        </h1>
-        <p className="text-md text-white font-bold">
-          Over 100+ rå kvinner har nådd sine personlige mål!
-        </p>
-        <Button>Bli med!</Button>
-      </div>
+      <Container className="flex">
+        <div className="space-y-4 lg:space-y-6 mb-14">
+          <h1 className="text-xl lg:text-2xl text-pink-mid font-bold max-w-xs md:max-w-md ">
+            Vær med å bygg din drømmekropp og skap din egen lykke!
+          </h1>
+          <p className="text-md text-white font-bold max-w-xs md:max-w-md ">
+            Over 100+ rå kvinner har nådd sine personlige mål!
+          </p>
+          <Button>Bli med!</Button>
+        </div>
+      </Container>
     </div>
   );
 }

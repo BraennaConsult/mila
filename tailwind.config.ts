@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       serif: "Libre Baskerville, serif",
-      sans: "Inter, sans-serif",
+      sans: "Hind Vadodara, sans-serif",
     },
     extend: {
       borderRadius: {

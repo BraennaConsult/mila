@@ -29,6 +29,9 @@ export function MyLuck() {
       "(min-width: 768px)": {
         slides: { perView: 2.5, spacing: 24 },
       },
+      "min-width: 1024px": {
+        slides: { perView: 3.5, spacing: 24 },
+      },
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -45,7 +48,7 @@ export function MyLuck() {
           &ldquo;You are so lucky to have the body that you have&ldquo;
         </h2>
       </Container>
-      <div ref={ref} className="keen-slider pl-4 mb-8">
+      <div ref={ref} className="keen-slider pl-4 mb-8 carousel-center relative">
         {images?.map((image, index) => (
           <div
             key={index}
