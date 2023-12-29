@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --container-size: 1200px;
+    --container-size-small: 576px;
   }
   html {
     @apply antialiased text-dark-grey;
@@ -24,6 +25,14 @@
     transform: translateX(
       calc(
         max(var(--container-size), 100vw) / 2 - calc(var(--container-size) / 2)
+      )
+    );
+  }
+  .carousel-center-small {
+    transform: translateX(
+      calc(
+        max(var(--container-size-small), 100vw) / 2 -
+          calc(var(--container-size-small) / 2)
       )
     );
   }

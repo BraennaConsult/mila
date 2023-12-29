@@ -1,11 +1,12 @@
 "use client";
 
+import { AnimatedNumber } from "@/app/components/AnimatedNumber";
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { PAYMENT_LINK } from "@/constants";
+import { PAYMENT_LINK, SPOTS_LEFT } from "@/constants";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -52,18 +53,26 @@ export function CTA() {
 
   const [progress, setProgress] = useState(200);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setProgress(SPOTS_LEFT));
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Section>
-      <Container className="flex flex-col justify-center max-w-xl">
-        <h2 className="text-center mb-9">
+    <Section className="bg-pink-light">
+      <Container className="flex flex-col justify-center max-w-xl space-y-9">
+        <h2 className="text-center mb-0">
           Vi bygger selvtillit på treningssenteret!
         </h2>
-        <Progress progress={progress} setProgress={setProgress} />
-        <div className="space-y-6 mt-14">
-          <Button hasIcon className="mx-auto" fullWidth>
+        <CountdownTimer timeLeft={timeLeft} />
+        <div className="space-y-3">
+          <Button hasIcon className="mx-auto text-dark-grey ">
             <Link href={PAYMENT_LINK}>Bli med!</Link>
           </Button>
-          <CountdownTimer timeLeft={timeLeft} />
+          <span className="flex space-x-2 justify-center text-mid-grey">
+            <span>Ledige plasser:</span>
+            <AnimatedNumber value={progress} />
+          </span>
         </div>
       </Container>
     </Section>

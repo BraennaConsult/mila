@@ -15,6 +15,8 @@ const buttonProps = cva({
         "border-pink-intense outline-none hover:text-white hover:border-pink-mid hover:bg-pink-mid focus:text-white focus:border-pink-mid focus:bg-pink-light disabled:text-pink-disabled disabled:border-pink-disabled disabled:bg-white text-white bg-pink-intense",
       secondary:
         "border-black disabled:border-mid-grey disabled:text-mid-grey text-black focus:ouline-2 hover:bg-black hover:text-white",
+      white:
+        "border-white disabled:border-white disabled:text-white text-white focus:ouline-2 hover:bg-white hover:text-black bg-white",
     },
     size: {
       sm: "text-sm lg:text-md py-[2px] px-4",
@@ -69,7 +71,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {hasIcon && (
           <span className="mr-2">
-            <HeartIcon className="" />
+            <HeartIcon className="text-black fill-black" />
           </span>
         )}
         {children}

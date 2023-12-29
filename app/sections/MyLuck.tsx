@@ -29,9 +29,9 @@ export function MyLuck() {
       "(min-width: 768px)": {
         slides: { perView: 2.5, spacing: 24 },
       },
-      "min-width: 1024px": {
-        slides: { perView: 3.5, spacing: 24 },
-      },
+      // "(min-width: 1024px)": {
+      //   slides: { perView: 3.5, spacing: 24 },
+      // },
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -44,29 +44,31 @@ export function MyLuck() {
   return (
     <Section>
       <Container>
-        <h2 className="max-w-lg">
-          &ldquo;You are so lucky to have the body that you have&ldquo;
+        <h2 className="max-w-lg text-pretty">
+          &ldquo;Du er så heldig som har den kroppen&ldquo;
         </h2>
       </Container>
-      <div ref={ref} className="keen-slider pl-4 mb-8 carousel-center relative">
-        {images?.map((image, index) => (
-          <div
-            key={index}
-            className={cn(
-              "keen-slider__slide rounded-[30px] relative",
-              `number-slide-${index + 1}`
-            )}
-          >
-            <Image
+      <div className="carousel-center relative">
+        <div ref={ref} className="keen-slider pl-4 mb-8 ">
+          {images?.map((image, index) => (
+            <div
               key={index}
-              className={`rounded-[30px]`}
-              src={image.src}
-              alt={image.alt}
-              width={800}
-              height={1000}
-            />
-          </div>
-        ))}
+              className={cn(
+                "keen-slider__slide rounded-[30px] relative",
+                `number-slide-${index + 1}`
+              )}
+            >
+              <Image
+                key={index}
+                className={`rounded-[30px]`}
+                src={image.src}
+                alt={image.alt}
+                width={800}
+                height={1000}
+              />
+            </div>
+          ))}
+        </div>
       </div>
       {loaded && instanceRef.current && (
         <div className="hidden lg:flex space-x-2 items-center justify-end pr-8">

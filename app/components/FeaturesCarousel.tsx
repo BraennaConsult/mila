@@ -30,6 +30,9 @@ export function FeaturesCarousel() {
       "(min-width: 768px)": {
         slides: { perView: 2.5, spacing: 24 },
       },
+      // "(min-width: 1024px)": {
+      //   slides: { perView: 3.5, spacing: 24 },
+      // },
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -41,70 +44,73 @@ export function FeaturesCarousel() {
 
   return (
     <div>
-      <div ref={ref} className="keen-slider pl-4 mb-8 carousel-center relative">
-        <FeatureCard
-          className="keen-slider__slide number-slide-1 border border-mid-grey"
-          title="Du vet alltid hva du skal gjøre"
-          description="12 ukers treningsprogram, 100+ videoer med steg-for-steg insstruks for hver enkelt øvelse"
-        />
-        <FeatureCard
-          className="keen-slider__slide number-slide-2 bg-[#DEF7FF]"
-          title="Du vet hva du skal spise for å lykkes!"
-          description="Smakfulle og enkle oppskrifter som du faktisk gleder deg over å  kunne spise!"
-        />
-        <FeatureCard
-          className="keen-slider__slide number-slide-3 bg-[#FEE9F1]"
-          title="Skreddersydd for kvinner"
-          description="Myluck inneholder treningsuker som er tilpasset din menstruasjonsperioden."
-        />
-        <FeatureCard
-          className="keen-slider__slide number-slide-4 text-white"
-          title="Hold oversikt over de gone vanene dine!"
-          description="Å være sunn handler ikke bare om å trene – logg alle de sunne vanene dine i appen for balansert helse!"
-          image={{
-            src: "/myluck-1.JPG",
-            alt: "MyLuck 1",
-            imageClassName: "object-cover",
-          }}
-        />
-        <FeatureCard
-          className="keen-slider__slide number-slide-5 bg-white"
-          title="Du er ikke alene!"
-          description="Bli med i en eksklusiv gruppe med likesinnede kvinner som har de samme målene – vi heier på hverandre!"
-          image={{
-            src: "/network.jpg",
-            alt: "Community illustration",
-            imageClassName: "object-contain bottom-0 absolute h-full",
-          }}
-        />
-        <FeatureCard
-          className="keen-slider__slide number-slide-6 bg-[#F5BECE]"
-          title="Bygg din drømmekropp opp slik som jeg gjorde – med å være heldig!"
-          description="Bli med i en eksklusiv gruppe med likesinnede kvinner som har de samme målene – vi heier på hverandre!"
-          image={{
-            src: "/fancy.png",
-            alt: "Model photo of Mila",
-            imageClassName: "object-cover ",
-          }}
-        />
-        {images?.map((image, index) => (
-          <div
-            key={index}
-            className={cn(
-              "keen-slider__slide rounded-[30px] relative",
-              `number-slide-${index + 7}`
-            )}
-          >
-            <Image
+      <div className="carousel-center relative">
+        <div ref={ref} className="keen-slider pl-4 mb-8 ">
+          <FeatureCard
+            className="keen-slider__slide number-slide-1 border border-mid-grey"
+            title="Du vet alltid hva du skal gjøre"
+            description="12 ukers treningsprogram, 100+ videoer med steg-for-steg insstruks for hver enkelt øvelse"
+          />
+          <FeatureCard
+            className="keen-slider__slide number-slide-2 bg-[#DEF7FF]"
+            title="Du vet hva du skal spise for å lykkes!"
+            description="Smakfulle og enkle oppskrifter som du faktisk gleder deg over å  kunne spise!"
+          />
+          <FeatureCard
+            className="keen-slider__slide number-slide-3 bg-[#FEE9F1]"
+            title="Skreddersydd for kvinner"
+            description="Myluck inneholder treningsuker som er tilpasset din menstruasjonsperioden."
+          />
+          <FeatureCard
+            className="keen-slider__slide number-slide-4 text-white"
+            title="Hold oversikt over de gone vanene dine!"
+            description="Å være sunn handler ikke bare om å trene – logg alle de sunne vanene dine i appen for balansert helse!"
+            image={{
+              src: "/myluck-1.JPG",
+              alt: "MyLuck 1",
+              imageClassName: "object-cover",
+            }}
+          />
+          <FeatureCard
+            className="keen-slider__slide number-slide-5 bg-white"
+            title="Du er ikke alene!"
+            description="Bli med i en eksklusiv gruppe med likesinnede kvinner som har de samme målene – vi heier på hverandre!"
+            image={{
+              src: "/network.jpg",
+              alt: "Community illustration",
+              imageClassName:
+                "object-contain bottom-0 absolute h-full object-bottom",
+            }}
+          />
+          <FeatureCard
+            className="keen-slider__slide number-slide-6 bg-[#F5BECE]"
+            title="Bygg din drømmekropp opp slik som jeg gjorde – med å være heldig!"
+            description="Bli med i en eksklusiv gruppe med likesinnede kvinner som har de samme målene – vi heier på hverandre!"
+            image={{
+              src: "/fancy.png",
+              alt: "Model photo of Mila",
+              imageClassName: "object-cover ",
+            }}
+          />
+          {images?.map((image, index) => (
+            <div
               key={index}
-              className={`rounded-[30px]`}
-              src={image.src}
-              alt={image.alt}
-              width={800}
-              height={1000}
-            />
-          </div>
-        ))}
+              className={cn(
+                "keen-slider__slide rounded-[30px] relative",
+                `number-slide-${index + 7}`
+              )}
+            >
+              <Image
+                key={index}
+                className={`rounded-[30px]`}
+                src={image.src}
+                alt={image.alt}
+                width={800}
+                height={1000}
+              />
+            </div>
+          ))}
+        </div>
       </div>
       {loaded && instanceRef.current && (
         <div className="hidden lg:flex space-x-2 items-center justify-end pr-8">
