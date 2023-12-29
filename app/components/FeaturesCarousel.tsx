@@ -8,16 +8,17 @@ import { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/app/utils";
 import Image from "next/image";
+import { FeatureCard } from "@/app/components/FeatureCard";
 
 const images = [
-  { src: "/myluck-1.JPG", alt: "MyLuck 1" },
+  { src: "/myluck-5.JPG", alt: "MyLuck 1" },
   { src: "/myluck-2.JPG", alt: "MyLuck 2" },
   { src: "/myluck-3.JPG", alt: "MyLuck 3" },
   { src: "/myluck-4.JPG", alt: "MyLuck 4" },
   { src: "/myluck-5.JPG", alt: "MyLuck 5" },
 ];
 
-export function MyLuck() {
+export function FeaturesCarousel() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
 
@@ -39,19 +40,59 @@ export function MyLuck() {
   });
 
   return (
-    <Section>
-      <Container>
-        <h2 className="max-w-lg">
-          &ldquo;You are so lucky to have the body that you have&ldquo;
-        </h2>
-      </Container>
+    <div>
       <div ref={ref} className="keen-slider pl-4 mb-8">
+        <FeatureCard
+          className="keen-slider__slide number-slide-1 border border-mid-grey"
+          title="Du vet alltid hva du skal gjøre"
+          description="12 ukers treningsprogram, 100+ videoer med steg-for-steg insstruks for hver enkelt øvelse"
+        />
+        <FeatureCard
+          className="keen-slider__slide number-slide-2 bg-[#DEF7FF]"
+          title="Du vet hva du skal spise for å lykkes!"
+          description="Smakfulle og enkle oppskrifter som du faktisk gleder deg over å  kunne spise!"
+        />
+        <FeatureCard
+          className="keen-slider__slide number-slide-3 bg-[#FEE9F1]"
+          title="Skreddersydd for kvinner"
+          description="Myluck inneholder treningsuker som er tilpasset din menstruasjonsperioden."
+        />
+        <FeatureCard
+          className="keen-slider__slide number-slide-4 text-white"
+          title="Hold oversikt over de gone vanene dine!"
+          description="Å være sunn handler ikke bare om å trene – logg alle de sunne vanene dine i appen for balansert helse!"
+          image={{
+            src: "/myluck-1.JPG",
+            alt: "MyLuck 1",
+            imageClassName: "object-cover",
+          }}
+        />
+        <FeatureCard
+          className="keen-slider__slide number-slide-5 bg-white"
+          title="Du er ikke alene!"
+          description="Bli med i en eksklusiv gruppe med likesinnede kvinner som har de samme målene – vi heier på hverandre!"
+          image={{
+            src: "/network.jpg",
+            alt: "Community illustration",
+            imageClassName: "object-contain bottom-0 absolute h-full",
+          }}
+        />
+        <FeatureCard
+          className="keen-slider__slide number-slide-6 bg-[#F5BECE]"
+          title="Bygg din drømmekropp opp slik som jeg gjorde – med å være heldig!"
+          description="Bli med i en eksklusiv gruppe med likesinnede kvinner som har de samme målene – vi heier på hverandre!"
+          image={{
+            src: "/fancy.png",
+            alt: "Model photo of Mila",
+            imageClassName: "object-cover ",
+          }}
+        />
         {images?.map((image, index) => (
           <div
             key={index}
             className={cn(
               "keen-slider__slide rounded-[30px] relative",
-              `number-slide-${index + 1}`
+              `number-slide-${index + 7}`
             )}
           >
             <Image
@@ -113,6 +154,6 @@ export function MyLuck() {
           })}
         </div>
       )}
-    </Section>
+    </div>
   );
 }

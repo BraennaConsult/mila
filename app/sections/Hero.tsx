@@ -14,15 +14,14 @@ export function Hero() {
       >
         <source src="/promo.mp4" type="video/mp4" />
       </video>
-
-      <div className="space-y-8 mx-8 mb-14 max-w-xs md:max-w-sm">
-        <h1 className="text-xl lg:text-2xl text-pink-mid">
-          Build your dream body with luck
+      <div className="space-y-4 lg:space-y-6 mx-8 mb-14 max-w-xs md:max-w-md">
+        <h1 className="text-xl lg:text-2xl text-pink-mid font-bold">
+          Vær med å bygg din drømmekropp og skap din egen lykke!
         </h1>
         <p className="text-md text-white font-bold">
-          100+ women helped to reach their fitness goals
+          Over 100+ rå kvinner har nådd sine personlige mål!
         </p>
-        <Button>Sign up now</Button>
+        <Button>Bli med!</Button>
       </div>
     </div>
   );

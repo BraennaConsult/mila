@@ -12,11 +12,14 @@ const config: Config = {
       sans: "Inter, sans-serif",
     },
     extend: {
+      borderRadius: {
+        project: "30px",
+      },
       fontSize: {
         md: ["16px", "24px"],
         lg: ["24px", "24px"],
-        xl: ["34px", "40px"],
-        "2xl": ["48px", "60px"],
+        xl: ["34px", "34px"],
+        "2xl": ["48px", "56px"],
         "3xl": ["60px", "64px"],
       },
       colors: {

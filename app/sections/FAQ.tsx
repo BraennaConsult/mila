@@ -10,7 +10,7 @@ export function FAQ() {
     <Section>
       <Container className="">
         <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
-          <h2>Frequently asked questions</h2>
+          <h2>Ofte stilte spørsmål</h2>
           <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
             {faqs.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
