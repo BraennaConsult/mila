@@ -11,12 +11,15 @@ export function JoinButton({ variant }: Props) {
     <Link
       href={PAYMENT_LINK}
       className={cn(
-        "border rounded-full py-1 px-4 font-semibold",
-        variant === "white" && "border-white text-black bg-white",
+        "border rounded-full py-2 px-4 font-semibold",
+        variant === "white" &&
+          "border-white text-black bg-white hover:bg-black hover:text-white focus:bg-black focus:text-white",
         variant === "ghost-white" &&
           "border-white bg-transparent text-white hover:bg-white hover:text-black",
-        variant === "ghost-black" && "border-black bg-white text-black",
-        variant === "pink" && "border-pink-loud bg-white text-pink-loud"
+        variant === "ghost-black" &&
+          "border-black bg-white text-black hover:bg-black hover:text-white focus:bg-black focus:text-white",
+        variant === "pink" &&
+          "border-pink-loud bg-white text-pink-loud hover:bg-pink-loud hover:text-white focus:bg-pink-loud focus:text-white"
       )}
     >
       Bli med!

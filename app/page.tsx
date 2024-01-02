@@ -1,3 +1,4 @@
+import { Container } from "@/app/components/Container";
 import { AppPreview } from "@/app/sections/AppPreview";
 import { CTA } from "@/app/sections/CTA";
 import { Hero } from "@/app/sections/Hero";
@@ -10,7 +11,7 @@ export default function Home() {
       <Hero />
       {/* <div className="bg-radial-pink bg-left"> */}
       <MyLuck />
-      <AppPreview />
+      {/* <AppPreview /> */}
       <CTA />
       {/* </div> */}
       <Testimonials />

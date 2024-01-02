@@ -24,8 +24,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full text-white bg-transparent z-10 py-1 backdrop-blur-2xl">
-      <Container className="flex justify-between items-center text w-full h-[44px] px-8 text-dark-grey ">
+    <header className="fixed top-0 left-0 w-full text-white bg-transparent z-10 py-1 backdrop-blur-2xl max-w-[100vw]">
+      <Container className="flex justify-between items-center h-[44px] text-dark-grey">
         <Link href="/">
           <Logo
             className={`cursor-pointer w-20 ${

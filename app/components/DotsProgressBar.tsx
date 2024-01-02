@@ -46,11 +46,6 @@ export const DotsProgressBar: React.FC<ProgressBarProps> = ({
       controls.start((i) => ({
         opacity: 1,
         transition: { delay: i * 0.065 },
-        // transition: {
-        //   type: "spring",
-        //   mass: 0.8,
-        //   damping: 15,
-        // },
       }));
     }
   }, [controls, inView]);

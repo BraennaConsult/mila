@@ -11,13 +11,11 @@ export function Progress({ progress, setProgress }: Props) {
   const spotsFilled = ((SPOTS_AVAILABLE - SPOTS_LEFT) / SPOTS_AVAILABLE) * 100;
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col space-y-2">
       <span className="text-mid-grey">Ledige plasser</span>
       <div className="space-x-6 text-[50px] font-serif flex items-start">
         <AnimatedNumber value={progress} />
-        <div>
-          <DotsProgressBar progressPercentage={spotsFilled} totalDots={30} />
-        </div>
+        <DotsProgressBar progressPercentage={spotsFilled} totalDots={33} />
       </div>
     </div>
   );

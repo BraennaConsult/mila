@@ -33,7 +33,7 @@ export function AnimatedNumber({ value }: { value: number }) {
   }, [inView, controls]);
 
   return (
-    <motion.span ref={ref} animate={controls}>
+    <motion.span ref={ref} animate={controls} className="leading-none">
       {display}
     </motion.span>
   );

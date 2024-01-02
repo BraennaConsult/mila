@@ -12,14 +12,6 @@ import { Button } from "@/app/components/Button";
 import { PAYMENT_LINK } from "@/constants";
 import Link from "next/link";
 
-const images = [
-  { src: "/myluck-1.JPG", alt: "MyLuck 1" },
-  { src: "/myluck-2.JPG", alt: "MyLuck 2" },
-  { src: "/myluck-3.JPG", alt: "MyLuck 3" },
-  { src: "/myluck-4.JPG", alt: "MyLuck 4" },
-  { src: "/myluck-5.JPG", alt: "MyLuck 5" },
-];
-
 export function MyLuck() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
@@ -32,9 +24,6 @@ export function MyLuck() {
       "(min-width: 768px)": {
         slides: { perView: 2.5, spacing: 24 },
       },
-      // "(min-width: 1024px)": {
-      //   slides: { perView: 3.5, spacing: 24 },
-      // },
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -51,8 +40,8 @@ export function MyLuck() {
           &ldquo;Du er så heldig som har den kroppen etter to barn 👶👶&ldquo;
         </h2>
       </Container>
-      <div className="">
-        <div ref={ref} className="keen-slider pl-4 mb-8 ">
+      <div className="px-4">
+        <div ref={ref} className="keen-slider mb-8">
           <div className="keen-slider__slide rounded-[30px] number-slide-0 relative">
             <Image
               className=""
@@ -61,9 +50,10 @@ export function MyLuck() {
               width={800}
               height={1000}
             />
-            <div className="absolute bottom-14 ml-6 flex items-center w-full font-serif">
-              <p className="max-w-40 text-lg">
-                Heldig? Jeg er &ldquo;heldig&ldquo; fordi
+            <div className="absolute bottom-8 lg:bottom-14 ml-6 flex items-center w-full font-serif">
+              <p className="max-w-48 lg:max-w-40 text-lg">
+                Heldig? <br className="lg:hidden" /> Jeg er &ldquo;heldig&ldquo;
+                fordi
               </p>
               <hr className="h-[1px] bg-white grow w-full" />
             </div>
@@ -124,7 +114,7 @@ export function MyLuck() {
               width={800}
               height={1000}
             />
-            <div className="absolute bottom-14 flex items-center w-full font-serif space-x-2 pr-12">
+            <div className="absolute bottom-[43px] lg:bottom-12 flex items-center w-full font-serif space-x-2 pr-12">
               <hr className="h-[1px] bg-white w-[48px]" />
               <Button
                 className="border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD]"
@@ -152,8 +142,7 @@ export function MyLuck() {
               e.stopPropagation() || instanceRef.current?.next()
             }
             disabled={
-              currentSlide ===
-              instanceRef.current.track.details.slides.length - 1
+              currentSlide === instanceRef.current.track.details.slides.length
             }
           >
             <ChevronRightIcon className="w-6 h-6" />
@@ -163,9 +152,7 @@ export function MyLuck() {
       {loaded && instanceRef.current && (
         <div className="flex space-x-1 justify-center">
           {[
-            ...Array(
-              instanceRef.current.track.details.slides.length - 1
-            ).keys(),
+            ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
             return (
               <button

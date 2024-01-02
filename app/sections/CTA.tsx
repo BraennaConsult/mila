@@ -65,7 +65,7 @@ export function CTA() {
         <h2 className="lg:text-center mb-0">
           Vi bygger selvtillit på treningssenteret!
         </h2>
-        <div className="space-y-5">
+        <div className="space-y-5 lg:mx-auto">
           <CountdownTimer timeLeft={timeLeft} />
           <Progress progress={progress} setProgress={setProgress} />
         </div>

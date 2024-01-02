@@ -11,11 +11,14 @@ const buttonProps = cva({
   base: "rounded-[100px] border transition-color duration-100 ease font-semibold  shadow-sm flex justify-center font-sans",
   variants: {
     variant: {
-      primary: "border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD]",
-      "pink-ghost": "border-pink-loud text-pink-loud bg-transparent",
+      primary:
+        "border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD] hover:bg-[#FBCBDD] hover:text-black",
+      "pink-ghost":
+        "border-pink-loud text-pink-loud bg-transparent hover:bg-pink-loud hover:text-white focus:bg-pink-loud focus:text-white",
       secondary:
         "border-black disabled:border-mid-grey disabled:text-mid-grey text-black focus:ouline-2 hover:bg-black hover:text-white",
-      white: "border-white text-black hover:bg-white bg-white",
+      white:
+        "border-white text-black hover:bg-black bg-white hover:text-white focus:bg-black focus:text-white",
       "ghost-white":
         "border-white bg-transparent text-white hover:bg-white hover:text-black",
     },

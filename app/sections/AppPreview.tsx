@@ -14,13 +14,53 @@ export function AppPreview() {
     offset: ["start 0.9", "start 0"],
   });
 
-  // const opacity = useTransform(scrollYProgress, [0, 1], [0, 2]);
+  const rotatePhone1 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["16deg", "4deg"]
+  );
+  const rotatePhone2 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["18deg", "8deg"]
+  );
+  const rotatePhone3 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["20deg", "10deg"]
+  );
 
-  // Rotation transform
-  const rotate = useTransform(scrollYProgress, [0, 1], ["90deg", "-15deg"]);
+  const translateYPhone1 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["0%", "75px"]
+  );
+  const translateYPhone2 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["0px", "25px"]
+  );
+  const translateYPhone3 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["-40px", "-60px"]
+  );
 
-  // Movement transform (adjust values as needed)
-  const translateY = useTransform(scrollYProgress, [0, 1], ["0px", "-50px"]);
+  const translatexPhone1 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["100px", "125px"]
+  );
+  const translatexPhone2 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["125px", "100px"]
+  );
+  const translatexPhone3 = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ["125px", "50px"]
+  );
 
   return (
     <Section>
@@ -28,65 +68,55 @@ export function AppPreview() {
         <h2 className="text-pretty mb-9 lg:mb-14 text-center mx-auto">
           3 måneders treningsmaraton på Myluck appen
         </h2>
-        {/* <div
-          className="container flex justify-center items-end space-x-4"
-          style={{ perspective: 1000 }}
-        >
-          <AnimatedImage
-            src="/myluck-1.JPG"
-            alt="Screenshot 1"
-            initialX={-100}
-            initialY={-100}
-            rotateX={0}
-          />
-          <AnimatedImage
-            src="/myluck-2.JPG"
-            alt="Screenshot 2"
-            initialX={0}
-            initialY={-50}
-            rotateX={0}
-          />
-          <AnimatedImage
-            src="/myluck-3.JPG"
-            alt="Screenshot 3"
-            initialX={100}
-            initialY={-100}
-            rotateX={0}
-          />
-        </div> */}
-        <div className="w-full aspect-square relative mb-9 lg:mb-14 max-w-2xl mx-auto">
+        <div className="relative max-w-2xl mx-auto w-full h-[450px] lg:h-[550px] pt-20 overflow-hidden">
           <motion.div
             ref={containerRef}
-            style={{ rotate, translateY: translateY }}
+            style={{
+              rotate: rotatePhone1,
+              translateY: translateYPhone1,
+              translateX: translatexPhone1,
+            }}
           >
             <Image
-              src="/bottom-phone.png"
-              className="object-cover absolute"
+              src="/phone-1.png"
+              className="absolute w-[60%]"
               alt="App screenshots"
-              width={375}
-              height={812}
+              width={300}
+              height={600}
             />
           </motion.div>
-          <motion.div style={{ rotate, translateY: translateY }}>
+          <motion.div
+            style={{
+              rotate: rotatePhone2,
+              translateY: translateYPhone2,
+              translateX: translatexPhone2,
+            }}
+          >
             <Image
-              src="/middle-phone.png"
-              className="object-cover absolute"
+              src="/phone-2.png"
+              className="absolute w-[60%]"
               alt="App screenshots"
-              width={375}
-              height={812}
+              width={300}
+              height={600}
             />
           </motion.div>
-          <motion.div style={{ rotate, translateY: translateY }}>
+          <motion.div
+            style={{
+              rotate: rotatePhone3,
+              translateY: translateYPhone3,
+              translateX: translatexPhone3,
+            }}
+          >
             <Image
-              src="/top-phone.png"
-              className="object-cover absolute"
+              src="/phone-3.png"
+              className="absolute w-[60%]"
               alt="App screenshots"
-              width={375}
-              height={812}
+              width={300}
+              height={600}
             />
           </motion.div>
         </div>
-        <div className="flex space-x-9 lg:space-x-14 mb-9 lg:mb-14 justify-center">
+        <div className="flex space-x-2 lg:space-x-14 mb-9 lg:mb-14 justify-center">
           <div className="flex flex-col space-y-5">
             <div className="space-x-2 flex items-center">
               <Image
