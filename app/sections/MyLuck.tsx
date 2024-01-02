@@ -151,24 +151,23 @@ export function MyLuck() {
       )}
       {loaded && instanceRef.current && (
         <div className="flex space-x-1 justify-center">
-          {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
-          ].map((idx) => {
-            return (
+          {Array.from(
+            { length: instanceRef.current.track.details.slides.length - 1 },
+            (_, idx) => (
               <button
                 key={idx}
                 onClick={() => {
                   instanceRef.current?.moveToIdx(idx);
                 }}
                 className={cn(
-                  "w-2 h-2 rounded-full cursor-pointer bg-mid-grey border-none p-1 transform-[width] origin-center",
+                  "w-2 h-2 rounded-full cursor-pointer bg-mid-grey border-none p-1",
                   currentSlide === idx
-                    ? "bg-black animate-enter-dot"
+                    ? "bg-black w-8 animate-enter-dot"
                     : "bg-mid-grey animate-leave-dot"
                 )}
               />
-            );
-          })}
+            )
+          )}
         </div>
       )}
     </Section>

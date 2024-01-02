@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       {/* <div className="bg-radial-pink bg-left"> */}
       <MyLuck />
-      {/* <AppPreview /> */}
+      <AppPreview />
       <CTA />
       {/* </div> */}
       <Testimonials />
