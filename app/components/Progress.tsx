@@ -1,5 +1,6 @@
 import { AnimatedNumber } from "@/app/components/AnimatedNumber";
-import { ProgressBar } from "@/app/components/ProgressBar";
+import { DotsProgressBar } from "@/app/components/DotsProgressBar";
+import { SPOTS_AVAILABLE, SPOTS_LEFT } from "@/constants";
 
 interface Props {
   progress: number;
@@ -7,13 +8,17 @@ interface Props {
 }
 
 export function Progress({ progress, setProgress }: Props) {
+  const spotsFilled = ((SPOTS_AVAILABLE - SPOTS_LEFT) / SPOTS_AVAILABLE) * 100;
+
   return (
-    <div className="flex flex-col space-y-3 items-center">
-      <ProgressBar progress={progress} setProgress={setProgress} />
-      <span className="flex justify-between w-full">
-        <span>Ledige plasser</span>
+    <div className="flex flex-col">
+      <span className="text-mid-grey">Ledige plasser</span>
+      <div className="space-x-6 text-[50px] font-serif flex items-start">
         <AnimatedNumber value={progress} />
-      </span>
+        <div>
+          <DotsProgressBar progressPercentage={spotsFilled} totalDots={30} />
+        </div>
+      </div>
     </div>
   );
 }

@@ -8,6 +8,9 @@ import { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/app/utils";
 import Image from "next/image";
+import { Button } from "@/app/components/Button";
+import { PAYMENT_LINK } from "@/constants";
+import Link from "next/link";
 
 const images = [
   { src: "/myluck-1.JPG", alt: "MyLuck 1" },
@@ -44,30 +47,93 @@ export function MyLuck() {
   return (
     <Section>
       <Container>
-        <h2 className="max-w-lg text-pretty">
-          &ldquo;Du er så heldig som har den kroppen&ldquo;
+        <h2 className="lg:max-w-lg text-pretty mb-10">
+          &ldquo;Du er så heldig som har den kroppen etter to barn 👶👶&ldquo;
         </h2>
       </Container>
-      <div className="carousel-center relative">
+      <div className="">
         <div ref={ref} className="keen-slider pl-4 mb-8 ">
-          {images?.map((image, index) => (
-            <div
-              key={index}
-              className={cn(
-                "keen-slider__slide rounded-[30px] relative",
-                `number-slide-${index + 1}`
-              )}
-            >
-              <Image
-                key={index}
-                className={`rounded-[30px]`}
-                src={image.src}
-                alt={image.alt}
-                width={800}
-                height={1000}
-              />
+          <div className="keen-slider__slide rounded-[30px] number-slide-0 relative">
+            <Image
+              className=""
+              src="/myluck-1.JPG"
+              alt="MyLuck 1"
+              width={800}
+              height={1000}
+            />
+            <div className="absolute bottom-14 ml-6 flex items-center w-full font-serif">
+              <p className="max-w-40 text-lg">
+                Heldig? Jeg er &ldquo;heldig&ldquo; fordi
+              </p>
+              <hr className="h-[1px] bg-white grow w-full" />
             </div>
-          ))}
+          </div>
+          <div className="keen-slider__slide rounded-[30px] number-slide-1 relative">
+            <Image
+              className=""
+              src="/myluck-2.JPG"
+              alt="MyLuck 2"
+              width={800}
+              height={1000}
+            />
+            <div className="absolute bottom-11 flex items-center w-full font-serif">
+              <hr className="h-[1px] bg-white grow w-full flex-1" />
+              <p className="max-w-[184px] w-full text-center flex justify-center text-white text-lg">
+                Jeg trener og beveger meg jevnlig
+              </p>
+              <hr className="h-[1px] bg-white grow w-full flex-1" />
+            </div>
+          </div>
+          <div className="keen-slider__slide rounded-[30px] number-slide-2 relative">
+            <Image
+              className=""
+              src="/myluck-3.JPG"
+              alt="MyLuck 3"
+              width={800}
+              height={1000}
+            />
+            <div className="absolute bottom-11 flex items-center w-full font-serif space-x-1">
+              <hr className="h-[1px] bg-white grow w-full flex-1" />
+              <p className="max-w-[220px] w-full text-center flex justify-center text-white text-lg">
+                Spiser næringssrikt & forstår betydningen av kalorier
+              </p>
+              <hr className="h-[1px] bg-white grow w-full flex-1" />
+            </div>
+          </div>
+          <div className="keen-slider__slide rounded-[30px] number-slide-3 relative">
+            <Image
+              className=""
+              src="/myluck-4.JPG"
+              alt="MyLuck 4"
+              width={800}
+              height={1000}
+            />
+            <div className="absolute bottom-14 flex items-center w-full font-serif space-x-1">
+              <hr className="h-[1px] bg-white grow w-full flex-1" />
+              <p className="max-w-[180px] w-full text-center flex justify-center text-white text-lg">
+                Jeg mediterer & har gode vaner{" "}
+              </p>
+              <hr className="h-[1px] bg-white grow w-full flex-1" />
+            </div>
+          </div>
+          <div className="keen-slider__slide rounded-[30px] number-slide-4 relative">
+            <Image
+              className=""
+              src="/myluck-5.JPG"
+              alt="MyLuck 5"
+              width={800}
+              height={1000}
+            />
+            <div className="absolute bottom-14 flex items-center w-full font-serif space-x-2 pr-12">
+              <hr className="h-[1px] bg-white w-[48px]" />
+              <Button
+                className="border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD]"
+                fullWidth
+              >
+                <Link href={PAYMENT_LINK}> Vil du også være heldig?</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
       {loaded && instanceRef.current && (

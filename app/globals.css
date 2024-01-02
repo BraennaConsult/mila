@@ -16,7 +16,7 @@
     @apply font-serif;
   }
   h2 {
-    @apply text-xl lg:text-2xl mb-20;
+    @apply text-xl lg:text-2xl;
   }
 }
 

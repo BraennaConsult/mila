@@ -4,6 +4,7 @@ import { AnimatedNumber } from "@/app/components/AnimatedNumber";
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
+import { DotsProgressBar } from "@/app/components/DotsProgressBar";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
 import { PAYMENT_LINK, SPOTS_LEFT } from "@/constants";
@@ -59,20 +60,19 @@ export function CTA() {
   }, []);
 
   return (
-    <Section className="bg-pink-light">
-      <Container className="flex flex-col justify-center max-w-xl space-y-9">
-        <h2 className="text-center mb-0">
+    <Section>
+      <Container className="flex flex-col justify-center max-w-xl space-y-14">
+        <h2 className="lg:text-center mb-0">
           Vi bygger selvtillit på treningssenteret!
         </h2>
-        <CountdownTimer timeLeft={timeLeft} />
+        <div className="space-y-5">
+          <CountdownTimer timeLeft={timeLeft} />
+          <Progress progress={progress} setProgress={setProgress} />
+        </div>
         <div className="space-y-3">
-          <Button hasIcon className="mx-auto text-dark-grey ">
+          <Button variant="pink-ghost" fullWidth>
             <Link href={PAYMENT_LINK}>Bli med!</Link>
           </Button>
-          <span className="flex space-x-2 justify-center text-mid-grey">
-            <span>Ledige plasser:</span>
-            <AnimatedNumber value={progress} />
-          </span>
         </div>
       </Container>
     </Section>
