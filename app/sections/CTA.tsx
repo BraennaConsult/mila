@@ -8,6 +8,7 @@ import { DotsProgressBar } from "@/app/components/DotsProgressBar";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
 import { PAYMENT_LINK, SPOTS_LEFT } from "@/constants";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -73,10 +74,11 @@ export function CTA({ className }: Props) {
           <CountdownTimer timeLeft={timeLeft} />
           <Progress progress={progress} setProgress={setProgress} />
         </div>
-        <div className="space-y-3">
-          <Button variant="pink" className="lg:mx-auto">
-            Bli med
-          </Button>
+        <div className="space-y-3 lg:mx-auto">
+          <Button variant="pink">Bli med</Button>
+          <div className="flex justify-center text-mid-grey items-center space-x-1">
+            <Image src="/klarna.svg" width={64} height={64} alt="Klarna logo" />
+          </div>
         </div>
       </Container>
     </Section>
