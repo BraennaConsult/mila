@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import { FeaturesCarousel } from "@/app/components/FeaturesCarousel";
 import { Section } from "@/app/components/Section";
@@ -8,9 +9,14 @@ import Image from "next/image";
 import { useRef } from "react";
 
 export function AppPreview() {
-  const containerRef = useRef(null);
+  const containerRefMobile = useRef(null);
+  const containerRefDesktop = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: containerRefMobile,
+    offset: ["start 0.9", "start 0"],
+  });
+  const { scrollYProgress: scrollYProgressDesktop } = useScroll({
+    target: containerRefDesktop,
     offset: ["start 0.9", "start 0"],
   });
 
@@ -62,19 +68,126 @@ export function AppPreview() {
     ["125px", "50px"]
   );
 
+  const translatexPhone1Desktop = useTransform(
+    scrollYProgressDesktop,
+    [0, 0.7],
+    ["100px", "200px"]
+  );
+  const translatexPhone2Desktop = useTransform(
+    scrollYProgressDesktop,
+    [0, 0.7],
+    ["125px", "150px"]
+  );
+  const translatexPhone3Desktop = useTransform(
+    scrollYProgressDesktop,
+    [0, 0.7],
+    ["125px", "50px"]
+  );
+
   return (
     <Section>
-      <Container className="mb-10 lg:mb-20">
-        <h2 className="text-pretty mb-9 lg:mb-14 text-center mx-auto max-w-xl">
-          3 måneders treningsmaraton på Myluck appen
-        </h2>
-        <div className="relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-20 overflow-hidden">
+      <Container className="mb-10 lg:mb-20 lg:flex">
+        <div>
+          <h2 className="text-pretty mb-9 lg:mb-14 text-center lg:text-left mx-auto max-w-xl">
+            3 måneders treningsmaraton på Myluck appen
+          </h2>
+          <div className="lg:hidden relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-20 overflow-hidden">
+            <motion.div
+              ref={containerRefMobile}
+              style={{
+                rotate: rotatePhone1,
+                translateY: translateYPhone1,
+                translateX: translatexPhone1,
+              }}
+            >
+              <Image
+                src="/phone-1.png"
+                className="absolute w-[60%]"
+                alt="App screenshots"
+                width={300}
+                height={600}
+              />
+            </motion.div>
+            <motion.div
+              style={{
+                rotate: rotatePhone2,
+                translateY: translateYPhone2,
+                translateX: translatexPhone2,
+              }}
+            >
+              <Image
+                src="/phone-2.png"
+                className="absolute w-[60%]"
+                alt="App screenshots"
+                width={300}
+                height={600}
+              />
+            </motion.div>
+            <motion.div
+              style={{
+                rotate: rotatePhone3,
+                translateY: translateYPhone3,
+                translateX: translatexPhone3,
+              }}
+            >
+              <Image
+                src="/phone-3.png"
+                className="absolute w-[60%]"
+                alt="App screenshots"
+                width={300}
+                height={600}
+              />
+            </motion.div>
+          </div>
+          <div className="flex space-x-2 lg:space-x-14 mb-9">
+            <div className="flex flex-col space-y-5">
+              <div className="space-x-2 flex items-center">
+                <Image
+                  src="/dumbbell.svg"
+                  width={22}
+                  height={22}
+                  alt="Dumbbell icon"
+                />
+                <h3 className="text-lg lg:text-xl">Trening</h3>
+              </div>
+              <ul className="list-disc list-outside space-y-2 pl-5">
+                <li className="">Steg for steg instruksjoner</li>
+                <li className="">Fokus på rumpe</li>
+                <li>Enkelt å følge</li>
+              </ul>
+            </div>
+            <div className="flex flex-col space-y-5">
+              <div className="space-x-2 flex items-center">
+                <Image
+                  src="/nutrition.svg"
+                  width={22}
+                  height={22}
+                  alt="Nutrition icon"
+                />
+                <h3 className="text-lg lg:text-xl">Kosthold</h3>
+              </div>
+              <ul className="list-disc list-outside pl-5 space-y-2">
+                <li>Smakfulle oppskrifter</li>
+                <li>Kalorioversikt</li>
+                <li>Din egen matplan</li>
+              </ul>
+            </div>
+          </div>
+          <Button
+            variant="secondary"
+            hasIcon
+            className="w-full lg:w-fit mb-9 lg:mb-0"
+          >
+            Bli med
+          </Button>
+        </div>
+        <div className="hidden lg:block relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-20 overflow-hidden">
           <motion.div
-            ref={containerRef}
+            ref={containerRefDesktop}
             style={{
               rotate: rotatePhone1,
               translateY: translateYPhone1,
-              translateX: translatexPhone1,
+              translateX: translatexPhone1Desktop,
             }}
           >
             <Image
@@ -89,7 +202,7 @@ export function AppPreview() {
             style={{
               rotate: rotatePhone2,
               translateY: translateYPhone2,
-              translateX: translatexPhone2,
+              translateX: translatexPhone2Desktop,
             }}
           >
             <Image
@@ -104,7 +217,7 @@ export function AppPreview() {
             style={{
               rotate: rotatePhone3,
               translateY: translateYPhone3,
-              translateX: translatexPhone3,
+              translateX: translatexPhone3Desktop,
             }}
           >
             <Image
@@ -115,40 +228,6 @@ export function AppPreview() {
               height={600}
             />
           </motion.div>
-        </div>
-        <div className="flex space-x-2 lg:space-x-14 mb-9 lg:mb-14 justify-center">
-          <div className="flex flex-col space-y-5">
-            <div className="space-x-2 flex items-center">
-              <Image
-                src="/dumbbell.svg"
-                width={22}
-                height={22}
-                alt="Dumbbell icon"
-              />
-              <h3 className="text-lg lg:text-xl">Trening</h3>
-            </div>
-            <ul className="list-disc list-outside space-y-2 pl-5">
-              <li className="">Steg for steg instruksjoner</li>
-              <li className="">Fokus på rumpe</li>
-              <li>Enkelt å følge</li>
-            </ul>
-          </div>
-          <div className="flex flex-col space-y-5">
-            <div className="space-x-2 flex items-center">
-              <Image
-                src="/nutrition.svg"
-                width={22}
-                height={22}
-                alt="Nutrition icon"
-              />
-              <h3 className="text-lg lg:text-xl">Kosthold</h3>
-            </div>
-            <ul className="list-disc list-outside pl-5 space-y-2">
-              <li>Smakfulle oppskrifter</li>
-              <li>Kalorioversikt</li>
-              <li>Din egen matplan</li>
-            </ul>
-          </div>
         </div>
       </Container>
       <FeaturesCarousel />

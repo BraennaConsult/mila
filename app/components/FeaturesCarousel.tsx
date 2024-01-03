@@ -34,6 +34,12 @@ export function FeaturesCarousel() {
     },
   });
 
+  const isDesktop = window?.innerWidth > 768;
+  const totalSlides =
+    isDesktop && instanceRef?.current
+      ? instanceRef?.current?.slides.length - 1
+      : instanceRef?.current?.slides.length;
+
   return (
     <div className="font-sans">
       <div className="">
@@ -280,7 +286,7 @@ export function FeaturesCarousel() {
               className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between h-full"
             >
               <div className="flex flex-col space-y-6 lg:space-y-10">
-                <h3 className="text-lg lg:text-xl leading-loose font-serif max-w-[150px] lg:max-w-[200px]">
+                <h3 className="text-lg lg:text-xl leading-normal lg:leading-loose font-serif max-w-[150px] lg:max-w-[200px]">
                   Bygg din drømmekropp slik som jeg gjorde - med å være heldig!
                 </h3>
                 <div>
@@ -325,23 +331,20 @@ export function FeaturesCarousel() {
       )}
       {loaded && instanceRef.current && (
         <div className="flex space-x-1 justify-center">
-          {Array.from(
-            { length: instanceRef.current.track.details.slides.length },
-            (_, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={cn(
-                  "w-2 h-2 rounded-full cursor-pointer bg-mid-grey border-none p-1",
-                  currentSlide === idx
-                    ? "bg-black w-8 animate-enter-dot"
-                    : "bg-mid-grey animate-leave-dot"
-                )}
-              />
-            )
-          )}
+          {Array.from({ length: totalSlides }, (_, idx) => (
+            <button
+              key={idx}
+              onClick={() => {
+                instanceRef.current?.moveToIdx(idx);
+              }}
+              className={cn(
+                "w-2 h-2 rounded-full cursor-pointer bg-mid-grey border-none p-1",
+                currentSlide === idx
+                  ? "bg-black w-8 animate-enter-dot"
+                  : "bg-mid-grey animate-leave-dot"
+              )}
+            />
+          ))}
         </div>
       )}
     </div>

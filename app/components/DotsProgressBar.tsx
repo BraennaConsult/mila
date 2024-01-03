@@ -51,7 +51,7 @@ export const DotsProgressBar: React.FC<ProgressBarProps> = ({
   }, [controls, inView]);
 
   return (
-    <div className="flex flex-wrap gap-2" ref={ref}>
+    <div className="grid grid-cols-10 gap-2" ref={ref}>
       {Array.from({ length: totalDots }, (_, index) => (
         <motion.div
           key={index}

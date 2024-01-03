@@ -74,7 +74,7 @@ export function CTA({ className }: Props) {
           <Progress progress={progress} setProgress={setProgress} />
         </div>
         <div className="space-y-3">
-          <Button variant="pink" className="mx-auto">
+          <Button variant="pink" className="lg:mx-auto">
             Bli med
           </Button>
         </div>

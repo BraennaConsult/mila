@@ -32,6 +32,13 @@ export function MyLuck() {
     },
   });
 
+  // Get current window size and make a const that is called isDesktop
+  const isDesktop = window?.innerWidth > 768;
+  const totalSlides =
+    isDesktop && instanceRef?.current
+      ? instanceRef?.current?.slides.length - 1
+      : instanceRef?.current?.slides.length;
+
   return (
     <Section>
       <Container>
@@ -181,23 +188,20 @@ export function MyLuck() {
       )}
       {loaded && instanceRef.current && (
         <div className="flex space-x-1 justify-center">
-          {Array.from(
-            { length: instanceRef.current.track.details.slides.length },
-            (_, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={cn(
-                  "w-2 h-2 rounded-full cursor-pointer bg-mid-grey border-none p-1",
-                  currentSlide === idx
-                    ? "bg-black w-8 animate-enter-dot"
-                    : "bg-mid-grey animate-leave-dot"
-                )}
-              />
-            )
-          )}
+          {Array.from({ length: totalSlides }, (_, idx) => (
+            <button
+              key={idx}
+              onClick={() => {
+                instanceRef.current?.moveToIdx(idx);
+              }}
+              className={cn(
+                "w-2 h-2 rounded-full cursor-pointer bg-mid-grey border-none p-1",
+                currentSlide === idx
+                  ? "bg-black w-8 animate-enter-dot"
+                  : "bg-mid-grey animate-leave-dot"
+              )}
+            />
+          ))}
         </div>
       )}
     </Section>
