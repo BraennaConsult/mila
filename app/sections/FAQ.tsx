@@ -58,14 +58,14 @@ export function FAQ() {
 }
 const faqs = [
   {
-    question: "Hvor lenge varer maratonet?",
+    question: "Hvem er dette for?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "For deg som ønsker å ta kontrollen tilbake og nå de målene du alltid har hatt lyst til! Jeg vet hvor vanskelig det kan være å prioritere seg selv i en hektisk hverdag, men jeg klarte det - og nå vil jeg vise deg hvordan! Det skal være litt utfordrende, men skikkelig gøy og så utrolig lærerikt på veien!",
   },
   {
-    question: "Hva er inkludert i appen?",
+    question: "Hvordan fungerer det?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Dette er min helt egen app hvor dere får tilgang til maratonet. 12 uker med treningsprogram som gjør at du aldri er i tvil om hva du skal gjøre, alle mine oppskrifter som vil hjelpe deg og få energien du trenger i hverdagen og ikke føle du går på diett.",
   },
   {
     question: "Kan jeg være med om jeg har matallergier eller skader?",
@@ -73,24 +73,32 @@ const faqs = [
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },
   {
-    question: "Hvordan fungerer gruppene under maratonet?",
+    question: "Hva er lengden på programmet?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Det nye maratonet er utvidet til hele 3 måneder! Grunnen til dette er fordi det tar fra 21 til 66 dager for å bygge gode vaner som faktisk varer! Derfor ønsker jeg å ta med damene mine på en reise som faktisk kan være en langvarig endring i livet ditt!",
   },
   {
-    question:
-      "Kan jeg være i samme gruppe som venninnen min som skal være med?",
+    question: "Er det binding?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Når du melder deg på varer maratonet i 3 måneder - målet mitt er å sikre deg at selv når det blir tungt og vanskelig er jeg og hele jentegjengen her for å heie deg fremover!",
+  },
+  {
+    question: "Hvordan kommer jeg i gang?",
+    answer:
+      "Hvis du har sikret deg en plass blir du lagt til en gruppe med andre likesinnede damer og der vil du får mer informasjon om oppstart.",
+  },
+  {
+    question: "Får jeg tett oppfølging?",
+    answer:
+      "Det som er vakkert med vår gjeng er at her støtter alle hverandre og jobber sammen mot målet! Jeg kommer også til å se hver enkelt og gi personlige justeringer, mål og ekstra vaner som bare er for deg slik at du kommer lengst mulig og føler deg sett på veien!",
+  },
+  {
+    question: "Kan jeg være med selv om jeg har allergier?",
+    answer:
+      "I oppskriftssamlingen inne på appen er det en rekke forskjellige retter hvor jeg har prøvd og ta høyde for alle folks forskjellige preferanser og eventuelle allergier - du kan også spørre om råd fra meg og resten av gjengen i gruppen om tips for hvordan du kan tilpasse de ulike rettene dine allergier!",
   },
   {
     question: "Er det mulig med delbetaling?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    question: "Får jeg hjelp med å sette mål når det kommer til mat?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+    answer: "Ja, du kan delbetale med Klarna!",
   },
 ];

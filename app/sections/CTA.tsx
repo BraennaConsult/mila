@@ -1,15 +1,12 @@
 "use client";
 
-import { AnimatedNumber } from "@/app/components/AnimatedNumber";
-import { Button, buttonProps } from "@/app/components/Button";
+import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
-import { DotsProgressBar } from "@/app/components/DotsProgressBar";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { PAYMENT_LINK, SPOTS_LEFT } from "@/constants";
+import { SPOTS_LEFT } from "@/constants";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export interface TimeLeft {
