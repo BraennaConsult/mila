@@ -127,9 +127,9 @@ export function AppPreview() {
               />
               <h3 className="text-lg lg:text-xl">Trening</h3>
             </div>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Steg for steg instruksjoner</li>
-              <li>Fokus på rumpe</li>
+            <ul className="list-disc list-outside space-y-2 pl-5">
+              <li className="">Steg for steg instruksjoner</li>
+              <li className="">Fokus på rumpe</li>
               <li>Enkelt å følge</li>
             </ul>
           </div>
@@ -143,7 +143,7 @@ export function AppPreview() {
               />
               <h3 className="text-lg lg:text-xl">Kosthold</h3>
             </div>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-outside pl-5 space-y-2">
               <li>Smakfulle oppskrifter</li>
               <li>Kalorioversikt</li>
               <li>Din egen matplan</li>

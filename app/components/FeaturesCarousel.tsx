@@ -20,7 +20,7 @@ export function FeaturesCarousel() {
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({
     breakpoints: {
       "(max-width: 768px": {
-        slides: { perView: 1.2, spacing: 16 },
+        slides: { perView: 1.2 },
       },
       "(min-width: 768px)": {
         slides: { perView: 2.5, spacing: 24 },
@@ -34,11 +34,19 @@ export function FeaturesCarousel() {
     },
   });
 
+  console.log(currentSlide);
+
   return (
     <div className="font-sans">
-      <div className="px-4">
-        <div ref={ref} className="keen-slider mb-8">
-          <div className="keen-slider__slide number-slide-1 rounded-project relative border border-light-grey hover:border-mid-grey text-white h-full">
+      <div className="">
+        <div ref={ref} className="keen-slider mb-8 ">
+          <div
+            className={cn(
+              "keen-slider__slide number-slide-0 rounded-project relative border border-light-grey hover:border-mid-grey text-white h-full",
+              currentSlide === 0 && "mx-4 lg:ml-4 lg:mr-0",
+              currentSlide === 6 && "mr-[-32px] lg:mr-[-48px]"
+            )}
+          >
             <AspectRatio
               ratio={364 / 478}
               className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between h-full"
@@ -64,7 +72,12 @@ export function FeaturesCarousel() {
               />
             </AspectRatio>
           </div>
-          <div className="keen-slider__slide number-slide-2 rounded-project relative border border-mid-grey hover:border-mid-grey bg-white text-black">
+          <div
+            className={cn(
+              "keen-slider__slide number-slide-1 rounded-project relative border border-mid-grey hover:border-mid-grey bg-white text-black",
+              currentSlide === 1 && "mx-4 lg:mx-0"
+            )}
+          >
             <AspectRatio ratio={364 / 478} className="flex flex-col">
               <div className="flex flex-col space-y-3 lg:space-y-6 px-6 py-8 lg:pt-14 pb-4 lg:pb-14">
                 <h3 className="text-[20px] font-semibold font-sans text-pretty">
@@ -134,7 +147,12 @@ export function FeaturesCarousel() {
               </div>
             </AspectRatio>
           </div>
-          <div className="keen-slider__slide number-slide-3 rounded-project relative border border-[#DEF7FF] hover:border-mid-grey bg-[#DEF7FF] text-black">
+          <div
+            className={cn(
+              "keen-slider__slide number-slide-2 rounded-project relative border border-[#DEF7FF] hover:border-mid-grey bg-[#DEF7FF] text-black",
+              currentSlide === 2 && "mx-4 lg:mx-0"
+            )}
+          >
             <AspectRatio
               ratio={364 / 478}
               className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between"
@@ -160,7 +178,12 @@ export function FeaturesCarousel() {
               />
             </AspectRatio>
           </div>
-          <div className="keen-slider__slide number-slide-4 rounded-project relative border border-[#FEE9F1] hover:border-mid-grey bg-[#FEE9F1] text-black">
+          <div
+            className={cn(
+              "keen-slider__slide number-slide-3 rounded-project relative border border-[#FEE9F1] hover:border-mid-grey bg-[#FEE9F1] text-black",
+              currentSlide === 3 && "mx-4 lg:mx-0"
+            )}
+          >
             <AspectRatio
               ratio={364 / 478}
               className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between"
@@ -186,7 +209,12 @@ export function FeaturesCarousel() {
               />
             </AspectRatio>
           </div>
-          <div className="keen-slider__slide number-slide-5 rounded-project relative border border-[#FEE9F1] hover:border-mid-grey text-black h-full">
+          <div
+            className={cn(
+              "keen-slider__slide number-slide-4 rounded-project relative border border-[#FEE9F1] hover:border-mid-grey text-black h-full",
+              currentSlide === 4 && "mx-4 lg:mx-0"
+            )}
+          >
             <AspectRatio
               ratio={364 / 478}
               className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between text-white h-full"
@@ -212,7 +240,12 @@ export function FeaturesCarousel() {
               />
             </AspectRatio>
           </div>
-          <div className="keen-slider__slide number-slide-6 rounded-project relative border border-mid-grey hover:border-mid-grey bg-white text-black">
+          <div
+            className={cn(
+              "keen-slider__slide number-slide-5 rounded-project relative border border-mid-grey hover:border-mid-grey bg-white text-black",
+              currentSlide === 5 && "mx-4 lg:mx-0"
+            )}
+          >
             <AspectRatio
               ratio={364 / 478}
               className="py-8 lg:pt-14 pb-6 mx-6 flex flex-col justify-between"
@@ -238,7 +271,12 @@ export function FeaturesCarousel() {
               />
             </AspectRatio>
           </div>
-          <div className="keen-slider__slide number-slide-7 rounded-project relative border border-pink-mid hover:border-mid-grey text-black bg-pink-mid h-full">
+          <div
+            className={cn(
+              "keen-slider__slide number-slide-6 rounded-project relative border border-pink-mid hover:border-mid-grey text-black bg-pink-mid h-full",
+              currentSlide === 6 && "mx-4 lg:ml-0 lg:mr-4"
+            )}
+          >
             <AspectRatio
               ratio={364 / 478}
               className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between h-full"
@@ -290,7 +328,7 @@ export function FeaturesCarousel() {
       {loaded && instanceRef.current && (
         <div className="flex space-x-1 justify-center">
           {Array.from(
-            { length: instanceRef.current.track.details.slides.length - 1 },
+            { length: instanceRef.current.track.details.slides.length },
             (_, idx) => (
               <button
                 key={idx}

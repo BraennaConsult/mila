@@ -11,8 +11,12 @@ const CountdownTimer = ({ timeLeft }: Props) => {
     <div className="flex flex-col">
       <span className="text-mid-grey">Påmeldingen stenger om</span>
       <div className="space-x-2 lg:space-x-3 text-[50px] font-serif">
-        <span suppressHydrationWarning>{timeLeft.days}d</span>
-        <span suppressHydrationWarning>{timeLeft.hours}t</span>
+        {timeLeft.days > 0 && (
+          <span suppressHydrationWarning>{timeLeft.days}d</span>
+        )}
+        {timeLeft.days > 0 && (
+          <span suppressHydrationWarning>{timeLeft.hours}t</span>
+        )}
         {timeLeft.minutes > 0 && (
           <span suppressHydrationWarning>{timeLeft.minutes}m</span>
         )}

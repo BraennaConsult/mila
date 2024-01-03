@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-white max-w-[100vw]">
+    <html lang="en" className="bg-white ">
       <body className={hindVadodara.className}>
         <Header />
         {children}

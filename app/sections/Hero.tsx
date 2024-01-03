@@ -6,14 +6,14 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <div className="w-full h-[600px] lg:h-[800px] rounded-bl-[60px] lg:rounded-bl-[80px] flex items-end  relative overflow-hidden">
+    <div className="w-full h-[600px] lg:h-[800px] rounded-bl-[80px] flex items-end  relative overflow-hidden">
       <video
         muted
         loop
         autoPlay
         playsInline
         id="promo-video"
-        className="absolute right-0 bottom-0 min-w-full min-h-full z-[-1] rounded-bl-[60px] lg:rounded-bl-[80px] aspect-[9/16] object-cover"
+        className="absolute right-0 bottom-0 min-w-full min-h-full z-[-1] rounded-bl-[80px] aspect-[9/16] object-cover"
       >
         <source src="/promo.mp4" type="video/mp4" />
       </video>

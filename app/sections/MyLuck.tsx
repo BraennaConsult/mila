@@ -19,7 +19,7 @@ export function MyLuck() {
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({
     breakpoints: {
       "(max-width: 768px": {
-        slides: { perView: 1.2, spacing: 16 },
+        slides: { perView: 1.2 },
       },
       "(min-width: 768px)": {
         slides: { perView: 2.5, spacing: 24 },
@@ -40,9 +40,15 @@ export function MyLuck() {
           &ldquo;Du er så heldig som har den kroppen etter to barn 👶👶&ldquo;
         </h2>
       </Container>
-      <div className="px-4">
+      <div className={cn("")}>
         <div ref={ref} className="keen-slider mb-8">
-          <div className="keen-slider__slide rounded-[30px] number-slide-0 relative">
+          <div
+            className={cn(
+              "keen-slider__slide rounded-[30px] number-slide-0 relative",
+              currentSlide === 0 && "mx-4 lg:ml-4 lg:mr-0",
+              currentSlide === 4 && "mr-[-32px] lg:mr-[-48px]"
+            )}
+          >
             <Image
               className=""
               src="/myluck-1.JPG"
@@ -58,7 +64,12 @@ export function MyLuck() {
               <hr className="h-[1px] bg-white grow w-full" />
             </div>
           </div>
-          <div className="keen-slider__slide rounded-[30px] number-slide-1 relative">
+          <div
+            className={cn(
+              "keen-slider__slide  rounded-[30px] number-slide-1 relative",
+              currentSlide === 1 && "mx-4 lg:mx-0"
+            )}
+          >
             <Image
               className=""
               src="/myluck-2.JPG"
@@ -74,7 +85,12 @@ export function MyLuck() {
               <hr className="h-[1px] bg-white grow w-full flex-1" />
             </div>
           </div>
-          <div className="keen-slider__slide rounded-[30px] number-slide-2 relative">
+          <div
+            className={cn(
+              "keen-slider__slide  rounded-[30px] number-slide-2 relative",
+              currentSlide === 2 && "mx-4 lg:mx-0"
+            )}
+          >
             <Image
               className=""
               src="/myluck-3.JPG"
@@ -85,12 +101,17 @@ export function MyLuck() {
             <div className="absolute bottom-11 flex items-center w-full font-serif space-x-1">
               <hr className="h-[1px] bg-white grow w-full flex-1" />
               <p className="max-w-[220px] w-full text-center flex justify-center text-white text-lg">
-                Spiser næringssrikt & forstår betydningen av kalorier
+                Spiser næringsrikt & forstår betydningen av kalorier
               </p>
               <hr className="h-[1px] bg-white grow w-full flex-1" />
             </div>
           </div>
-          <div className="keen-slider__slide rounded-[30px] number-slide-3 relative">
+          <div
+            className={cn(
+              "keen-slider__slide  rounded-[30px] number-slide-3 relative",
+              currentSlide === 3 && "mx-4 lg:mx-0"
+            )}
+          >
             <Image
               className=""
               src="/myluck-4.JPG"
@@ -106,7 +127,12 @@ export function MyLuck() {
               <hr className="h-[1px] bg-white grow w-full flex-1" />
             </div>
           </div>
-          <div className="keen-slider__slide rounded-[30px] number-slide-4 relative">
+          <div
+            className={cn(
+              "keen-slider__slide rounded-[30px] number-slide-4 relative",
+              currentSlide === 4 && "mx-4 lg:ml-0 lg:mr-4"
+            )}
+          >
             <Image
               className=""
               src="/myluck-5.JPG"
@@ -152,7 +178,7 @@ export function MyLuck() {
       {loaded && instanceRef.current && (
         <div className="flex space-x-1 justify-center">
           {Array.from(
-            { length: instanceRef.current.track.details.slides.length - 1 },
+            { length: instanceRef.current.track.details.slides.length },
             (_, idx) => (
               <button
                 key={idx}
