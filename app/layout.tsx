@@ -3,6 +3,7 @@ import { hindVadodara } from "@/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { Footer } from "@/app/components/Footer";
 
 export const metadata: Metadata = {
   title: "Myluck by Mila",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Analytics />
+        <Footer />
       </body>
     </html>
   );

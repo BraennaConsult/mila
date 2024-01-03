@@ -64,7 +64,7 @@ export function AppPreview() {
 
   return (
     <Section>
-      <Container>
+      <Container className="mb-10 lg:mb-20">
         <h2 className="text-pretty mb-9 lg:mb-14 text-center mx-auto max-w-xl">
           3 måneders treningsmaraton på Myluck appen
         </h2>

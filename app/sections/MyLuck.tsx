@@ -21,7 +21,7 @@ export function MyLuck() {
         slides: { perView: 1.2 },
       },
       "(min-width: 768px)": {
-        slides: { perView: 3.5, spacing: 24 },
+        slides: { perView: 2.5, spacing: 24 },
       },
     },
     slideChanged(slider) {
@@ -31,8 +31,6 @@ export function MyLuck() {
       setLoaded(true);
     },
   });
-
-  console.log(instanceRef?.current?.track.details.slides.length);
 
   return (
     <Section>
