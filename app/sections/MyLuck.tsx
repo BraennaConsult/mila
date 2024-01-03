@@ -189,7 +189,7 @@ export function MyLuck() {
       )}
       {loaded && instanceRef.current && (
         <div className="flex space-x-1 justify-center lg:pt-3">
-          {Array.from({ length: totalSlides }, (_, idx) => (
+          {Array.from({ length: totalSlides || 0 }, (_, idx) => (
             <button
               key={idx}
               onClick={() => {
