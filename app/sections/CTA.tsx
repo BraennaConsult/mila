@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatedNumber } from "@/app/components/AnimatedNumber";
-import { Button } from "@/app/components/Button";
+import { Button, buttonProps } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { DotsProgressBar } from "@/app/components/DotsProgressBar";
@@ -70,9 +70,12 @@ export function CTA() {
           <Progress progress={progress} setProgress={setProgress} />
         </div>
         <div className="space-y-3">
-          <Button variant="pink-ghost" fullWidth>
-            <Link href={PAYMENT_LINK}>Bli med!</Link>
-          </Button>
+          <Link
+            href={PAYMENT_LINK}
+            className={buttonProps({ variant: "pink-ghost", fullWidth: true })}
+          >
+            Bli med!
+          </Link>
         </div>
       </Container>
     </Section>

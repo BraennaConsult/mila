@@ -146,7 +146,7 @@ export function MyLuck() {
                 className="border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD]"
                 fullWidth
               >
-                <Link href={PAYMENT_LINK}> Vil du også være heldig?</Link>
+                Vil du også være heldig?
               </Button>
             </div>
           </div>

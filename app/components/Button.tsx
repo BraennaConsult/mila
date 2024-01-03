@@ -2,13 +2,12 @@
 
 import { HeartIcon } from "@/app/icons/HeartIcon";
 import { cn } from "@/app/utils";
-import { Slot } from "@radix-ui/react-slot";
+import { PAYMENT_LINK } from "@/constants";
 import { cva, type VariantProps } from "cva";
-
-import { forwardRef } from "react";
+import Link from "next/link";
 
 const buttonProps = cva({
-  base: "rounded-[100px] border transition-color duration-100 ease font-semibold  shadow-sm flex justify-center font-sans",
+  base: "rounded-[100px] border transition-color duration-100 ease font-semibold  shadow-sm flex justify-center font-sans text-center",
   variants: {
     variant: {
       primary:
@@ -28,6 +27,7 @@ const buttonProps = cva({
     },
     fullWidth: {
       true: "w-full",
+      false: "w-fit",
     },
   },
   defaultVariants: {
@@ -45,45 +45,33 @@ export interface ButtonProps
   hasIcon?: boolean;
 }
 
-// TODO add icon
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      className,
-      variant,
-      size,
-      asChild = false,
-      isLoading,
-      fullWidth,
-      children,
-      hasIcon = false,
-      ...props
-    },
-    ref
-  ) => {
-    const Comp = asChild ? Slot : "button";
-    return (
-      <Comp
-        className={cn(
-          buttonProps({ variant, size, fullWidth, className }),
-          "relative",
-          isLoading && "",
-          hasIcon && "flex items-center justify-center"
-        )}
-        ref={ref}
-        {...props}
-      >
-        {hasIcon && (
-          <span className="mr-2">
-            <HeartIcon />
-          </span>
-        )}
-        {children}
-      </Comp>
-    );
-  }
-);
-
-Button.displayName = "Button";
+const Button = ({
+  variant,
+  size,
+  fullWidth,
+  className,
+  isLoading,
+  hasIcon,
+  children,
+}: ButtonProps) => {
+  return (
+    <Link
+      href={PAYMENT_LINK}
+      className={cn(
+        buttonProps({ variant, size, fullWidth, className }),
+        "relative",
+        isLoading && "",
+        hasIcon && "flex items-center justify-center"
+      )}
+    >
+      {hasIcon && (
+        <span className="mr-2">
+          <HeartIcon />
+        </span>
+      )}
+      {children}
+    </Link>
+  );
+};
 
 export { Button, buttonProps };
