@@ -3,6 +3,7 @@
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import { Section } from "@/app/components/Section";
+import { useIsDesktop } from "@/app/useIsDesktop";
 import { cn } from "@/app/utils";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
@@ -33,7 +34,7 @@ export function MyLuck() {
   });
 
   // Get current window size and make a const that is called isDesktop
-  const isDesktop = window?.innerWidth > 768;
+  const isDesktop = useIsDesktop();
   const totalSlides =
     isDesktop && instanceRef?.current
       ? instanceRef?.current?.slides.length - 1
@@ -164,7 +165,7 @@ export function MyLuck() {
         </div>
       </div>
       {loaded && instanceRef.current && (
-        <div className="hidden lg:flex space-x-2 items-center justify-end pr-8">
+        <div className="hidden lg:flex space-x-2 items-center justify-end pr-8 lg:absolute lg:right-0">
           <button
             className="rounded-full border-light-grey border p-1 hover:bg-pink-light"
             onClick={(e: any) =>
@@ -187,7 +188,7 @@ export function MyLuck() {
         </div>
       )}
       {loaded && instanceRef.current && (
-        <div className="flex space-x-1 justify-center">
+        <div className="flex space-x-1 justify-center lg:pt-3">
           {Array.from({ length: totalSlides }, (_, idx) => (
             <button
               key={idx}

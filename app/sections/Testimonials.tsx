@@ -10,24 +10,12 @@ export function Testimonials() {
         <h2 className="mb-10">Hva folk sier</h2>
         <div className="columns-1 lg:columns-3 space-y-4 ">
           {testimonials.map((testimonial, i) => (
-            <Card key={i} testimonial={testimonial} />
+            <div key={i}>
+              <Card key={i} testimonial={testimonial} />
+            </div>
           ))}
         </div>
       </Container>
-      {/* <div className="space-y-4 lg:space-y-8">
-        <Marquee pauseOnHover>
-          {testimonials.slice(0, 16)?.map((testimonial, i) => (
-            <Card key={i} testimonial={testimonial} />
-          ))}
-        </Marquee>
-        <Marquee pauseOnHover delay={0.5} className="">
-          {testimonials
-            .slice(17, testimonials.length)
-            ?.map((testimonial, i) => (
-              <Card key={i} testimonial={testimonial} />
-            ))}
-        </Marquee>
-      </div> */}
     </Section>
   );
 }

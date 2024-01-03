@@ -24,7 +24,7 @@ export function Hero() {
       {/* <div className=""> */}
       <Container className="space-y-6 mb-14 w-full lg:mx-auto">
         <h1 className="text-xl lg:text-2xl text-pink-mid font-bold max-w-xs md:max-w-md ">
-          Vår med å bygg din drømmekropp og skap din egen lykke!
+          Vær med å bygg din drømmekropp og skap din egen lykke!
         </h1>
         {/* <motion.h1
           initial="initial"

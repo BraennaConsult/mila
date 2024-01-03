@@ -1,7 +1,6 @@
-"use client";
-
 import { Button } from "@/app/components/Button";
 import { JoinButton } from "@/app/components/JoinButton";
+import { useIsDesktop } from "@/app/useIsDesktop";
 import { cn } from "@/app/utils";
 import { PAYMENT_LINK } from "@/constants";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
@@ -34,7 +33,8 @@ export function FeaturesCarousel() {
     },
   });
 
-  const isDesktop = window?.innerWidth > 768;
+  const isDesktop = useIsDesktop();
+
   const totalSlides =
     isDesktop && instanceRef?.current
       ? instanceRef?.current?.slides.length - 1
@@ -286,7 +286,7 @@ export function FeaturesCarousel() {
               className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between h-full"
             >
               <div className="flex flex-col space-y-6 lg:space-y-10">
-                <h3 className="text-lg lg:text-xl leading-normal lg:leading-loose font-serif max-w-[150px] lg:max-w-[200px]">
+                <h3 className="text-lg lg:text-xl leading-normal font-serif max-w-[150px] lg:max-w-[200px]">
                   Bygg din drømmekropp slik som jeg gjorde - med å være heldig!
                 </h3>
                 <div>
@@ -330,7 +330,7 @@ export function FeaturesCarousel() {
         </div>
       )}
       {loaded && instanceRef.current && (
-        <div className="flex space-x-1 justify-center">
+        <div className="flex space-x-1 justify-center lg:pt-3">
           {Array.from({ length: totalSlides }, (_, idx) => (
             <button
               key={idx}

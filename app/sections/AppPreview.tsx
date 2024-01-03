@@ -194,8 +194,8 @@ export function AppPreview() {
               src="/phone-1.png"
               className="absolute w-[60%]"
               alt="App screenshots"
-              width={300}
-              height={600}
+              width={600}
+              height={1200}
             />
           </motion.div>
           <motion.div
@@ -209,8 +209,8 @@ export function AppPreview() {
               src="/phone-2.png"
               className="absolute w-[60%]"
               alt="App screenshots"
-              width={300}
-              height={600}
+              width={600}
+              height={1200}
             />
           </motion.div>
           <motion.div
@@ -224,8 +224,8 @@ export function AppPreview() {
               src="/phone-3.png"
               className="absolute w-[60%]"
               alt="App screenshots"
-              width={300}
-              height={600}
+              width={600}
+              height={1200}
             />
           </motion.div>
         </div>

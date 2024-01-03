@@ -2,12 +2,12 @@
 
 import { Container } from "@/app/components/Container";
 import { Section } from "@/app/components/Section";
-import { Disclosure } from "@headlessui/react";
+import { Disclosure, Transition } from "@headlessui/react";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 
 export function FAQ() {
   return (
-    <Section>
+    <Section className="bg-light-grey">
       <Container className="">
         <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
           <h2>Ofte stilte spørsmål</h2>
@@ -34,9 +34,18 @@ export function FAQ() {
                         </span>
                       </Disclosure.Button>
                     </dt>
-                    <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                      <p className="text-md text-light">{faq.answer}</p>
-                    </Disclosure.Panel>
+                    <Transition
+                      enter="transition duration-300 ease-out"
+                      enterFrom="transform opacity-0"
+                      enterTo="transform opacity-100"
+                      leave="transition duration-300 ease-out"
+                      leaveFrom="transform opacity-100"
+                      leaveTo="transform opacity-0"
+                    >
+                      <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                        <p className="text-md text-light">{faq.answer}</p>
+                      </Disclosure.Panel>
+                    </Transition>
                   </>
                 )}
               </Disclosure>
@@ -49,7 +58,38 @@ export function FAQ() {
 }
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "Hvor lenge varer maratonet?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "Hva er inkludert i appen?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "Kan jeg være med om jeg har matallergier eller skader?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "Hvordan fungerer gruppene under maratonet?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question:
+      "Kan jeg være i samme gruppe som venninnen min som skal være med?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "Er det mulig med delbetaling?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    question: "Får jeg hjelp med å sette mål når det kommer til mat?",
     answer:
       "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
   },

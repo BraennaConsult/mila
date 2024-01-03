@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Footer() {
   const copyRightYear = new Date().getFullYear();
   return (
-    <footer className="py-2 border-t border-mid-grey/25 w-full flex justify-center text-sm text-mid-grey">
+    <footer className="py-2 w-full flex justify-center text-sm text-mid-grey">
       <ul className="flex items-center space-x-5 list-none">
         <li>&copy; {copyRightYear}, Myluck by Mila</li>
         <li>
