@@ -68,7 +68,7 @@ export function AppPreview() {
         <h2 className="text-pretty mb-9 lg:mb-14 text-center mx-auto max-w-xl">
           3 måneders treningsmaraton på Myluck appen
         </h2>
-        <div className="relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 overflow-hidden">
+        <div className="relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-20 overflow-hidden">
           <motion.div
             ref={containerRef}
             style={{
