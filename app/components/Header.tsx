@@ -34,7 +34,7 @@ export function Header() {
           />
         </Link>
         <Button size="sm" variant={hasScrolled ? "pink-ghost" : "white"}>
-          <Link href={PAYMENT_LINK}>Bli med!</Link>
+          <Link href={PAYMENT_LINK}>Bli med</Link>
         </Button>
       </Container>
     </header>

@@ -1,4 +1,3 @@
-import { Container } from "@/app/components/Container";
 import { AppPreview } from "@/app/sections/AppPreview";
 import { CTA } from "@/app/sections/CTA";
 import { Hero } from "@/app/sections/Hero";
@@ -12,7 +11,7 @@ export default function Home() {
       {/* <div className="bg-radial-pink bg-left"> */}
       <MyLuck />
       <AppPreview />
-      <CTA />
+      <CTA className="pt-0 md:pt-0 lg:pt-0" />
       {/* </div> */}
       <Testimonials />
       {/* <div className="bg-radial-pink [--position:90%]"> */}

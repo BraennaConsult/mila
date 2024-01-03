@@ -12,6 +12,7 @@ const buttonProps = cva({
     variant: {
       primary:
         "border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD] hover:bg-[#FBCBDD] hover:text-black",
+      pink: "bg-pink-loud text-white border-pink-loud hover:bg-white hover:text-pink-loud focus:bg-white focus:text-pink-loud",
       "pink-ghost":
         "border-pink-loud text-pink-loud bg-transparent hover:bg-pink-loud hover:text-white focus:bg-pink-loud focus:text-white",
       secondary:
@@ -23,7 +24,7 @@ const buttonProps = cva({
     },
     size: {
       sm: "text-sm lg:text-md py-[2px] px-6",
-      default: "text-md lg:text-lg py-3 px-5 lg:py-5 lg:px-10 ",
+      default: "text-md lg:text-[20px] py-3 px-5 lg:py-5 lg:px-10",
     },
     fullWidth: {
       true: "w-full",

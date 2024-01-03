@@ -8,7 +8,7 @@ const heading = "Vær med å bygg din drømmekropp og skap din egen lykke!";
 
 export function Hero() {
   return (
-    <div className="w-full h-[600px] lg:h-[800px] rounded-bl-[80px] flex items-end  relative overflow-hidden aspect-[16/9]">
+    <div className="w-full h-[600px] rounded-bl-[80px] flex items-end  relative overflow-hidden aspect-[16/9]">
       <video
         muted
         loop
@@ -43,7 +43,7 @@ export function Hero() {
         <p className="text-md text-white font-bold max-w-xs md:max-w-md text-pretty">
           Over 100+ rå kvinner har nådd sine personlige mål!
         </p>
-        <Button hasIcon>Bli med!</Button>
+        <Button hasIcon>Bli med</Button>
       </Container>
       {/* </div> */}
     </div>

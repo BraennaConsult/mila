@@ -13,9 +13,9 @@ export function Progress({ progress, setProgress }: Props) {
   return (
     <div className="flex flex-col space-y-2">
       <span className="text-mid-grey">Ledige plasser</span>
-      <div className="space-x-6 text-[50px] font-serif flex items-start">
+      <div className="space-x-6 text-[50px] lg:text-[60px] font-serif flex items-start">
         <AnimatedNumber value={progress} />
-        <DotsProgressBar progressPercentage={spotsFilled} totalDots={33} />
+        <DotsProgressBar progressPercentage={spotsFilled} totalDots={30} />
       </div>
     </div>
   );

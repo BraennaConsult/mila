@@ -31,7 +31,7 @@ export function FeatureCard({ title, description, className, image }: Props) {
           href={PAYMENT_LINK}
           className="border border-dark-grey rounded-full py-2 px-4 font-semibold"
         >
-          Bli med!
+          Bli med
         </Link>
       </div>
       {image && (

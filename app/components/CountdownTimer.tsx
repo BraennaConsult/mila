@@ -10,7 +10,7 @@ const CountdownTimer = ({ timeLeft }: Props) => {
   return (
     <div className="flex flex-col">
       <span className="text-mid-grey">Påmeldingen stenger om</span>
-      <div className="space-x-2 lg:space-x-3 text-[50px] font-serif">
+      <div className="space-x-2 lg:space-x-3 text-[50px] lg:[text-60px] font-serif">
         {timeLeft.days > 0 && (
           <span suppressHydrationWarning>{timeLeft.days}d</span>
         )}
