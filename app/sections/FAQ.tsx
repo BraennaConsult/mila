@@ -68,11 +68,6 @@ const faqs = [
       "Dette er min helt egen app hvor dere får tilgang til maratonet. 12 uker med treningsprogram som gjør at du aldri er i tvil om hva du skal gjøre, alle mine oppskrifter som vil hjelpe deg og få energien du trenger i hverdagen og ikke føle du går på diett.",
   },
   {
-    question: "Kan jeg være med om jeg har matallergier eller skader?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
     question: "Hva er lengden på programmet?",
     answer:
       "Det nye maratonet er utvidet til hele 3 måneder! Grunnen til dette er fordi det tar fra 21 til 66 dager for å bygge gode vaner som faktisk varer! Derfor ønsker jeg å ta med damene mine på en reise som faktisk kan være en langvarig endring i livet ditt!",
