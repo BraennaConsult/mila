@@ -19,10 +19,10 @@ export function MyLuck() {
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({
     breakpoints: {
       "(max-width: 768px": {
-        slides: { perView: 1.2 },
+        slides: { perView: 1.1 },
       },
       "(min-width: 768px)": {
-        slides: { perView: 2.5, spacing: 24 },
+        slides: { perView: 2.5, spacing: 16 },
       },
     },
     slideChanged(slider) {
@@ -39,6 +39,7 @@ export function MyLuck() {
     isDesktop && instanceRef?.current
       ? instanceRef?.current?.slides.length - 1
       : instanceRef?.current?.slides.length;
+  const aspectRatio = isDesktop ? 1 : 0.75;
 
   return (
     <Section>
@@ -47,26 +48,25 @@ export function MyLuck() {
           &ldquo;Du er så heldig som har den kroppen etter to barn&ldquo;
         </h2>
       </Container>
-      <div className={cn("")}>
+      <div className={cn("carousel-padding")}>
         <div ref={ref} className="keen-slider mb-8">
           <div
             className={cn(
               "keen-slider__slide rounded-[30px] number-slide-0 relative",
-              currentSlide === 0 && "mx-4 lg:ml-4 lg:mr-0",
+              currentSlide === 0 && "ml-4 mr-1 lg:ml-4 lg:mr-0",
               currentSlide === 4 && "mr-[-32px] lg:mr-[-48px]"
             )}
           >
-            <AspectRatio ratio={1}>
+            <AspectRatio ratio={aspectRatio}>
               <Image
                 className="object-cover object-top absolute rounded-project"
                 src="/myluck-1.JPG"
                 alt="MyLuck 1"
                 fill
               />
-              <div className="absolute bottom-8 lg:bottom-14 ml-6 flex items-center w-full font-serif">
-                <p className="max-w-48 lg:max-w-40 text-lg">
-                  Heldig? <br className="lg:hidden" /> Jeg er
-                  &ldquo;heldig&ldquo; fordi
+              <div className="absolute bottom-14 lg:bottom-14 ml-6 flex items-center w-full font-serif">
+                <p className="max-w-48 lg:max-w-40 text-lg text-balance">
+                  Jeg er heldig fordi
                 </p>
                 <hr className="h-[1px] bg-white grow w-full" />
               </div>
@@ -75,10 +75,10 @@ export function MyLuck() {
           <div
             className={cn(
               "keen-slider__slide  rounded-[30px] number-slide-1 relative",
-              currentSlide === 1 && "mx-4 lg:mx-0"
+              currentSlide === 1 && "ml-4 mr-1 lg:mx-0"
             )}
           >
-            <AspectRatio ratio={1}>
+            <AspectRatio ratio={aspectRatio}>
               <Image
                 className="object-cover rounded-project"
                 fill
@@ -97,17 +97,17 @@ export function MyLuck() {
           <div
             className={cn(
               "keen-slider__slide  rounded-[30px] number-slide-2 relative",
-              currentSlide === 2 && "mx-4 lg:mx-0"
+              currentSlide === 2 && "ml-4 mr-1 lg:mx-0"
             )}
           >
-            <AspectRatio ratio={1}>
+            <AspectRatio ratio={aspectRatio}>
               <Image
-                className="rounded-project object-cover"
+                className="rounded-project object-cover scale-[115%] object-top lg:scale-100"
                 fill
                 src="/myluck-3.JPG"
                 alt="MyLuck 3"
               />
-              <div className="absolute bottom-11 flex items-center w-full font-serif space-x-1">
+              <div className="absolute bottom-11 flex items-center w-full font-serif space-x-4 lg:space-x-1">
                 <hr className="h-[1px] bg-white grow w-full flex-1" />
                 <p className="max-w-[220px] w-full text-center flex justify-center text-white text-lg">
                   Spiser næringsrikt & forstår betydningen av kalorier
@@ -119,19 +119,19 @@ export function MyLuck() {
           <div
             className={cn(
               "keen-slider__slide  rounded-[30px] number-slide-3 relative",
-              currentSlide === 3 && "mx-4 lg:mx-0"
+              currentSlide === 3 && "ml-4 mr-1 lg:mx-0"
             )}
           >
-            <AspectRatio ratio={1}>
+            <AspectRatio ratio={aspectRatio}>
               <Image
-                className="object-cover rounded-project"
+                className="object-cover rounded-project scale-[115%] lg:scale-[125%] object-top"
                 fill
                 src="/myluck-4.JPG"
                 alt="MyLuck 4"
               />
-              <div className="absolute bottom-14 flex items-center w-full font-serif space-x-1">
+              <div className="absolute bottom-14 flex items-center w-full font-serif space-x-4 lg:space-x-1">
                 <hr className="h-[1px] bg-white grow w-full flex-1" />
-                <p className="max-w-[180px] w-full text-center flex justify-center text-white text-lg">
+                <p className="max-w-[180px] w-full text-center flex justify-center text-white text-lg text-pretty">
                   Jeg mediterer & har gode vaner{" "}
                 </p>
                 <hr className="h-[1px] bg-white grow w-full flex-1" />
@@ -141,17 +141,17 @@ export function MyLuck() {
           <div
             className={cn(
               "keen-slider__slide rounded-[30px] number-slide-4 relative",
-              currentSlide === 4 && "mx-4 lg:ml-0 lg:mr-4"
+              currentSlide === 4 && "mx-2 lg:ml-0 lg:mr-2"
             )}
           >
-            <AspectRatio ratio={1}>
+            <AspectRatio ratio={aspectRatio}>
               <Image
                 className="object-cover rounded-project"
                 fill
                 src="/myluck-5.JPG"
                 alt="MyLuck 5"
               />
-              <div className="absolute bottom-[43px] lg:bottom-12 flex items-center w-full font-serif space-x-2 pr-12">
+              <div className="absolute bottom-[55px] lg:bottom-12 flex items-center w-full font-serif space-x-2 pr-12">
                 <hr className="h-[1px] bg-white w-[48px]" />
                 <Button
                   className="border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD]"

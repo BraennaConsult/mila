@@ -22,7 +22,7 @@ export function FeaturesCarousel() {
         slides: { perView: 1.2 },
       },
       "(min-width: 768px)": {
-        slides: { perView: 2.5, spacing: 24 },
+        slides: { perView: 3, spacing: 16 },
       },
     },
     slideChanged(slider) {
@@ -39,32 +39,33 @@ export function FeaturesCarousel() {
     isDesktop && instanceRef?.current
       ? instanceRef?.current?.slides.length - 1
       : instanceRef?.current?.slides.length;
+  const aspectRatio = isDesktop ? 1 : 0.75;
 
   return (
     <div className="font-sans">
-      <div className="">
+      <div className="carousel-padding">
         <div ref={ref} className="keen-slider mb-8 ">
           <div
             className={cn(
-              "keen-slider__slide number-slide-0 rounded-project relative border border-light-grey hover:border-mid-grey text-white h-full",
+              "keen-slider__slide number-slide-0 rounded-project relative border border-light-grey hover:border-mid-grey/50 text-white h-full",
               currentSlide === 0 && "mx-4 lg:ml-4 lg:mr-0",
               currentSlide === 6 && "mr-[-32px] lg:mr-[-48px]"
             )}
           >
             <AspectRatio
-              ratio={1}
-              className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between h-full"
+              ratio={aspectRatio}
+              className="py-8 pb-6 px-6 flex flex-col justify-between h-full"
             >
               <div className="flex flex-col space-y-4 lg:space-y-6">
-                <h3 className="text-md lg:text-[20px] font-semibold font-sans">
-                  Jeg støtter og <br /> heier på deg <br /> gjennom <br /> hele
-                  reisen!
+                <h3 className="text-[20px] font-semibold font-sans">
+                  Jeg støtter og heier <br className="" /> på deg gjennom <br />{" "}
+                  hele reisen
                 </h3>
-                <p className="text-md lg:text-[20px] font-light text-balance">
+                <p className="text-[20px] font-light text-balance">
                   Ukentlig sjekk for <br />
-                  motivasjon og <br /> veiledning!
+                  motivasjon og <br /> veiledning
                 </p>
-                <div className="flex">
+                <div className="absolute bottom-[26px] right-6">
                   <JoinButton variant="white" />
                 </div>
               </div>
@@ -78,23 +79,26 @@ export function FeaturesCarousel() {
           </div>
           <div
             className={cn(
-              "keen-slider__slide number-slide-1 rounded-project relative border border-mid-grey/25 hover:border-mid-grey bg-white text-black",
+              "keen-slider__slide number-slide-1 rounded-project relative border border-mid-grey/25 hover:border-mid-grey/50 bg-white text-black",
               currentSlide === 1 && "mx-4 lg:mx-0"
             )}
           >
-            <AspectRatio ratio={1} className="flex flex-col">
-              <div className="flex flex-col space-y-3 lg:space-y-6 px-6 py-8 lg:pt-14 pb-2 lg:pb-14">
-                <h3 className="text-md lg:text-[20px] font-semibold font-sans text-pretty">
+            <AspectRatio
+              ratio={aspectRatio}
+              className="flex flex-col space-y-9 lg:space-y-6"
+            >
+              <div className="flex flex-col space-y-6 px-6 py-8 pb-2">
+                <h3 className="text-[20px] font-semibold font-sans text-pretty">
                   Du vet alltid hva du skal gjøre
                 </h3>
-                <p className="text-md lg:text-[20px] font-light text-balance">
+                <p className="text-[20px] font-light text-balance">
                   12 ukers treningsprogram, 100+ videoer med steg for steg
                   intruks for hver enkelt øvelse
                 </p>
               </div>
-              <div className="space-y-1 lg:space-y-3">
+              <div className="space-y-3">
                 <Marquee className="flex">
-                  <div className="w-[100px] lg:w-[182px] h-[50px] lg:h-[82px] mr-1 lg:mr-3 relative">
+                  <div className="w-[182px] h-[82px] mr-1 lg:mr-3 relative">
                     <Image
                       src="/marquee-top-1.png"
                       fill
@@ -102,7 +106,7 @@ export function FeaturesCarousel() {
                       alt="video screenshot"
                     />
                   </div>
-                  <div className="w-[100px] lg:w-[182px] h-[50px] lg:h-[82px] mr-1 lg:mr-3 relative">
+                  <div className="w-[182px] h-[82px] mr-1 lg:mr-3 relative">
                     <Image
                       src="/marquee-top-2.png"
                       fill
@@ -110,7 +114,7 @@ export function FeaturesCarousel() {
                       alt="video screenshot"
                     />
                   </div>
-                  <div className="w-[100px] lg:w-[182px] h-[50px] lg:h-[82px] mr-1 lg:mr-3 relative">
+                  <div className="w-[182px] h-[82px] mr-1 lg:mr-3 relative">
                     <Image
                       src="/maruqee-top-3.png"
                       fill
@@ -119,8 +123,8 @@ export function FeaturesCarousel() {
                     />
                   </div>
                 </Marquee>
-                <Marquee delay={1}>
-                  <div className="w-[100px] lg:w-[182px] h-[50px] lg:h-[82px] mr-1 lg:mr-3 relative">
+                <Marquee direction="right">
+                  <div className="w-[182px] h-[82px] mr-1 lg:mr-3 relative">
                     <Image
                       src="/marquee-bottom-1.png"
                       fill
@@ -128,7 +132,7 @@ export function FeaturesCarousel() {
                       alt="video screenshot"
                     />
                   </div>
-                  <div className="w-[100px] lg:w-[182px] h-[50px] lg:h-[82px] mr-1 lg:mr-3 relative">
+                  <div className="w-[182px] h-[82px] mr-1 lg:mr-3 relative">
                     <Image
                       src="/marquee-bottom-2.png"
                       fill
@@ -136,7 +140,7 @@ export function FeaturesCarousel() {
                       alt="video screenshot"
                     />
                   </div>
-                  <div className="w-[100px] lg:w-[182px] h-[50px] lg:h-[82px] mr-1 lg:mr-3 relative">
+                  <div className="w-[182px] h-[82px] mr-1 lg:mr-3 relative">
                     <Image
                       src="/marquee-bottom-3.png"
                       fill
@@ -153,28 +157,28 @@ export function FeaturesCarousel() {
           </div>
           <div
             className={cn(
-              "keen-slider__slide number-slide-2 rounded-project relative border border-[#DEF7FF] hover:border-mid-grey bg-[#DEF7FF] text-black",
+              "keen-slider__slide number-slide-2 rounded-project relative border border-[#DEF7FF] hover:border-mid-grey/50 bg-[#DEF7FF] text-black",
               currentSlide === 2 && "mx-4 lg:mx-0"
             )}
           >
             <AspectRatio
-              ratio={1}
-              className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between"
+              ratio={aspectRatio}
+              className="py-8 pb-6 px-6 flex flex-col justify-between"
             >
               <div className="flex flex-col space-y-3 lg:space-y-6">
-                <h3 className="text-md lg:text-[20px] font-semibold font-sans text-pretty">
+                <h3 className="text-[20px] font-semibold font-sans text-pretty">
                   Du vet hva du skal spise for å lykkes
                 </h3>
-                <p className="text-md lg:text-[20px] font-light">
+                <p className="text-[20px] font-light text-pretty max-w-[80%]">
                   Smakfulle og enkle oppskrifter som du faktisk gleder deg over
-                  å kunne spise!
+                  å kunne spise
                 </p>
                 <div className="absolute bottom-[26px] right-6">
                   <JoinButton variant="ghost-black" />
                 </div>
               </div>
               <Image
-                className="absolute bottom-[-40px] lg:bottom-0 w-2/5 z-[-1]"
+                className="absolute bottom-0 w-1/2 lg:w-2/5 z-[-1]"
                 width={400}
                 height={800}
                 src="/nutrition-mockup.png"
@@ -184,19 +188,19 @@ export function FeaturesCarousel() {
           </div>
           <div
             className={cn(
-              "keen-slider__slide number-slide-3 rounded-project relative border border-[#FEE9F1] hover:border-mid-grey bg-[#FEE9F1] text-black",
+              "keen-slider__slide number-slide-3 rounded-project relative border border-[#FEE9F1] hover:border-mid-grey/50 bg-[#FEE9F1] text-black",
               currentSlide === 3 && "mx-4 lg:mx-0"
             )}
           >
             <AspectRatio
-              ratio={1}
-              className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between"
+              ratio={aspectRatio}
+              className="py-8 pb-6 px-6 flex flex-col justify-between"
             >
               <div className="flex flex-col space-y-3 lg:space-y-6">
-                <h3 className="text-md lg:text-[20px] font-sans font-semibold ">
+                <h3 className="text-[20px] font-sans font-semibold ">
                   Skreddersydd for kvinner
                 </h3>
-                <p className="text-md lg:text-[20px] font-light text-balance">
+                <p className="text-[20px] font-light text-pretty max-w-[80%]">
                   Myluck inneholder treningsuker som er tilpasset din
                   menstruasjonsperiode.
                 </p>
@@ -205,7 +209,7 @@ export function FeaturesCarousel() {
                 </div>
               </div>
               <Image
-                className="absolute bottom-[26px] w-1/3 lg:w-2/5"
+                className="absolute bottom-[26px] w-1/2 lg:w-2/5"
                 width={196}
                 height={395}
                 src="/woman.svg"
@@ -215,21 +219,21 @@ export function FeaturesCarousel() {
           </div>
           <div
             className={cn(
-              "keen-slider__slide number-slide-4 rounded-project relative border border-[#FEE9F1] hover:border-mid-grey text-black h-full",
+              "keen-slider__slide number-slide-4 rounded-project relative border border-[#FEE9F1] hover:border-mid-grey/50 text-black h-full",
               currentSlide === 4 && "mx-4 lg:mx-0"
             )}
           >
             <AspectRatio
-              ratio={1}
-              className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between text-white h-full"
+              ratio={aspectRatio}
+              className="py-8 pb-6 px-6 flex flex-col justify-between text-white h-full"
             >
               <div className="flex flex-col space-y-3 lg:space-y-6 z-10">
-                <h3 className="text-md lg:text-[20px] font-semibold font-sans text-pretty">
-                  Hold oversikt over de gode vanene dine!
+                <h3 className="text-[20px] font-semibold font-sans text-pretty">
+                  Hold oversikt over de gode vanene dine
                 </h3>
-                <p className="text-md lg:text-[20px] font-light text-balance">
+                <p className="text-[20px] font-light text-balance">
                   Å være sunn handler ikke bare om å trene – logg alle de sunne
-                  vanene dine i appen for balansert helse!
+                  vanene dine i appen for balansert helse
                 </p>
                 <div className="absolute bottom-[26px] right-6">
                   <JoinButton variant="ghost-white" />
@@ -246,28 +250,28 @@ export function FeaturesCarousel() {
           </div>
           <div
             className={cn(
-              "keen-slider__slide number-slide-5 rounded-project relative border border-mid-grey/25 hover:border-mid-grey bg-white text-black",
+              "keen-slider__slide number-slide-5 rounded-project relative border border-mid-grey/25 hover:border-mid-grey/50 bg-white text-black",
               currentSlide === 5 && "mx-4 lg:mx-0"
             )}
           >
             <AspectRatio
-              ratio={1}
-              className="py-8 lg:pt-14 pb-6 mx-6 flex flex-col justify-between"
+              ratio={aspectRatio}
+              className="py-8 pb-6 mx-6 flex flex-col justify-between"
             >
               <div className="flex flex-col space-y-3 lg:space-y-6">
-                <h3 className="text-md lg:text-[20px] font-semibold font-sans">
-                  Du er ikke alene!
+                <h3 className="text-[20px] font-semibold font-sans">
+                  Du er ikke alene
                 </h3>
-                <p className="text-md lg:text-[20px] font-light">
+                <p className="text-[20px] font-light">
                   Bli med i en eksklusiv gruppe med likesinnede kvinner som har
-                  de samme målene – vi heier på hverandre!
+                  de samme målene – vi heier på hverandre
                 </p>
                 <div className="absolute bottom-[26px] right-0">
                   <JoinButton variant="pink" />
                 </div>
               </div>
               <Image
-                className="absolute bottom-6 w-[90%] lg:w-full left-0 z-[-1]"
+                className="absolute bottom-6 w-full left-0 z-[-1]"
                 width={400}
                 height={250}
                 src="/network.jpg"
@@ -277,21 +281,21 @@ export function FeaturesCarousel() {
           </div>
           <div
             className={cn(
-              "keen-slider__slide number-slide-6 rounded-project relative border border-pink-mid hover:border-mid-grey text-black bg-[#F5BECE] h-full",
+              "keen-slider__slide number-slide-6 rounded-project relative border border-pink-mid hover:border-mid-grey/50 text-black bg-[#F5BECE] h-full",
               currentSlide === 6 && "mx-4 lg:ml-0 lg:mr-4"
             )}
           >
             <AspectRatio
-              ratio={1}
-              className="py-8 lg:pt-14 pb-6 px-6 flex flex-col justify-between h-full"
+              ratio={aspectRatio}
+              className="py-8 pb-6 px-6 flex flex-col justify-between h-full"
             >
               <div className="flex flex-col space-y-6 lg:space-y-10">
-                <h3 className="text-lg lg:text-xl leading-normal font-serif max-w-[150px] lg:max-w-[200px]">
-                  Bygg din drømmekropp slik som jeg gjorde - med å være heldig!
+                <h3 className="text-xl lg:text-2xl leading-normal font-serif max-w-[150px] lg:max-w-[200px]">
+                  Få din drømmekropp med flaks
                 </h3>
                 <div>
                   <Button variant="white">
-                    <Link href={PAYMENT_LINK}>Bli med nå!</Link>
+                    <Link href={PAYMENT_LINK}>Bli med nå</Link>
                   </Button>
                 </div>
               </div>

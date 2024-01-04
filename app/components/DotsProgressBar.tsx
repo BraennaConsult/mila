@@ -1,13 +1,12 @@
-"use client";
-
 import React, { useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "framer-motion";
 
 interface DotProps {
-  filled: boolean;
+  isFilled: boolean;
 }
 
-const Dot: React.FC<DotProps> = ({ filled }) => {
+const Dot: React.FC<DotProps> = ({ isFilled }) => {
   const variants = {
     filled: { backgroundColor: "#000000" }, // Black for filled
     unfilled: { backgroundColor: "#FFC0CB" }, // Pink for unfilled
@@ -18,8 +17,8 @@ const Dot: React.FC<DotProps> = ({ filled }) => {
       className="w-3 h-3 rounded-full"
       variants={variants}
       initial="unfilled"
-      animate={filled ? "filled" : "unfilled"}
-      transition={{ type: "spring", mass: 0.8, damping: 15, stiffness: 25 }}
+      animate={isFilled ? "filled" : "unfilled"}
+      transition={{ type: "spring", stiffness: 500 }}
     />
   );
 };
@@ -34,33 +33,30 @@ export const DotsProgressBar: React.FC<ProgressBarProps> = ({
   progressPercentage,
 }) => {
   const controls = useAnimation();
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, {
-    once: true,
-  });
+  const ref = useRef(null);
+  const inView = useInView(ref);
 
   const filledDots = Math.round((progressPercentage / 100) * totalDots);
 
   React.useEffect(() => {
     if (inView) {
       controls.start((i) => ({
-        opacity: 1,
-        transition: { delay: i * 0.065 },
+        backgroundColor: i < filledDots ? "#000000" : "#FFC0CB",
+        transition: { delay: i * 0.11, type: "easeOut" },
       }));
     }
-  }, [controls, inView]);
+  }, [controls, filledDots, inView]);
 
   return (
-    <div className="grid grid-cols-10 gap-2" ref={ref}>
+    <div ref={ref} className="grid grid-cols-10 gap-2">
       {Array.from({ length: totalDots }, (_, index) => (
         <motion.div
           key={index}
           custom={index}
-          initial={{ opacity: 0 }}
+          initial={{ backgroundColor: "#FFC0CB" }}
           animate={controls}
-        >
-          <Dot filled={index < filledDots} />
-        </motion.div>
+          className="w-3 h-3 rounded-full"
+        />
       ))}
     </div>
   );

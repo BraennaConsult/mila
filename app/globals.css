@@ -28,6 +28,9 @@
       )
     );
   }
+  .carousel-padding {
+    padding-left: calc(max(0px, (100vw - var(--container-size)) / 2));
+  }
   .carousel-center-small {
     transform: translateX(
       calc(

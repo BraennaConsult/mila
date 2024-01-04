@@ -88,10 +88,10 @@ export function AppPreview() {
     <Section>
       <Container className="mb-10 lg:mb-20 lg:flex">
         <div>
-          <h2 className="text-pretty mb-9 lg:mb-14 text-center lg:text-left mx-auto max-w-xl">
+          <h2 className="text-pretty mb-9 lg:mb-14 text-center lg:text-left mx-auto max-w-xl text-2xl lg:text-3xl">
             3 måneders treningsmaraton på Myluck appen
           </h2>
-          <div className="lg:hidden relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-20 overflow-hidden">
+          <div className="lg:hidden relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 pl-20 overflow-hidden">
             <motion.div
               ref={containerRefMobile}
               style={{
@@ -176,12 +176,12 @@ export function AppPreview() {
           <Button
             variant="secondary"
             hasIcon
-            className="w-full lg:w-fit mb-9 lg:mb-0"
+            className="w-full lg:w-fit mb-20 lg:mb-0"
           >
             Bli med
           </Button>
         </div>
-        <div className="hidden lg:block relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-20 overflow-hidden">
+        <div className="hidden lg:block relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-10 overflow-hidden">
           <motion.div
             ref={containerRefDesktop}
             style={{
@@ -230,7 +230,9 @@ export function AppPreview() {
           </motion.div>
         </div>
       </Container>
+      {/* <div className="lg:max-w-[1200px] lg:mx-auto"> */}
       <FeaturesCarousel />
+      {/* </div> */}
     </Section>
   );
 }
