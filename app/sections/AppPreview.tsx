@@ -230,9 +230,7 @@ export function AppPreview() {
           </motion.div>
         </div>
       </Container>
-      {/* <div className="lg:max-w-[1200px] lg:mx-auto"> */}
       <FeaturesCarousel />
-      {/* </div> */}
     </Section>
   );
 }
