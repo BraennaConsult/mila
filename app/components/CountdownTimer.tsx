@@ -17,7 +17,7 @@ const CountdownTimer = ({ title, targetDate }: Props) => {
         {timeLeft.days > 0 && (
           <span suppressHydrationWarning>{timeLeft.days}d</span>
         )}
-        {timeLeft.days > 0 && (
+        {timeLeft.hours > 0 && (
           <span suppressHydrationWarning>{timeLeft.hours}t</span>
         )}
         {timeLeft.minutes > 0 && (
