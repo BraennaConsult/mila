@@ -18,16 +18,17 @@ export function CTA({ className }: Props) {
   return (
     <Section className={className}>
       <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
-        <h2 className="text-center mb-0 text-2xl lg:text-3xl">
+        <h2 className="text-center mb-0 text-2xl lg:text-3xl text-balance">
           Vi bygger selvtillit på treningssenteret
         </h2>
-        <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto">
+        <Progress className="mx-auto" />
+        {/* <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto">
           <CountdownTimer
             title="Påmeldingen stenger om"
             targetDate={targetDate}
           />
           <Progress className="lg:order-first" />
-        </div>
+        </div> */}
         <div className="space-y-3 lg:mx-auto flex flex-col items-center">
           <Button variant="pink" className="w-full lg:w-fit">
             Bli med

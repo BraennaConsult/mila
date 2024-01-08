@@ -7,7 +7,7 @@ export function Testimonials() {
   return (
     <Section className="bg-light-grey">
       <Container>
-        <h2 className="mb-10">Hva folk sier</h2>
+        <h2 className="mb-10 text-center lg:text-left">Hva folk sier</h2>
         <div className="columns-1 lg:columns-3 space-y-4 ">
           {testimonials.map((testimonial, i) => (
             <div key={i}>
