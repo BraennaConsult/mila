@@ -5,6 +5,7 @@ import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
+import { SALE_FINISHES_AT } from "@/constants";
 import Image from "next/image";
 
 interface Props {
@@ -12,6 +13,8 @@ interface Props {
 }
 
 export function CTA({ className }: Props) {
+  const targetDate = SALE_FINISHES_AT;
+
   return (
     <Section className={className}>
       <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
@@ -19,7 +22,10 @@ export function CTA({ className }: Props) {
           Vi bygger selvtillit på treningssenteret
         </h2>
         <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto">
-          <CountdownTimer />
+          <CountdownTimer
+            title="Påmeldingen stenger om"
+            targetDate={targetDate}
+          />
           <Progress className="lg:order-first" />
         </div>
         <div className="space-y-3 lg:mx-auto flex flex-col items-center">

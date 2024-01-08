@@ -7,11 +7,10 @@ import CountdownTimer from "@/app/components/CountdownTimer";
 import { Footer } from "@/app/components/Footer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { useTimer } from "@/app/useTimer";
-import { TEMP_LINK } from "@/constants";
+import { SALE_STARTS_AT, TEMP_LINK } from "@/constants";
 
 export default function Page() {
-  const { timeLeft, progress } = useTimer();
+  const targetDate = SALE_STARTS_AT;
 
   return (
     <>
@@ -27,10 +26,15 @@ export default function Page() {
               men påmeldingen åpner for alle snart ❤️❤️❤️
             </p>
             <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto">
-              <CountdownTimer />
+              <CountdownTimer
+                title="Påmelding åpner om"
+                targetDate={targetDate}
+              />
               <Progress className="lg:order-first" />
             </div>
-            <Button href={TEMP_LINK}>Del Myluck-reelen</Button>
+            <Button href={TEMP_LINK} variant="pink" className="mx-auto">
+              Del Myluck-reelen
+            </Button>
           </Container>
         </Section>
       </main>

@@ -10,9 +10,7 @@ export interface TimeLeft {
   seconds: number;
 }
 
-export function useCountdown() {
-  const targetDate = SALE_FINISHES_AT;
-
+export function useCountdown(targetDate: string) {
   const calculateTimeLeft = (): TimeLeft => {
     const difference = +new Date(targetDate) - +new Date();
     if (difference > 0) {
