@@ -22,7 +22,7 @@ export function Hero() {
           Vær med å bygg din drømmekropp og skap din egen lykke
         </h1>
         <p className="text-md text-white max-w-xs md:max-w-md text-pretty">
-          Over 100+ rå kvinner har nådd sine personlige mål
+          Over 100+ rå kvinner har nådd sine personlige mål.
           Transformasjonsmaraton av @milatimaa
         </p>
         <Button hasIcon>Bli med</Button>
