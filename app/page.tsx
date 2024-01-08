@@ -1,3 +1,5 @@
+import { Footer } from "@/app/components/Footer";
+import { Header } from "@/app/components/Header";
 import { AppPreview } from "@/app/sections/AppPreview";
 import { CTA } from "@/app/sections/CTA";
 import { FAQ } from "@/app/sections/FAQ";
@@ -7,15 +9,18 @@ import { Testimonials } from "@/app/sections/Testimonials";
 
 export default function Home() {
   return (
-    <main className="">
-      <Hero />
-      <MyLuck />
-      <AppPreview />
-      <CTA className="pt-0 md:pt-0 lg:pt-0" />
-      <Testimonials />
-      <CTA />
-      <FAQ />
-      <CTA />
-    </main>
+    <>
+      <Header />
+      <main className="">
+        <Hero />
+        <MyLuck />
+        <AppPreview />
+        <CTA className="pt-0 md:pt-0 lg:pt-0" />
+        <Testimonials />
+        <CTA />
+        <FAQ />
+      </main>
+      <Footer />
+    </>
   );
 }

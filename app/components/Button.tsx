@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "@vercel/analytics";
 import { HeartIcon } from "@/app/icons/HeartIcon";
 import { cn } from "@/app/utils";
 import { PAYMENT_LINK } from "@/constants";
@@ -18,7 +19,9 @@ const buttonProps = cva({
       secondary:
         "border-black disabled:border-mid-grey disabled:text-mid-grey text-black focus:ouline-2 hover:bg-black hover:text-white",
       white:
-        "border-white text-black hover:bg-black bg-white hover:text-white focus:bg-black focus:text-white",
+        "border-white text-black hover:bg-black hover:border-black bg-white hover:text-white focus:bg-black focus:border-black focus:text-white",
+      black:
+        "bg-black text-white hover:text-black focus:text-black hover:bg-white focus:bg-white hover:border-black focus:border-black",
       "ghost-white":
         "border-white bg-transparent text-white hover:bg-white hover:text-black",
     },
@@ -44,6 +47,7 @@ export interface ButtonProps
   asChild?: boolean;
   isLoading?: boolean;
   hasIcon?: boolean;
+  href?: string;
 }
 
 const Button = ({
@@ -53,11 +57,15 @@ const Button = ({
   className,
   isLoading,
   hasIcon,
+  href,
   children,
 }: ButtonProps) => {
   return (
-    <Link
-      href={PAYMENT_LINK}
+    <a
+      href={href || PAYMENT_LINK}
+      onClick={() => {
+        track("cta_button");
+      }}
       className={cn(
         buttonProps({ variant, size, fullWidth, className }),
         "relative",
@@ -71,7 +79,7 @@ const Button = ({
         </span>
       )}
       {children}
-    </Link>
+    </a>
   );
 };
 

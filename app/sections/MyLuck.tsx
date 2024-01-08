@@ -24,7 +24,7 @@ export function MyLuck() {
             const isFirstSlide = idx === 0;
 
             const firstSlideOrigin = Math.max(0, 15 / window.innerWidth);
-            const spacing = Math.max(0, 4 / window.innerWidth);
+            const spacing = Math.max(0, 8 / window.innerWidth);
 
             let origin = 0.05;
 
@@ -78,7 +78,7 @@ export function MyLuck() {
   return (
     <Section>
       <Container>
-        <h2 className="lg:max-w-lg text-pretty mb-20 md:mb-32 lg:mb-40">
+        <h2 className="lg:max-w-lg text-pretty mb-20 md:mb-32 lg:mb-40 text-[28px] lg:text-2xl text-center lg:text-left">
           &ldquo;Du er så heldig som har den kroppen etter to barn&ldquo;
         </h2>
       </Container>
@@ -140,7 +140,7 @@ export function MyLuck() {
               src="/myluck-3.JPG"
               alt="MyLuck 3"
             />
-            <div className="absolute bottom-11 flex items-center w-full font-serif space-x-4 lg:space-x-1">
+            <div className="absolute bottom-11 flex items-center w-full font-serif space-x-4">
               <hr className="h-[1px] bg-white grow w-full flex-1" />
               <p className="max-w-[220px] w-full text-center flex justify-center text-white text-lg">
                 Spiser næringsrikt & forstår betydningen av kalorier

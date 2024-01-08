@@ -1,6 +1,6 @@
 "use client";
 
-import { SPOTS_AVAILABLE } from "@/constants";
+import { PERCENTAGE_FILLED, SPOTS_AVAILABLE } from "@/constants";
 import {
   motion,
   useAnimation,
@@ -11,7 +11,7 @@ import {
 import { useEffect, useRef } from "react";
 
 export function AnimatedNumber({ value }: { value: number }) {
-  let spring = useSpring(SPOTS_AVAILABLE, {
+  let spring = useSpring(0, {
     mass: 0.8,
     stiffness: 25,
     damping: 15,

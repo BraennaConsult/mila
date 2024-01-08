@@ -91,7 +91,7 @@ export function AppPreview() {
           <h2 className="text-pretty mb-9 lg:mb-14 text-center lg:text-left mx-auto max-w-xl text-2xl lg:text-3xl">
             3 måneders treningsmaraton på Myluck appen
           </h2>
-          <div className="lg:hidden relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 pl-20 overflow-hidden">
+          <div className="lg:hidden relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-20 overflow-hidden">
             <motion.div
               ref={containerRefMobile}
               style={{
@@ -173,13 +173,14 @@ export function AppPreview() {
               </ul>
             </div>
           </div>
-          <Button
-            variant="secondary"
-            hasIcon
-            className="w-full lg:w-fit mb-20 lg:mb-0"
-          >
-            Bli med
-          </Button>
+          <div className="flex flex-col space-y-3 lg:space-y-5 mb-20 lg:mb-0">
+            <Button variant="secondary" hasIcon className="w-full lg:w-fit ">
+              Bli med
+            </Button>
+            <span className="text-mid-grey text-md flex justify-center lg:justify-start">
+              Maratonet starter den 29. januar 2024
+            </span>
+          </div>
         </div>
         <div className="hidden lg:block relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-10 overflow-hidden">
           <motion.div

@@ -1,12 +1,11 @@
 "use client";
 
-import { TimeLeft } from "@/app/sections/CTA";
+import { useCountdown } from "@/app/useCountdown";
+import { TimeLeft } from "@/app/useTimer";
 
-interface Props {
-  timeLeft: TimeLeft;
-}
+const CountdownTimer = () => {
+  const timeLeft = useCountdown();
 
-const CountdownTimer = ({ timeLeft }: Props) => {
   return (
     <div className="flex flex-col">
       <span className="text-mid-grey">Påmeldingen stenger om</span>

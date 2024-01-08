@@ -24,7 +24,7 @@ export function FeaturesCarousel() {
             const isFirstSlide = idx === 0;
 
             const firstSlideOrigin = Math.max(0, 15 / window.innerWidth);
-            const spacing = Math.max(0, 4 / window.innerWidth);
+            const spacing = Math.max(0, 8 / window.innerWidth);
 
             let origin = 0.05;
 
@@ -42,6 +42,24 @@ export function FeaturesCarousel() {
         },
       },
       "(min-width: 768px)": {
+        slides(_, slides) {
+          const slideConfig = slides.map((_, idx) => {
+            const isLastSlide = idx === slides.length - 1;
+
+            const marginLeft = Math.max(0, (window.innerWidth - 1200) / 2);
+            const originRatio = marginLeft / window.innerWidth;
+            const spacing = Math.max(0, 8 / window.innerWidth);
+
+            return {
+              spacing: spacing,
+              origin: isLastSlide ? 1.33 : originRatio,
+              size: 0.5,
+            };
+          });
+          return slideConfig;
+        },
+      },
+      "(min-width: 1200px)": {
         slides(_, slides) {
           const slideConfig = slides.map((_, idx) => {
             const isLastSlide = idx === slides.length - 1;
@@ -127,7 +145,7 @@ export function FeaturesCarousel() {
               </p>
             </div>
             <div className="space-y-3">
-              <Marquee className="flex">
+              <Marquee className="flex" speed={25}>
                 <div className="w-[182px] h-[82px] mr-1 lg:mr-3 relative">
                   <Image
                     src="/marquee-top-1.png"
@@ -153,7 +171,7 @@ export function FeaturesCarousel() {
                   />
                 </div>
               </Marquee>
-              <Marquee direction="right">
+              <Marquee direction="right" speed={25}>
                 <div className="w-[182px] h-[82px] mr-1 lg:mr-3 relative">
                   <Image
                     src="/marquee-bottom-1.png"
@@ -196,7 +214,7 @@ export function FeaturesCarousel() {
             className="py-8 pb-6 px-6 flex flex-col justify-between"
           >
             <div className="flex flex-col space-y-3 lg:space-y-6">
-              <h3 className="text-[20px] font-semibold font-sans text-pretty">
+              <h3 className="text-[20px] font-semibold font-sans text-balance">
                 Du vet hva du skal spise for å lykkes
               </h3>
               <p className="text-[20px] font-light text-pretty max-w-[90%] lg:max-w-[80%]">
@@ -258,7 +276,7 @@ export function FeaturesCarousel() {
             className="py-8 pb-6 px-6 flex flex-col justify-between text-white h-full w-full"
           >
             <div className="flex flex-col space-y-3 lg:space-y-6 z-10">
-              <h3 className="text-[20px] font-semibold font-sans text-pretty">
+              <h3 className="text-[20px] font-semibold font-sans text-balance">
                 Hold oversikt over de gode vanene dine
               </h3>
               <p className="text-[20px] font-light text-balance">
@@ -320,8 +338,8 @@ export function FeaturesCarousel() {
             className="py-8 pb-6 px-6 flex flex-col justify-between h-full"
           >
             <div className="flex flex-col space-y-6 lg:space-y-10">
-              <h3 className="text-xl lg:text-2xl leading-normal font-serif max-w-[150px] lg:max-w-[200px]">
-                Få din drømme- kropp med flaks
+              <h3 className="text-lg lg:text-xl leading-normal font-serif max-w-[150px] lg:max-w-[200px]">
+                Få din drømmekropp med flaks
               </h3>
               <div>
                 <Button variant="white">
