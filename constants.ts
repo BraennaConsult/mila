@@ -14,5 +14,5 @@ export const ROUTES = {
   TERMS_OF_SERVICE: "/terms-of-service",
 };
 
-export const SALE_STARTS_AT = "2024-01-09T18:00:00";
-export const SALE_FINISHES_AT = "2024-01-20T23:59:59";
+export const SALE_STARTS_AT = "2024-01-09T18:00:00+01:00";
+export const SALE_FINISHES_AT = "2024-01-20T23:59:59+01:00";
