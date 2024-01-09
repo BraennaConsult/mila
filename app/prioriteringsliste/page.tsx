@@ -110,6 +110,7 @@ export default function Page() {
                 kr 1 883 per mnd i 3 mnd
               </span>
             </div>
+            <Progress className="mx-auto" />
           </Container>
         </Section>
         <Section className="mt-0 md:mt-0 lg:mt-0">
