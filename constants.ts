@@ -4,7 +4,8 @@ export const PERCENTAGE_FILLED = 10;
 
 export const CONTACT_EMAIL = "hei@myluck.no";
 
-export const TEMP_LINK = "/";
+export const TEMP_LINK =
+  "https://www.instagram.com/reel/C13stl0IhUC/?igsh=NTYzOWQzNmJjMA==";
 export const PAYMENT_LINK = "/forsalg";
 // export const PAYMENT_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
 export const STRIPE_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
