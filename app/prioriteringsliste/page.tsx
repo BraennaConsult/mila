@@ -98,13 +98,18 @@ export default function Page() {
             <h1 className="text-center mb-0 text-2xl lg:text-3xl">
               Hemmelig påmelding for prioritetslisten
             </h1>
-            <Button
-              href={STRIPE_LINK}
-              variant="pink"
-              className="mx-auto w-full lg:w-fit"
-            >
-              Bli med på maraton
-            </Button>
+            <div className="flex flex-col space-y-3 mx-auto">
+              <Button
+                href={STRIPE_LINK}
+                variant="pink"
+                className="mx-auto w-full lg:w-fit"
+              >
+                Bli med på maraton
+              </Button>
+              <span className="text-center text-mid-grey text-md">
+                Totalpris for 3 mnd er kr 5 650
+              </span>
+            </div>
           </Container>
         </Section>
         <Section className="mt-0 md:mt-0 lg:mt-0">
