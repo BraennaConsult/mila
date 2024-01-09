@@ -169,7 +169,7 @@ export function AppPreview() {
               <ul className="list-disc list-outside pl-5 space-y-2">
                 <li>Smakfulle oppskrifter</li>
                 <li>Kalorioversikt</li>
-                <li>Din egen matplan</li>
+                <li>Personlig kalori- og makromål</li>
               </ul>
             </div>
           </div>
