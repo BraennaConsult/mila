@@ -96,9 +96,13 @@ export default function Page() {
         <Section>
           <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
             <h1 className="text-center mb-0 text-2xl lg:text-3xl">
-              Betalingslenke for prioriteringsliste
+              Betalingslenke for prioritetsliste
             </h1>
-            <Button href={STRIPE_LINK} variant="pink" className="mx-auto">
+            <Button
+              href={STRIPE_LINK}
+              variant="pink"
+              className="mx-auto w-full lg:w-fit"
+            >
               Bli med på maraton
             </Button>
           </Container>
