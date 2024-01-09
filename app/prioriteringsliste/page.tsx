@@ -101,7 +101,14 @@ export default function Page() {
             <Button href={STRIPE_LINK} variant="pink" className="mx-auto">
               Bli med på maraton
             </Button>
-            {/* <div>
+          </Container>
+        </Section>
+        <Section className="mt-0 md:mt-0 lg:mt-0">
+          <Container className="mb-10 lg:mb-20 lg:flex">
+            <div>
+              <h2 className="text-pretty mb-9 lg:mb-14 text-center lg:text-left mx-auto max-w-xl text-2xl lg:text-3xl">
+                3 måneders treningsmaraton på Myluck appen
+              </h2>
               <div className="lg:hidden relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-20 overflow-hidden">
                 <motion.div
                   ref={containerRefMobile}
@@ -189,6 +196,7 @@ export default function Page() {
                   variant="secondary"
                   hasIcon
                   className="w-full lg:w-fit "
+                  href={STRIPE_LINK}
                 >
                   Bli med
                 </Button>
@@ -196,8 +204,8 @@ export default function Page() {
                   Maratonet starter den 29. januar 2024
                 </span>
               </div>
-            </div> */}
-            {/* <div className="hidden lg:block relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-10 overflow-hidden">
+            </div>
+            <div className="hidden lg:block relative max-w-2xl mx-auto w-full h-[450px] lg:h-[650px] pt-20 lg:pl-10 overflow-hidden">
               <motion.div
                 ref={containerRefDesktop}
                 style={{
@@ -244,7 +252,7 @@ export default function Page() {
                   height={1200}
                 />
               </motion.div>
-            </div> */}
+            </div>
           </Container>
         </Section>
       </main>
