@@ -8,7 +8,12 @@ import { Footer } from "@/app/components/Footer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
 import { getLink, getSaleHasStarted } from "@/app/utils";
-import { SALE_FINISHES_AT, SALE_STARTS_AT } from "@/constants";
+import {
+  SALE_FINISHES_AT,
+  SALE_STARTS_AT,
+  STRIPE_LINK,
+  TEMP_LINK,
+} from "@/constants";
 
 export default function Page() {
   const targetDate = SALE_STARTS_AT;
@@ -39,7 +44,11 @@ export default function Page() {
               />
               <Progress className="lg:order-first" />
             </div>
-            <Button href={getLink()} variant="pink" className="mx-auto">
+            <Button
+              href={saleHasStarted ? STRIPE_LINK : TEMP_LINK}
+              variant="pink"
+              className="mx-auto"
+            >
               {saleHasStarted ? "Bli med på maratonet" : "Del Myluck-reelen"}
             </Button>
           </Container>
