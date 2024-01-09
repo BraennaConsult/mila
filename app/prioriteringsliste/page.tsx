@@ -96,7 +96,7 @@ export default function Page() {
         <Section>
           <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
             <h1 className="text-center mb-0 text-2xl lg:text-3xl">
-              Betalingslenke for prioritetsliste
+              Hemmelig påmelding for prioritetslisten
             </h1>
             <Button
               href={STRIPE_LINK}
