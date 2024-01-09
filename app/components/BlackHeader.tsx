@@ -1,6 +1,7 @@
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import { Logo } from "@/app/components/Logo";
+import { getLink } from "@/app/utils";
 import { PAYMENT_LINK } from "@/constants";
 import Link from "next/link";
 
@@ -16,7 +17,7 @@ export function BlackHeader({ href }: Props) {
           <Logo className={`cursor-pointer w-20 text black`} />
         </Link>
         <Button size="sm" variant="black">
-          <Link href={href || PAYMENT_LINK}>Bli med</Link>
+          <Link href={href || getLink()}>Bli med</Link>
         </Button>
       </Container>
     </header>

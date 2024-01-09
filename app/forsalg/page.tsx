@@ -7,10 +7,13 @@ import CountdownTimer from "@/app/components/CountdownTimer";
 import { Footer } from "@/app/components/Footer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { SALE_STARTS_AT, TEMP_LINK } from "@/constants";
+import { getLink, getSaleHasStarted } from "@/app/utils";
+import { SALE_FINISHES_AT, SALE_STARTS_AT } from "@/constants";
 
 export default function Page() {
   const targetDate = SALE_STARTS_AT;
+  const saleFinishesAt = SALE_FINISHES_AT;
+  const saleHasStarted = getSaleHasStarted();
 
   return (
     <>
@@ -27,13 +30,17 @@ export default function Page() {
             </p>
             <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto">
               <CountdownTimer
-                title="Påmelding åpner om"
-                targetDate={targetDate}
+                title={
+                  saleHasStarted
+                    ? "Påmeldingen stenger om"
+                    : "Påmeldingen åpner om"
+                }
+                targetDate={saleHasStarted ? saleFinishesAt : targetDate}
               />
               <Progress className="lg:order-first" />
             </div>
-            <Button href={TEMP_LINK} variant="pink" className="mx-auto">
-              Del Myluck-reelen
+            <Button href={getLink()} variant="pink" className="mx-auto">
+              {saleHasStarted ? "Bli med på maratonet" : "Del Myluck-reelen"}
             </Button>
           </Container>
         </Section>

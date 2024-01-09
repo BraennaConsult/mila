@@ -2,7 +2,7 @@
 
 import { track } from "@vercel/analytics";
 import { HeartIcon } from "@/app/icons/HeartIcon";
-import { cn } from "@/app/utils";
+import { cn, getLink } from "@/app/utils";
 import { PAYMENT_LINK } from "@/constants";
 import { cva, type VariantProps } from "cva";
 import Link from "next/link";
@@ -62,7 +62,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <a
-      href={href || PAYMENT_LINK}
+      href={href || getLink()}
       onClick={() => {
         track("cta_button");
       }}

@@ -3,6 +3,7 @@
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import { Logo } from "@/app/components/Logo";
+import { getLink } from "@/app/utils";
 import { PAYMENT_LINK } from "@/constants";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -34,7 +35,7 @@ export function Header() {
           />
         </Link>
         <Button size="sm" variant={hasScrolled ? "pink-ghost" : "white"}>
-          <Link href={PAYMENT_LINK}>Bli med</Link>
+          <Link href={getLink()}>Bli med</Link>
         </Button>
       </Container>
     </header>

@@ -5,6 +5,7 @@ import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
+import { getSaleHasStarted } from "@/app/utils";
 import { SALE_FINISHES_AT } from "@/constants";
 import Image from "next/image";
 
@@ -14,6 +15,7 @@ interface Props {
 
 export function CTA({ className }: Props) {
   const targetDate = SALE_FINISHES_AT;
+  const saleHasStarted = getSaleHasStarted();
 
   return (
     <Section className={className}>
@@ -21,14 +23,17 @@ export function CTA({ className }: Props) {
         <h2 className="text-center mb-0 text-2xl lg:text-3xl text-balance">
           Vi bygger selvtillit på treningssenteret
         </h2>
-        <Progress className="mx-auto" />
-        {/* <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto">
-          <CountdownTimer
-            title="Påmeldingen stenger om"
-            targetDate={targetDate}
-          />
-          <Progress className="lg:order-first" />
-        </div> */}
+        {saleHasStarted ? (
+          <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto">
+            <CountdownTimer
+              title="Påmeldingen stenger om"
+              targetDate={targetDate}
+            />
+            <Progress className="lg:order-first" />
+          </div>
+        ) : (
+          <Progress className="mx-auto" />
+        )}
         <div className="space-y-3 lg:mx-auto flex flex-col items-center">
           <Button variant="pink" className="w-full lg:w-fit">
             Bli med

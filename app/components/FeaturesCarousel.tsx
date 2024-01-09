@@ -1,7 +1,7 @@
 import { Button } from "@/app/components/Button";
 import { JoinButton } from "@/app/components/JoinButton";
 import { useIsDesktop } from "@/app/useIsDesktop";
-import { cn } from "@/app/utils";
+import { cn, getLink } from "@/app/utils";
 import { PAYMENT_LINK } from "@/constants";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
@@ -343,7 +343,7 @@ export function FeaturesCarousel() {
               </h3>
               <div>
                 <Button variant="white">
-                  <Link href={PAYMENT_LINK}>Bli med nå</Link>
+                  <Link href={getLink()}>Bli med nå</Link>
                 </Button>
               </div>
             </div>

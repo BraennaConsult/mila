@@ -1,4 +1,4 @@
-import { cn } from "@/app/utils";
+import { cn, getLink } from "@/app/utils";
 import { PAYMENT_LINK } from "@/constants";
 import { track } from "@vercel/analytics";
 
@@ -9,7 +9,7 @@ interface Props {
 export function JoinButton({ variant }: Props) {
   return (
     <a
-      href={PAYMENT_LINK}
+      href={getLink()}
       onClick={() => {
         track("cta_button");
       }}

@@ -1,3 +1,4 @@
+import { PAYMENT_LINK, SALE_STARTS_AT, STRIPE_LINK } from "@/constants";
 import clsx, { ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -35,4 +36,20 @@ export function getPercentage(): number {
   const hour = now.getUTCHours() + 1;
 
   return percentageByHour[hour] || 0;
+}
+
+export function getSaleHasStarted() {
+  const saleStartTime = SALE_STARTS_AT;
+
+  const saleHasStarted = new Date() >= new Date(saleStartTime);
+
+  return saleHasStarted;
+}
+
+export function getLink() {
+  const saleHasStarted = getSaleHasStarted();
+
+  const link = saleHasStarted ? STRIPE_LINK : PAYMENT_LINK;
+
+  return link;
 }
