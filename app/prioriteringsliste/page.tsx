@@ -107,7 +107,7 @@ export default function Page() {
                 Bli med på maraton
               </Button>
               <span className="text-center text-mid-grey text-md">
-                Totalpris for 3 mnd er kr 5 650
+                kr 1 883 per mnd i 3 mnd
               </span>
             </div>
           </Container>
