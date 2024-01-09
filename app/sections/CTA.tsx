@@ -33,8 +33,11 @@ export function CTA({ className }: Props) {
           <Button variant="pink" className="w-full lg:w-fit">
             Bli med
           </Button>
+
           <div className="flex justify-center text-mid-grey items-center space-x-0.5">
-            <span className="mt-0.5">Del opp betalingen med</span>
+            <span className="text-center text-mid-grey text-md">
+              kr 1 883 per mnd i 3 mnd med
+            </span>
             <Image src="/klarna.svg" width={64} height={64} alt="Klarna logo" />
           </div>
         </div>
