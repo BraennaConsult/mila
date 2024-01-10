@@ -2,7 +2,7 @@ export const SPOTS_AVAILABLE = 200;
 export const SPOTS_LEFT = 12;
 export const PERCENTAGE_FILLED = 10;
 
-export const CONTACT_EMAIL = "hei@myluck.no";
+export const CONTACT_EMAIL = "jk@gymfluence.io";
 
 export const TEMP_LINK =
   "https://www.instagram.com/reel/C13stl0IhUC/?igsh=NTYzOWQzNmJjMA==";
@@ -12,6 +12,7 @@ export const STRIPE_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
 
 export const ROUTES = {
   TERMS_OF_SERVICE: "/terms-of-service",
+  CONTACT_INFO: "/contact-info",
 };
 
 export const SALE_STARTS_AT = "2024-01-09T18:00:00+01:00";
