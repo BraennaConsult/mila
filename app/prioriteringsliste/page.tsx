@@ -3,19 +3,18 @@
 import { BlackHeader } from "@/app/components/BlackHeader";
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
-import CountdownTimer from "@/app/components/CountdownTimer";
 import { Footer } from "@/app/components/Footer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { SALE_STARTS_AT, STRIPE_LINK, TEMP_LINK } from "@/constants";
+import { PAYMENT_LINK } from "@/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
 export default function Page() {
-  // const targetDate = SALE_STARTS_AT;
   const containerRefMobile = useRef(null);
   const containerRefDesktop = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: containerRefMobile,
     offset: ["start 0.9", "start 0"],
@@ -91,7 +90,7 @@ export default function Page() {
 
   return (
     <>
-      <BlackHeader href={STRIPE_LINK} />
+      <BlackHeader href={PAYMENT_LINK} />
       <main>
         <Section>
           <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
@@ -100,7 +99,7 @@ export default function Page() {
             </h1>
             <div className="flex flex-col space-y-3 mx-auto">
               <Button
-                href={STRIPE_LINK}
+                href={PAYMENT_LINK}
                 variant="pink"
                 className="mx-auto w-full lg:w-fit"
               >
@@ -214,7 +213,7 @@ export default function Page() {
                   variant="secondary"
                   hasIcon
                   className="w-full lg:w-fit "
-                  href={STRIPE_LINK}
+                  href={PAYMENT_LINK}
                 >
                   Bli med
                 </Button>

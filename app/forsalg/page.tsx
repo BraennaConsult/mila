@@ -7,11 +7,11 @@ import CountdownTimer from "@/app/components/CountdownTimer";
 import { Footer } from "@/app/components/Footer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { getLink, getSaleHasStarted } from "@/app/utils";
+import { getSaleHasStarted } from "@/app/utils";
 import {
+  PAYMENT_LINK,
   SALE_FINISHES_AT,
   SALE_STARTS_AT,
-  STRIPE_LINK,
   TEMP_LINK,
 } from "@/constants";
 
@@ -45,7 +45,7 @@ export default function Page() {
               <Progress className="lg:order-first" />
             </div>
             <Button
-              href={saleHasStarted ? STRIPE_LINK : TEMP_LINK}
+              href={saleHasStarted ? PAYMENT_LINK : TEMP_LINK}
               variant="pink"
               className="mx-auto"
             >

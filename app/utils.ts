@@ -1,4 +1,4 @@
-import { PAYMENT_LINK, SALE_STARTS_AT, STRIPE_LINK } from "@/constants";
+import { PAYMENT_LINK, SALE_STARTS_AT, TEMP_LINK } from "@/constants";
 import clsx, { ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -53,7 +53,7 @@ export function getSaleHasStarted() {
 export function getLink() {
   const saleHasStarted = getSaleHasStarted();
 
-  const link = saleHasStarted ? STRIPE_LINK : PAYMENT_LINK;
+  const link = saleHasStarted ? PAYMENT_LINK : TEMP_LINK;
 
   return link;
 }

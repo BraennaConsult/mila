@@ -62,7 +62,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <a
-      href={href || getLink()}
+      href={href || PAYMENT_LINK}
       onClick={() => {
         track("cta_button");
       }}

@@ -45,6 +45,17 @@ export function CTA({ className }: Props) {
             </span>
             <Image src="/klarna.svg" width={64} height={64} alt="Klarna logo" />
           </div>
+          <div className="flex justify-center text-mid-grey items-center space-x-2">
+            <span className="text-center text-mid-grey text-md">Betal med</span>
+            <div className="w-[64px]">
+              <Image
+                src="/vipps.png"
+                width={256}
+                height={256}
+                alt="Vipps logo"
+              />
+            </div>
+          </div>
         </div>
       </Container>
     </Section>
