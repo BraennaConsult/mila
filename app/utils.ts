@@ -13,28 +13,28 @@ export function getPercentage(): number {
     9: 9,
     10: 10,
     11: 13,
-    12: 18,
-    13: 24,
-    14: 55,
-    15: 55,
-    16: 56,
-    17: 57,
-    18: 58,
-    19: 59,
-    20: 60,
-    21: 61,
-    22: 61,
-    23: 61,
+    12: 62,
+    13: 63,
+    14: 63,
+    15: 64,
+    16: 64,
+    17: 65,
+    18: 65,
+    19: 66,
+    20: 66,
+    21: 67,
+    22: 67,
+    23: 67,
   };
 
   const now = new Date();
   if (
     now.getUTCFullYear() !== 2024 ||
     now.getUTCMonth() !== 0 ||
-    now.getUTCDate() !== 10 ||
-    now.getUTCDay() !== 3
+    now.getUTCDate() !== 12 ||
+    now.getUTCDay() !== 5
   ) {
-    return 62;
+    return 67;
   }
 
   const hour = now.getUTCHours() + 1;
