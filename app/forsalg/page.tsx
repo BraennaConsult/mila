@@ -10,6 +10,7 @@ import { Section } from "@/app/components/Section";
 import { getSaleHasStarted } from "@/app/utils";
 import {
   PAYMENT_LINK,
+  PRICE_AND_DATE,
   SALE_FINISHES_AT,
   SALE_STARTS_AT,
   TEMP_LINK,
@@ -44,13 +45,16 @@ export default function Page() {
               />
               <Progress className="lg:order-first" />
             </div>
-            <Button
-              href={saleHasStarted ? PAYMENT_LINK : TEMP_LINK}
-              variant="pink"
-              className="mx-auto"
-            >
-              {saleHasStarted ? "Bli med på maratonet" : "Del Myluck-reelen"}
-            </Button>
+            <div className="flex flex-col space-y-5 justify-center items-center">
+              <Button
+                href={saleHasStarted ? PAYMENT_LINK : TEMP_LINK}
+                variant="pink"
+                className="mx-auto"
+              >
+                {saleHasStarted ? "Bli med på maratonet" : "Del Myluck-reelen"}
+              </Button>
+              <span className="text-md text-mid-grey">{PRICE_AND_DATE}</span>
+            </div>
           </Container>
         </Section>
       </main>

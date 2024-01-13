@@ -4,6 +4,7 @@ import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import { FeaturesCarousel } from "@/app/components/FeaturesCarousel";
 import { Section } from "@/app/components/Section";
+import { PRICE_AND_DATE } from "@/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
@@ -178,7 +179,7 @@ export function AppPreview() {
               Bli med
             </Button>
             <span className="text-mid-grey text-md flex justify-center lg:justify-start">
-              Maratonet starter den 29. januar 2024
+              {PRICE_AND_DATE}
             </span>
           </div>
         </div>

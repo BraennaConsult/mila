@@ -6,7 +6,7 @@ import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
 import { getSaleHasStarted } from "@/app/utils";
-import { SALE_FINISHES_AT } from "@/constants";
+import { PRICE_AND_DATE, SALE_FINISHES_AT } from "@/constants";
 import Image from "next/image";
 
 interface Props {
@@ -39,13 +39,14 @@ export function CTA({ className }: Props) {
             Bli med
           </Button>
 
-          <div className="flex justify-center text-mid-grey items-center space-x-0.5">
+          <span className="text-md text-mid-grey">{PRICE_AND_DATE}</span>
+          {/* <div className="flex justify-center text-mid-grey items-center space-x-0.5">
             <span className="text-center text-mid-grey text-md">
               kr 1 883 per mnd i 3 mnd med
             </span>
             <Image src="/klarna.svg" width={64} height={64} alt="Klarna logo" />
-          </div>
-          <div className="flex justify-center text-mid-grey items-center space-x-2">
+          </div> */}
+          {/* <div className="flex justify-center text-mid-grey items-center space-x-2">
             <span className="text-center text-mid-grey text-md">Betal med</span>
             <div className="w-[64px]">
               <Image
@@ -55,7 +56,7 @@ export function CTA({ className }: Props) {
                 alt="Vipps logo"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </Section>

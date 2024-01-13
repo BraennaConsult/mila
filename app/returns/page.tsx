@@ -3,7 +3,12 @@ import { BlackHeader } from "@/app/components/BlackHeader";
 import { Container } from "@/app/components/Container";
 import { Footer } from "@/app/components/Footer";
 import { Section } from "@/app/components/Section";
-import { CONTACT_EMAIL, PHONE_NUMBER } from "@/constants";
+import {
+  COMPANY_ADDRESS,
+  COMPANY_NAME,
+  CONTACT_EMAIL,
+  PHONE_NUMBER,
+} from "@/constants";
 // import content from "@/app/terms-of-service/content.md";
 
 export default function Page() {
@@ -26,9 +31,9 @@ export default function Page() {
 
               <p>For å kunne bruke angreretten må du underrette oss:</p>
               <address>
-                Tifra AS
+                {COMPANY_NAME}
                 <br />
-                Hamrevegen 25 G, 5229 Kalandseidet
+                {COMPANY_ADDRESS}
                 <br />
                 <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
                 <br />

@@ -2,9 +2,16 @@ export const SPOTS_AVAILABLE = 200;
 export const SPOTS_LEFT = 12;
 export const PERCENTAGE_FILLED = 10;
 
-export const CONTACT_EMAIL = "sammentilmaal@outlook.com";
-export const PHONE_NUMBER = "+4793603230";
-export const COMPANY_NAME = "Tifra AS";
+// export const CONTACT_EMAIL = "sammentilmaal@outlook.com";
+// export const PHONE_NUMBER = "+4793603230";
+// export const COMPANY_NAME = "Tifra AS"
+// export const COMPANY_ADDRESS = "Hamrevegen 25 G, 5229 Kalandseidet";
+// export const COMPANY_NUMBER = "926 756 435"
+export const PHONE_NUMBER = "+37255574987";
+export const CONTACT_EMAIL = "jk@gymfluence.io";
+export const COMPANY_NAME = "Gymfluence OÜ";
+export const COMPANY_ADDRESS = "Paepargi 43, 28, 11417 Tallinn, Estonia";
+export const COMPANY_NUMBER = "16864978";
 
 export const TEMP_LINK = "/forsalg";
 export const PAYMENT_LINK = "https://milatimaa.net/cart/43243039162545:1";
@@ -19,3 +26,6 @@ export const ROUTES = {
 
 export const SALE_STARTS_AT = "2024-01-09T18:00:00+01:00";
 export const SALE_FINISHES_AT = "2024-01-20T23:59:59+01:00";
+
+export const PRICE_AND_DATE =
+  "Maratonet koster kr 5 650 og starter den 29.01.24";

@@ -1,5 +1,6 @@
 import { Button } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
+import { PRICE_AND_DATE } from "@/constants";
 
 export function Hero() {
   return (
@@ -25,7 +26,10 @@ export function Hero() {
           Over 100+ rå kvinner har nådd sine personlige mål.
           Transformasjonsmaraton av @milatimaa
         </p>
-        <Button hasIcon>Bli med</Button>
+        <div className="flex flex-col space-y-5">
+          <Button hasIcon>Bli med</Button>
+          <span className="text-white text-md">{PRICE_AND_DATE}</span>
+        </div>
       </Container>
     </div>
   );

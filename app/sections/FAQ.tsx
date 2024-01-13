@@ -92,8 +92,8 @@ const faqs = [
     answer:
       "I oppskriftssamlingen inne på appen er det en rekke forskjellige retter hvor jeg har prøvd og ta høyde for alle folks forskjellige preferanser og eventuelle allergier - du kan også spørre om råd fra meg og resten av gjengen i gruppen om tips for hvordan du kan tilpasse de ulike rettene dine allergier!",
   },
-  {
-    question: "Er det mulig med delbetaling?",
-    answer: "Ja, du kan delbetale med Klarna!",
-  },
+  // {
+  //   question: "Er det mulig med delbetaling?",
+  //   answer: "Ja, du kan delbetale med Klarna!",
+  // },
 ];
