@@ -19,22 +19,22 @@ export function getPercentage(): number {
     15: 72,
     16: 73,
     17: 74,
-    18: 75,
-    19: 76,
-    20: 77,
-    21: 77,
-    22: 78,
-    23: 78,
+    18: 80,
+    19: 81,
+    20: 82,
+    21: 83,
+    22: 84,
+    23: 85,
   };
 
   const now = new Date();
   if (
     now.getUTCFullYear() !== 2024 ||
     now.getUTCMonth() !== 0 ||
-    now.getUTCDate() !== 16 ||
-    now.getUTCDay() !== 2
+    now.getUTCDate() !== 17 ||
+    now.getUTCDay() !== 3
   ) {
-    return 78;
+    return 85;
   }
 
   const hour = now.getUTCHours() + 1;
