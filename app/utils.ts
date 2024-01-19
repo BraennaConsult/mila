@@ -34,7 +34,7 @@ export function getPercentage(): number {
     now.getUTCDate() !== 17 ||
     now.getUTCDay() !== 3
   ) {
-    return 85;
+    return 96;
   }
 
   const hour = now.getUTCHours() + 1;
