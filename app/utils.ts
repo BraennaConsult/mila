@@ -30,7 +30,7 @@ export function getPercentage(): number {
     20: 82,
     21: 98,
     22: 98,
-    23: 98,
+    23: 99,
   };
 
   const now = new Date();
