@@ -1,4 +1,10 @@
-import { PAYMENT_LINK, SALE_STARTS_AT, TEMP_LINK } from "@/constants";
+import {
+  PAYMENT_LINK,
+  POST_SALE_LINK,
+  SALE_FINISHES_AT,
+  SALE_STARTS_AT,
+  TEMP_LINK,
+} from "@/constants";
 import clsx, { ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -22,19 +28,19 @@ export function getPercentage(): number {
     18: 80,
     19: 81,
     20: 82,
-    21: 83,
-    22: 84,
-    23: 85,
+    21: 98,
+    22: 98,
+    23: 98,
   };
 
   const now = new Date();
   if (
     now.getUTCFullYear() !== 2024 ||
     now.getUTCMonth() !== 0 ||
-    now.getUTCDate() !== 17 ||
-    now.getUTCDay() !== 3
+    now.getUTCDate() !== 20 ||
+    now.getUTCDay() !== 6
   ) {
-    return 98;
+    return 100;
   }
 
   const hour = now.getUTCHours() + 1;
@@ -50,10 +56,20 @@ export function getSaleHasStarted() {
   return saleHasStarted;
 }
 
-export function getLink() {
-  const saleHasStarted = getSaleHasStarted();
+export function getSaleHasEnded() {
+  const saleEndTime = SALE_FINISHES_AT;
 
-  const link = saleHasStarted ? PAYMENT_LINK : TEMP_LINK;
+  const saleHasEnded = new Date() >= new Date(saleEndTime);
+
+  return saleHasEnded;
+}
+
+export function getLink() {
+  // const saleHasStarted = getSaleHasStarted();
+  const saleHasEnded = getSaleHasEnded();
+
+  // const link = saleHasStarted ? PAYMENT_LINK : TEMP_LINK;
+  const link = saleHasEnded ? POST_SALE_LINK : PAYMENT_LINK;
 
   return link;
 }

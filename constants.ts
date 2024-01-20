@@ -16,6 +16,7 @@ export const COMPANY_NUMBER = "16864978";
 export const TEMP_LINK = "/forsalg";
 export const PAYMENT_LINK = "https://milatimaa.net/cart/43243039162545:1";
 export const STRIPE_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
+export const POST_SALE_LINK = "https://forms.gle/1mstHspCBY8nsqs88";
 
 export const ROUTES = {
   TERMS_OF_SERVICE: "/terms-of-service",
