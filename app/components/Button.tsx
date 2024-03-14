@@ -12,7 +12,7 @@ const buttonProps = cva({
   variants: {
     variant: {
       primary:
-        "border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD] hover:bg-[#FBCBDD] hover:text-black",
+        "border-pink-primary bg-pink-primary/20 text-pink-primary hover:bg-[#FBCBDD] hover:text-black",
       pink: "bg-pink-loud text-white border-pink-loud hover:bg-white hover:text-pink-loud focus:bg-white focus:text-pink-loud",
       "pink-ghost":
         "border-pink-loud text-pink-loud bg-transparent hover:bg-pink-loud hover:text-white focus:bg-pink-loud focus:text-white",

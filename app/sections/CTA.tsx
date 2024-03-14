@@ -8,6 +8,7 @@ import { Section } from "@/app/components/Section";
 import { getSaleHasStarted } from "@/app/utils";
 import { PRICE_AND_DATE, SALE_FINISHES_AT } from "@/constants";
 import Image from "next/image";
+import { Card } from "../components/Card";
 
 interface Props {
   className?: string;
@@ -20,27 +21,49 @@ export function CTA({ className }: Props) {
   return (
     <Section className={className}>
       <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
-        <h2 className="text-center mb-0 text-2xl lg:text-3xl text-balance">
+        <h2 className="text-center mb-0 text-[28px] lg:text-3xl text-balance">
           Vi bygger selvtillit på treningssenteret
         </h2>
-        {saleHasStarted ? (
-          <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto">
-            <CountdownTimer
-              title="Påmeldingen stenger om"
-              targetDate={targetDate}
+        <Card className="overflow-hidden relative">
+          {/* SVG Background */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={"/cta-background.svg"}
+              alt="cta background"
+              layout="fill"
+              objectFit="cover"
             />
-            <Progress className="lg:order-first" />
           </div>
-        ) : (
-          <Progress className="mx-auto" />
-        )}
-        <div className="space-y-3 lg:mx-auto flex flex-col items-center">
-          <Button variant="pink" className="w-full lg:w-fit">
-            Bli med
-          </Button>
+          {/* <div className="absolute z-[0]">
+            <Image
+              src={"/cta-background.svg"}
+              alt="cta"
+              width={500}
+              height={500}
+              // className="absolute inset-0 z-0"
+            />
+          </div> */}
+          <div className="z-10 relative">
+            {saleHasStarted ? (
+              <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto z-2">
+                <CountdownTimer
+                  title="Påmeldingen stenger om"
+                  targetDate={targetDate}
+                />
+                <Progress className="lg:order-first" />
+              </div>
+            ) : (
+              <Progress className="mx-auto" />
+            )}
+            <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
+              <Button variant="black" className="w-full lg:w-fit">
+                Bli med
+              </Button>
 
-          <span className="text-md text-mid-grey">{PRICE_AND_DATE}</span>
-        </div>
+              {/* <span className="text-md text-mid-grey">{PRICE_AND_DATE}</span> */}
+            </div>
+          </div>
+        </Card>
       </Container>
     </Section>
   );

@@ -32,6 +32,7 @@ const config: Config = {
         "pink-intense": "#FFA8C9",
         "pink-disabled": "#C9B0BA",
         "pink-loud": "#E54280",
+        "pink-primary": "#FEC0FE",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

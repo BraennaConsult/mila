@@ -6,19 +6,29 @@ import { FAQ } from "@/app/sections/FAQ";
 import { Hero } from "@/app/sections/Hero";
 import { MyLuck } from "@/app/sections/MyLuck";
 import { Testimonials } from "@/app/sections/Testimonials";
+import { MarathonBenefits } from "./sections/MarathonBenefits";
+import { WhyMyLuck } from "./sections/WhyMyLuck";
+import { ParticipantsReview } from "./sections/ParticipantsReview";
+import { WhatYouGet } from "./sections/WhatYouGet";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="">
+      <main className="bg-[#F7F6F6]">
         <Hero />
-        <MyLuck />
-        <AppPreview />
+        <MarathonBenefits />
+        <WhyMyLuck />
+        <ParticipantsReview />
+        <WhatYouGet />
         <CTA className="pt-0 md:pt-0 lg:pt-0" />
         <Testimonials />
-        <CTA />
+        <CTA className="pt-0 md:pt-0 lg:pt-0" />
         <FAQ />
+
+        {/* <MyLuck /> */}
+        {/* <AppPreview /> */}
+        {/* <CTA /> */}
       </main>
       <Footer />
     </>

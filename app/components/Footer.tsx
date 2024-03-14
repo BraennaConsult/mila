@@ -5,23 +5,23 @@ export function Footer() {
   const copyRightYear = new Date().getFullYear();
   return (
     <footer className="py-2 w-full flex justify-center text-sm text-mid-grey">
-      <ul className="flex items-center space-x-5 list-none">
-        <li>
+      <ul className="flex items-center space-x-5 list-none flex-wrap">
+        <li className="mt-5 lg:mt-0">
           &copy; {copyRightYear}, {COMPANY_NAME}
         </li>
-        <li>
+        <li className="mt-5 lg:mt-0">
           <Link href={ROUTES.TERMS_OF_SERVICE}>Brukervilkår</Link>
         </li>
-        <li>
+        <li className="mt-5 lg:mt-0">
           <Link href={ROUTES.PRIVACY_POLICY}>Personvernvilkår</Link>
         </li>
-        <li>
+        <li className="mt-5 lg:mt-0">
           <Link href={`mailto:${CONTACT_EMAIL}`}>Kontakt oss</Link>
         </li>
-        <li>
+        <li className="mt-5 lg:mt-0">
           <Link href={ROUTES.RETURNS}>Retur & Angrerett</Link>
         </li>
-        <li>
+        <li className="mt-5 lg:mt-0">
           <Link href={ROUTES.CONTACT_INFO}>Kontaktinformasjon</Link>
         </li>
       </ul>

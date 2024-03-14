@@ -41,7 +41,7 @@ export const DotsProgressBar: React.FC<ProgressBarProps> = ({
   React.useEffect(() => {
     if (inView) {
       controls.start((i) => ({
-        backgroundColor: i < filledDots ? "#000000" : "#FFC0CB",
+        backgroundColor: i < filledDots ? "#000000" : "#40E7E5",
         transition: { delay: i * 0.11, type: "easeOut" },
       }));
     }
@@ -53,7 +53,7 @@ export const DotsProgressBar: React.FC<ProgressBarProps> = ({
         <motion.div
           key={index}
           custom={index}
-          initial={{ backgroundColor: "#FFC0CB" }}
+          initial={{ backgroundColor: "#40E7E5" }}
           animate={controls}
           className="w-3 h-3 rounded-full"
         />
