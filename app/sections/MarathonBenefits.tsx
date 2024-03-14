@@ -28,7 +28,7 @@ function BenefitPerkRow({
   data: { src: string; alt: string; text: string; color: string }[];
 }) {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center space-x-0 lg:space-x-8 space-y-0 lg:space-y-2">
       {data.map((perk) => (
         <BenefitPerk
           key={perk.alt}
@@ -53,7 +53,6 @@ function BenefitPerk({
   text: string;
   color: string;
 }) {
-  console.log(color);
   return (
     <div className="rounded-[24px] shadow-md  p-4 flex flex-col items-center gap-y-2">
       <Image src={src} alt={alt} width={29.16} height={28} />
