@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card } from "../components/Card";
 import { Section } from "../components/Section";
+import { Container } from "../components/Container";
 
 interface Props {
   className?: string;
@@ -9,15 +10,17 @@ interface Props {
 export function WhatYouGet({ className }: Props) {
   return (
     <Section>
-      <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
-        What you get
-      </h2>
-      <div className="space-y-3 lg:grid lg:grid-cols-2">
-        {cardData.map((data) => (
-          <BenefitCard key={data.alt} data={data} />
-        ))}
-        <BenefitCardWintPills />
-      </div>
+      <Container>
+        <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
+          What you get
+        </h2>
+        <div className="space-y-3 lg:space-y-0 lg:grid lg:grid-cols-2">
+          {cardData.map((data) => (
+            <BenefitCard key={data.alt} data={data} />
+          ))}
+          <BenefitCardWintPills />
+        </div>
+      </Container>
     </Section>
   );
 }

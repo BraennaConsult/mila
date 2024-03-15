@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card } from "../components/Card";
 import { Section } from "../components/Section";
+import { Container } from "../components/Container";
 
 interface Props {
   className?: string;
@@ -9,20 +10,22 @@ interface Props {
 export function MarathonBenefits({ className }: Props) {
   return (
     <Section className="py-12 flex justify-center items-center">
-      <Card className="max-w-[1200px] mx-auto flex flex-col lg:flex-row space-x-0 lg:space-x-12">
-        <div className="flex items-center justify-center">
-          <h2 className="text-[22px] text-black/80 text-center font-sans font-medium leading-7 mb-6">
-            This marathon is for you <br />
-            if you struggle with
-          </h2>
-        </div>
-        <div>
-          <BenefitPerkRow data={benefitPerkData.row1} />
-          <BenefitPerkRow data={benefitPerkData.row2} />
-          <BenefitPerkRow data={benefitPerkData.row3} />
-          <BenefitPerkRow data={benefitPerkData.row4} />
-        </div>
-      </Card>
+      <Container className="lg:w-full px-0">
+        <Card className="lg:w-full lg:justify-center flex flex-col lg:flex-col space-x-0 lg:space-x-12 lg:py-20">
+          <div className="flex items-center justify-center lg:mb-12">
+            <h2 className="text-[22px] text-black/80 text-center font-sans font-medium leading-7 mb-6 lg:text-xl">
+              This marathon is for you <br />
+              if you struggle with
+            </h2>
+          </div>
+          <div className="lg:space-y-4">
+            <BenefitPerkRow data={benefitPerkData.row1} />
+            <BenefitPerkRow data={benefitPerkData.row2} />
+            <BenefitPerkRow data={benefitPerkData.row3} />
+            <BenefitPerkRow data={benefitPerkData.row4} />
+          </div>
+        </Card>
+      </Container>
     </Section>
   );
 }
@@ -33,7 +36,7 @@ function BenefitPerkRow({
   data: { src: string; alt: string; text: string; color: string }[];
 }) {
   return (
-    <div className="flex justify-center space-x-0 lg:space-x-8 space-y-0 lg:space-y-2">
+    <div className="flex justify-center space-x-0 lg:gap-x-4 lg:max-w-[720px] lg:mx-auto">
       {data.map((perk) => (
         <BenefitPerk
           key={perk.alt}
@@ -59,7 +62,7 @@ function BenefitPerk({
   color: string;
 }) {
   return (
-    <div className="rounded-[24px] shadow-brand  p-4 flex flex-col items-center gap-y-2">
+    <div className="rounded-[24px] shadow-brand  p-4 flex flex-col items-center gap-y-2 lg:grow ">
       <Image src={src} alt={alt} width={29.16} height={28} />
       <p style={{ color: color }} className={`text-[14px]`}>
         {text}

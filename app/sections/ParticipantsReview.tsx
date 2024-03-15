@@ -79,7 +79,7 @@ export function ParticipantsReview() {
 
   return (
     <Section>
-      <h2 className="lg:max-w-lg text-pretty mb-[40px] md:mb-32 lg:mb-40 text-[28px] lg:text-2xl text-black/80 text-center font-sans lg:text-left">
+      <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
         What participants say
       </h2>
       <div ref={ref} className="keen-slider mb-8">
