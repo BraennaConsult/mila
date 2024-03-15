@@ -9,10 +9,10 @@ interface Props {
 export function WhatYouGet({ className }: Props) {
   return (
     <Section>
-      <h2 className="text-[22px] text-black/80 text-center font-medium  mb-6 lg:max-w-lg text-pretty md:mb-32 lg:mb-40 lg:text-2xl lg:text-left">
+      <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
         What you get
       </h2>
-      <div className="space-y-3">
+      <div className="space-y-3 lg:grid lg:grid-cols-2">
         {cardData.map((data) => (
           <BenefitCard key={data.alt} data={data} />
         ))}
@@ -27,7 +27,7 @@ function BenefitCard({ data }: { data: CardDataSchema }) {
     <Card>
       <div className="flex flex-col items-center space-y-8">
         <Image src={data.src} alt={data.alt} width={245} height={382} />
-        <p className="text-[20px] max-w-[245px]">{data.title}</p>
+        <p className="text-[20px] max-w-[245px] text-center">{data.title}</p>
       </div>
     </Card>
   );
@@ -44,13 +44,13 @@ function BenefitCardWintPills() {
           objectFit="cover"
         />
       </div>
-      <div className="flex flex-col items-center space-y-4 z-10 relative">
+      <div className="flex flex-col items-center space-y-2 z-10 relative">
         {benefitPerkData.map((data) => (
           <BenefitPill key={data.title} title={data.title} />
         ))}
       </div>
       <div className="flex flex-col items-center mt-12 z-10 relative">
-        <p className="text-[20px] max-w-[245px] text-center">
+        <p className="text-[20px] max-w-[245px] text-center text-black/80 font-sans leading-6">
           Proven results from 100+ women
         </p>
       </div>
@@ -60,7 +60,7 @@ function BenefitCardWintPills() {
 
 function BenefitPill({ title }: { title: string }) {
   return (
-    <div className="shadow-md px-2 py-2 rounded-[24px] flex items-center bg-white">
+    <div className="shadow-brand px-2 py-2 rounded-[24px] flex items-center bg-white">
       <Image
         src={"/radiant-checkmark.svg"}
         alt={"Checkmark"}

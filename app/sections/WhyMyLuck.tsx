@@ -79,7 +79,7 @@ export function WhyMyLuck() {
 
   return (
     <Section>
-      <h2 className="lg:max-w-lg text-pretty mb-[40px] md:mb-32 lg:mb-40 text-[28px] lg:text-2xl text-center lg:text-left">
+      <h2 className="lg:max-w-lg text-pretty mb-[40px] md:mb-32 lg:mb-40 text-[28px] lg:text-2xl text-black/80 text-center font-sans lg:text-left">
         Why I&apos;ve created MyLuck
       </h2>
       <div ref={ref} className="keen-slider mb-8">
@@ -160,7 +160,7 @@ const slides: Slide[] = [
   },
   {
     type: "image",
-    src: "/myluck-4.JPG",
+    src: "/myluck-1.JPG",
     alt: "MyLuck 4",
     aspectRatio: 0.75,
     text: "Reduce stress",
@@ -168,7 +168,7 @@ const slides: Slide[] = [
   },
   {
     type: "image",
-    src: "/myluck-5.JPG",
+    src: "/myluck-2.JPG",
     alt: "MyLuck 5",
     aspectRatio: 0.75,
     text: "Fit into your old clothes again",
@@ -176,7 +176,7 @@ const slides: Slide[] = [
   },
   {
     type: "image",
-    src: "/myluck-5.JPG",
+    src: "/myluck-3.JPG",
     alt: "MyLuck 5",
     aspectRatio: 0.75,
     text: "Fit into your old clothes again",

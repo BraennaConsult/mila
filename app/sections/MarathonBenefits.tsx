@@ -8,15 +8,20 @@ interface Props {
 
 export function MarathonBenefits({ className }: Props) {
   return (
-    <Section>
-      <Card>
-        <h2 className="text-[22px] text-black/80 text-center font-medium  mb-6">
-          This marathon is for you if you struggle with
-        </h2>
-        <BenefitPerkRow data={benefitPerkData.row1} />
-        <BenefitPerkRow data={benefitPerkData.row2} />
-        <BenefitPerkRow data={benefitPerkData.row3} />
-        <BenefitPerkRow data={benefitPerkData.row4} />
+    <Section className="py-12 flex justify-center items-center">
+      <Card className="max-w-[1200px] mx-auto flex flex-col lg:flex-row space-x-0 lg:space-x-12">
+        <div className="flex items-center justify-center">
+          <h2 className="text-[22px] text-black/80 text-center font-sans font-medium leading-7 mb-6">
+            This marathon is for you <br />
+            if you struggle with
+          </h2>
+        </div>
+        <div>
+          <BenefitPerkRow data={benefitPerkData.row1} />
+          <BenefitPerkRow data={benefitPerkData.row2} />
+          <BenefitPerkRow data={benefitPerkData.row3} />
+          <BenefitPerkRow data={benefitPerkData.row4} />
+        </div>
       </Card>
     </Section>
   );
@@ -54,7 +59,7 @@ function BenefitPerk({
   color: string;
 }) {
   return (
-    <div className="rounded-[24px] shadow-md  p-4 flex flex-col items-center gap-y-2">
+    <div className="rounded-[24px] shadow-brand  p-4 flex flex-col items-center gap-y-2">
       <Image src={src} alt={alt} width={29.16} height={28} />
       <p style={{ color: color }} className={`text-[14px]`}>
         {text}

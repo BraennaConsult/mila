@@ -17,7 +17,7 @@ export const MediaCard = ({
     bottom: "bottom-0 mb-16",
   };
   return (
-    <div className="keen-slider__slide rounded-[69px] relative">
+    <div className="keen-slider__slide rounded-[69px] relative shadow-card">
       <AspectRatio ratio={aspectRatio}>
         {type === "image" ? (
           <Image

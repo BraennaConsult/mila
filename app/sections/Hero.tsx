@@ -18,13 +18,12 @@ export function Hero() {
         <source src="/promo-big.mp4" type="video/mp4" />
       </video>
       <div className="absolute w-full h-full bg-black/20 top-0 left-0 z-1" />
-      <Container className="space-y-6 mb-14 w-full lg:mx-auto ml-8 z-20">
-        <h1 className="text-xl lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md ">
-          Vær med å bygg din drømmekropp og skap din egen lykke
+      <Container className="space-y-6 mb-14 w-full lg:mx-auto mx-6 z-20">
+        <h1 className="text-[40px] leading-[50px] lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md ">
+          Glutes, <br /> weigt loss, <br /> forme kroppen
         </h1>
         <p className="text-md text-white max-w-xs md:max-w-md text-pretty">
-          Over 100+ rå kvinner har nådd sine personlige mål.
-          Transformasjonsmaraton av @milatimaa
+          Everything you need to achieve the body of your dreams.
         </p>
         <div className="flex flex-col space-y-5">
           <Button className="w-full lg:w-fit" hasIcon>
