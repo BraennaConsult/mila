@@ -12,18 +12,22 @@ import { Card } from "../components/Card";
 
 interface Props {
   className?: string;
+  withTitle?: boolean;
 }
 
-export function CTA({ className }: Props) {
+export function CTA({ className, withTitle = true }: Props) {
   const targetDate = SALE_FINISHES_AT;
   const saleHasStarted = getSaleHasStarted();
 
   return (
     <Section className={className}>
       <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
-        <h2 className="text-center mb-0 text-[28px] lg:text-3xl leading-8 text-black/80 font-sans">
-          Vi bygger selvtillit på treningssenteret
-        </h2>
+        {withTitle && (
+          <h2 className="text-center mb-0 text-[28px] lg:text-3xl leading-8 text-black/80 font-sans">
+            Vi bygger selvtillit på treningssenteret
+          </h2>
+        )}
+
         <Card className="overflow-hidden relative">
           {/* SVG Background */}
           <div className="absolute inset-0 z-0">

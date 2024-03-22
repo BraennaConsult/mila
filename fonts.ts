@@ -9,5 +9,5 @@ export const libreBaskerville = Libre_Baskerville({
 
 export const hindVadodara = Hind_Vadodara({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "600"],
 });
