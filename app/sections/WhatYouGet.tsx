@@ -135,7 +135,7 @@ const benefitPerkData = [
     title: "Mindre fettprosent",
   },
   {
-    title: "Mindre oppblåst og smerter",
+    title: "Mindre hevelser og smerter",
   },
   {
     title: "Veldefinerte glutes",
