@@ -10,7 +10,6 @@ const testimonialsWithImages = [
   },
   {
     content: testimonials[2],
-    image: "/testimonials/1.png",
   },
   {
     content: testimonials[3],
