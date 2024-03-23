@@ -12,6 +12,7 @@ export function Hero() {
         preload="auto"
         controls={false}
         id="promo-video"
+        poster="/promo-big.png"
         className="absolute right-0 bottom-0 min-w-full min-h-full object-cover"
       >
         <source src="/video/promo-big.mp4" type="video/mp4" />
