@@ -8,7 +8,7 @@ interface Props {
 
 export function Section({ ref, children, className }: Props) {
   return (
-    <section ref={ref} className={cn("py-20 md:py-32 lg:py-40", className)}>
+    <section ref={ref} className={cn("py-20 md:py-32", className)}>
       {children}
     </section>
   );

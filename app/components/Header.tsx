@@ -8,7 +8,7 @@ import { PAYMENT_LINK } from "@/constants";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export function Header() {
+export function Header({ black = false }: { black?: boolean }) {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -30,11 +30,15 @@ export function Header() {
         <Link href="/">
           <Logo
             className={`cursor-pointer w-20 ${
-              hasScrolled ? "text-black" : "text-white"
+              hasScrolled ? "text-black" : black ? "text-black" : "text-white"
             }`}
           />
         </Link>
-        <Button size="sm" variant={hasScrolled ? "pink-ghost" : "white"}>
+        <Button
+          size="sm"
+          location="header"
+          variant={hasScrolled ? "pink-ghost" : "white"}
+        >
           <Link href={getLink()}>Bli med</Link>
         </Button>
       </Container>

@@ -32,6 +32,7 @@ const config: Config = {
         "pink-intense": "#FFA8C9",
         "pink-disabled": "#C9B0BA",
         "pink-loud": "#E54280",
+        "pink-primary": "#FEC0FE",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -53,6 +54,10 @@ const config: Config = {
       animation: {
         "enter-dot": "enter-dot 200ms ease forwards",
         "leave-dot": "leave-dot 600ms ease forwards",
+      },
+      boxShadow: {
+        brand: "0 2px 12px 0 rgba(0, 0, 0, 0.05)",
+        card: "0px 4px 10px rgba(0, 0, 0, 0.05)",
       },
     },
   },

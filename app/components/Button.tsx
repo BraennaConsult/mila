@@ -3,16 +3,21 @@
 import { track } from "@vercel/analytics";
 import { HeartIcon } from "@/app/icons/HeartIcon";
 import { cn, getLink } from "@/app/utils";
-import { PAYMENT_LINK } from "@/constants";
+import {
+  INNER_CIRCLE_CHECKOUT_LINK,
+  PAYMENT_LINK,
+  PREMIUM_CHECKOUT_LINK,
+} from "@/constants";
 import { cva, type VariantProps } from "cva";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 const buttonProps = cva({
   base: "rounded-[100px] border transition-color duration-100 ease font-semibold  shadow-sm flex justify-center font-sans text-center",
   variants: {
     variant: {
       primary:
-        "border-pink-intense bg-[#FBCBDD]/20 text-[#FBCBDD] hover:bg-[#FBCBDD] hover:text-black",
+        "border-pink-primary bg-pink-primary/20 text-pink-primary hover:bg-[#FBCBDD] hover:text-black",
       pink: "bg-pink-loud text-white border-pink-loud hover:bg-white hover:text-pink-loud focus:bg-white focus:text-pink-loud",
       "pink-ghost":
         "border-pink-loud text-pink-loud bg-transparent hover:bg-pink-loud hover:text-white focus:bg-pink-loud focus:text-white",
@@ -48,6 +53,9 @@ export interface ButtonProps
   isLoading?: boolean;
   hasIcon?: boolean;
   href?: string;
+  location?: string;
+  disabled?: boolean;
+  trackingType?: string;
 }
 
 const Button = ({
@@ -59,13 +67,25 @@ const Button = ({
   hasIcon,
   href,
   children,
+  location,
+  disabled,
+  trackingType = "cta_button",
 }: ButtonProps) => {
+  const searchParams = useSearchParams();
+  const hasOption = searchParams.has("option");
+  const option = searchParams.get("option");
+  const linkHref =
+    hasOption && option === "premium"
+      ? PREMIUM_CHECKOUT_LINK
+      : INNER_CIRCLE_CHECKOUT_LINK;
+
   return (
     <a
-      href={getLink()}
+      href={disabled ? "#" : hasOption ? linkHref : getLink()}
       onClick={() => {
-        track("cta_button");
+        location ? track(trackingType, { location }) : track(trackingType);
       }}
+      aria-disabled={disabled}
       className={cn(
         buttonProps({ variant, size, fullWidth, className }),
         "relative",
