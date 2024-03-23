@@ -5,7 +5,7 @@ import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { getSaleHasStarted } from "@/app/utils";
+import { cn, getSaleHasStarted } from "@/app/utils";
 import { PRICE_AND_DATE, SALE_FINISHES_AT } from "@/constants";
 import Image from "next/image";
 import { Card } from "../components/Card";
@@ -13,9 +13,16 @@ import { Card } from "../components/Card";
 interface Props {
   className?: string;
   withTitle?: boolean;
+  disabled?: boolean;
+  trackingType?: string;
 }
 
-export function CTA({ className, withTitle = true }: Props) {
+export function CTA({
+  className,
+  withTitle = true,
+  disabled,
+  trackingType,
+}: Props) {
   const targetDate = SALE_FINISHES_AT;
   const saleHasStarted = getSaleHasStarted();
 
@@ -28,7 +35,7 @@ export function CTA({ className, withTitle = true }: Props) {
           </h2>
         )}
 
-        <Card className="overflow-hidden relative mx-0">
+        <Card className="overflow-hidden relative mx-0 lg:px-10">
           {/* SVG Background */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -62,11 +69,21 @@ export function CTA({ className, withTitle = true }: Props) {
             <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
               <Button
                 variant="black"
+                disabled={disabled}
                 location="cta"
-                className="w-full lg:w-fit"
+                trackingType={trackingType}
+                className={cn(
+                  "w-full lg:w-fit",
+                  disabled && "cursor-not-allowed bg-black/60"
+                )}
               >
-                Bli med
+                Bli med på maraton
               </Button>
+              {disabled && (
+                <span className="text-md">
+                  NB! Du må velge en pakke før du kan gå videre.
+                </span>
+              )}
 
               {/* <span className="text-md text-mid-grey">{PRICE_AND_DATE}</span> */}
             </div>

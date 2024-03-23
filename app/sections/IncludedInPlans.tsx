@@ -5,7 +5,7 @@ import { Section } from "../components/Section";
 export function IncludedInPlans() {
   return (
     <Section className="flex justify-center items-center py-0">
-      <Container className="w-full space-y-8 px-2">
+      <Container className="w-full space-y-8 px-2 lg:max-w-[800px]">
         {/* <h2>Plans include</h2> */}
         {/* <div className="grid grid-cols-4 gap-4"> */}
         {/* <RowItem

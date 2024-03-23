@@ -14,7 +14,7 @@ export function WhatYouGet({ className }: Props) {
         <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
           Hva du får
         </h2>
-        <div className="space-y-3 lg:space-y-0 lg:grid lg:grid-cols-2">
+        <div className="gap-3 lg:gap-5 lg:space-y-0 lg:grid lg:grid-cols-2">
           {cardData.map((data) => (
             <BenefitCard key={data.alt} data={data} />
           ))}

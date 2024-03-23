@@ -3,24 +3,29 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { createUrl } from "../utils";
+import Link from "next/link";
+import { track } from "@vercel/analytics";
 
 interface props {
-  label: string;
+  // label: string;
   name: string;
-  value: string;
-  checked: boolean;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  // checked: boolean;
+  // value: string;
+  // onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function CustomRadioButton({ label, name, value, checked, onChange }: props) {
+export function CustomRadioButton({ name }: props) {
+  const searchParams = useSearchParams();
+  const selectedOptionValue = searchParams.get("option");
+  const checked = name === selectedOptionValue;
+
   return (
-    <label className="flex items-center cursor-pointer">
+    <label className="flex items-start cursor-pointer ml-3 mt-0.5">
       <input
         type="radio"
         name={name}
-        value={value}
+        value={name}
         checked={checked}
-        onChange={onChange}
         className="hidden" // This hides the default radio button
       />
       <span
@@ -34,34 +39,33 @@ function CustomRadioButton({ label, name, value, checked, onChange }: props) {
 
 export default CustomRadioButton;
 
-export function ProductPageRadioButton({ option }: { option: string }) {
+export function ProductPageRadioButton({
+  option,
+  children,
+}: {
+  option: string;
+  children: React.ReactNode;
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const value = option.replace(" ", "-").toLowerCase();
 
   // get the selected option from url search params
-  const selectedOptionValue = searchParams.get("option");
-  console.log(selectedOptionValue);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault();
     const key = "option";
     const optionSearchParams = new URLSearchParams(searchParams.toString());
     optionSearchParams.set(key, value);
     const optionUrl = createUrl(pathname, optionSearchParams);
     router.replace(optionUrl, { scroll: false });
+    track("product_option", { option: value });
   }
 
   return (
-    <div className="flex flex-col space-y-2 ml-2 z-10">
-      <CustomRadioButton
-        label={option}
-        name={option}
-        value={option}
-        checked={value === selectedOptionValue}
-        onChange={handleChange}
-      />
-    </div>
+    <button onClick={handleChange} className="w-full lg:w-[375px]">
+      {children}
+    </button>
   );
 }

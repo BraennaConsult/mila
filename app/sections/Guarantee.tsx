@@ -7,15 +7,15 @@ import { Container } from "@/app/components/Container";
 
 export function Guarantee() {
   return (
-    <Section className="py-0 pb-8 lg:flex lg:justify-center lg:pt-0">
+    <Section className="py-0 pb-8 lg:flex lg:justify-center lg:pt-0 ">
       <Container>
-        <Card className="px-8 py-8 mx-0 lg:max-w-[550px]">
+        <Card className="px-8 py-8 mx-0 lg:max-w-[800px]">
           <div className="rounded-[24px] space-y-5">
             {/* <div className="border-[1px] rounded-[24px] border-black/10 px-4 py-8 space-y-5"> */}
-            <h3 className="font-sans text-black/80 text-[20px] font-semibold">
+            <h3 className="font-sans text-black/80 text-[20px] font-semibold lg:text-lg">
               Får du ikke resultater, får du pengene dine tilbake.
             </h3>
-            <p className="text-[14px]">
+            <p className="text-[14px] lg:text-[18px] lg:leading-[28px]">
               Jeg er trygg på kvaliteten av maratonet og resultatene det gir.
               Hundrevis av flotte damer har oppnåd resultater med meg. Hvis du
               er klar for nå målene dine en gang for alle, så er dette et
