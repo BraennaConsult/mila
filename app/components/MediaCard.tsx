@@ -28,14 +28,19 @@ export const MediaCard = ({
           />
         ) : (
           <video
-            className="object-cover rounded-project absolute w-full h-full"
-            src={src}
-            controls
-          />
+            // controls
+            autoPlay
+            loop
+            style={{ transform: "translateY(-20%)" }}
+            className="object-cover rounded-project absolute w-full"
+          >
+            <source src={src} width={200} type="video/webm" />
+            Sorry, your browser does not support embedded videos.
+          </video>
         )}
         {text && position && (
           <p
-            className={`absolute w-full text-center ${positionClass[position]} transform px-4 text-white text-[20px]`}
+            className={`absolute w-full text-center ${positionClass[position]} transform px-4 text-white text-[20px] `}
           >
             {text}
           </p>
