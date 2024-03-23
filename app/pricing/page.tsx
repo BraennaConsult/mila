@@ -9,8 +9,14 @@ import { ProductOptions } from "../sections/ProductOptions";
 import { ProductReview } from "../sections/ProductReview";
 import Link from "next/link";
 import { Logo } from "../components/Logo";
+import { GoToCheckout } from "../sections/GoToCheckout";
 
-export default function ProductPage() {
+interface Props {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+export default function ProductPage({ searchParams }: Props) {
+  const option = searchParams?.option as string | undefined;
+  const hasOption = searchParams?.option ? true : false;
   return (
     <>
       {/* <Header /> */}
@@ -42,6 +48,7 @@ export default function ProductPage() {
           <ProductOptions />
           <Guarantee />
           <CTA className="pt-0 md:pt-0 lg:pt-0" withTitle={false} />
+          <GoToCheckout show={hasOption} option={option} />
         </>
       </main>
     </>
