@@ -91,6 +91,7 @@ export function WhyMyLuck() {
                 type={slide.type}
                 src={slide.src}
                 alt={slide.alt}
+                poster={slide.poster}
                 aspectRatio={aspectRatio}
                 text={slide.text}
                 position={slide.position}
@@ -103,6 +104,7 @@ export function WhyMyLuck() {
               type={slide.type}
               src={slide.src}
               alt={slide.alt}
+              poster={slide.poster}
               aspectRatio={aspectRatio}
               text={slide.text}
               position={slide.position}
