@@ -18,6 +18,11 @@ export const PAYMENT_LINK = "/pricing";
 export const STRIPE_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
 export const POST_SALE_LINK = "https://forms.gle/1mstHspCBY8nsqs88";
 
+export const PREMIUM_CHECKOUT_LINK =
+  "https://milatimaa.net/cart/43560009466033:1";
+export const INNER_CIRCLE_CHECKOUT_LINK =
+  "https://milatimaa.net/cart/43560009498801:1";
+
 export const ROUTES = {
   TERMS_OF_SERVICE: "/terms-of-service",
   PRIVACY_POLICY: "/privacy-policy",
