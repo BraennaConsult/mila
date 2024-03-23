@@ -1,5 +1,3 @@
-"use client";
-
 import { Slide } from "@/lib/types";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import Image from "next/image";
@@ -31,8 +29,8 @@ export const MediaCard = ({
         ) : (
           <video
             // controls
-            // autoPlay
-            onFocus={(e) => e.target.play()}
+            autoPlay
+            // onFocus={(e) => e.target.play()}
             loop
             style={{ transform: "translateY(-20%)" }}
             className="object-cover rounded-project absolute w-full"
