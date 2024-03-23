@@ -14,7 +14,7 @@ export function MyPath() {
           autoPlay
           // onFocus={(e) => e.target.play()}
         >
-          <source src="/video/Transformation.webm" type="video/webm" />
+          <source src="/video/Transformation.mp4" type="video/mp4" />
           Sorry, your browser does not support embedded videos.
         </video>
       </div>

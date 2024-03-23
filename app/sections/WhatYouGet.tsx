@@ -31,7 +31,7 @@ function BenefitCard({ data }: { data: CardDataSchema }) {
       <div className="flex flex-col items-center space-y-8">
         {data.type === "video" && (
           <video autoPlay width="245" loop>
-            <source src={data.src} type="video/webm" />
+            <source src={data.src} type="video/mp4" />
             Sorry, your browser does not support embedded videos.
           </video>
         )}
@@ -94,13 +94,13 @@ const cardData: CardDataSchema[] = [
   {
     // src: "/what-you-get/pro-in-gym.png",
     type: "video",
-    src: "/video/pro-in-gym.webm",
+    src: "/video/pro-in-gym.mp4",
     alt: "What you get",
     title: "Bli trygg på treningssenteret",
   },
   {
     type: "video",
-    src: "/video/meal-plan.webm",
+    src: "/video/meal-plan.mp4",
     alt: "What you get",
     title: "Personlige måltidsplaner som hjelper deg nå målene dine",
   },
@@ -112,7 +112,7 @@ const cardData: CardDataSchema[] = [
   },
   {
     type: "video",
-    src: "/video/habbit-tracker.webm",
+    src: "/video/habbit-tracker.mp4",
     alt: "What you get",
     title: "Hold styr på de sunne vanene dine og redusér stress",
   },

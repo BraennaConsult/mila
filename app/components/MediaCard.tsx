@@ -40,7 +40,7 @@ export const MediaCard = ({
             style={{ transform: "translateY(-20%)" }}
             className="object-cover rounded-project absolute w-full"
           >
-            <source src={src} width={200} type="video/webm" />
+            <source src={src} width={200} type="video/mp4" />
             Sorry, your browser does not support embedded videos.
           </video>
         )}

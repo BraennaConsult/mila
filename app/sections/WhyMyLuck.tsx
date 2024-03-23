@@ -144,7 +144,7 @@ const slides: Slide[] = [
   { type: "image", src: "/myluck-1.JPG", alt: "MyLuck 1", aspectRatio: 0.75 },
   {
     type: "video",
-    src: "/video/in-shower.webm",
+    src: "/video/in-shower.mp4",
     alt: "MyLuck 2",
     aspectRatio: 0.75,
     text: "Loose wight & shape up",
@@ -152,7 +152,7 @@ const slides: Slide[] = [
   },
   {
     type: "video",
-    src: "/video/mila-with-child.webm",
+    src: "/video/mila-with-child.mp4",
     alt: "MyLuck 3",
     aspectRatio: 0.75,
     text: `Have more energy for you family`,
