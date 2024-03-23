@@ -10,6 +10,7 @@ import { ProductReview } from "../sections/ProductReview";
 import Link from "next/link";
 import { Logo } from "../components/Logo";
 import { GoToCheckout } from "../sections/GoToCheckout";
+import { getLink, getSaleHasStarted } from "../utils";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -17,6 +18,7 @@ interface Props {
 export default function ProductPage({ searchParams }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
+  const hasSaleStarted = getSaleHasStarted();
   return (
     <>
       {/* <Header /> */}
@@ -53,10 +55,10 @@ export default function ProductPage({ searchParams }: Props) {
           <CTA
             className="pt-0 md:pt-0 lg:pt-0"
             withTitle={false}
-            disabled={!hasOption}
+            disabled={!hasOption || !hasSaleStarted}
             trackingType="checkout_button"
           />
-          <GoToCheckout show={hasOption} option={option} />
+          {hasSaleStarted && <GoToCheckout show={hasOption} option={option} />}
         </>
       </main>
     </>

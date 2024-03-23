@@ -1,6 +1,5 @@
 "use client";
 
-import { cookies } from "next/headers";
 import { setCookie } from "../actions";
 
 export function SecretLinkTitle({
@@ -12,14 +11,15 @@ export function SecretLinkTitle({
 
   if (isClient) {
     if (!cookieCountdownTime) {
-      console.log("Setting cookie");
-      setCookie();
+      setTimeout(() => {
+        setCookie();
+      }, 1500);
     }
   }
 
   return (
-    <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl mb-8">
-      OBS! Hemmelig link!
+    <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl mb-8 px-2">
+      OBS! Hemmelig påmeldingslenke (ikke del).
     </h3>
   );
 }
