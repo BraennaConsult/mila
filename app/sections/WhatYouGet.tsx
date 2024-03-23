@@ -30,7 +30,16 @@ function BenefitCard({ data }: { data: CardDataSchema }) {
     <Card className="">
       <div className="flex flex-col items-center space-y-8">
         {data.type === "video" && (
-          <video autoPlay width="245" loop>
+          <video
+            autoPlay
+            width="245"
+            loop
+            muted
+            playsInline
+            preload="auto"
+            controls={false}
+            id={data.src}
+          >
             <source src={data.src} type="video/mp4" />
             Sorry, your browser does not support embedded videos.
           </video>
