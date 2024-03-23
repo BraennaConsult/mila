@@ -33,13 +33,13 @@ export default function ProductPage({ searchParams }: Props) {
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
           </div>
-          <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
-            Hemmelig link
-          </h3>
           {/* <h1>myLuck by mila</h1> */}
           <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
             Velg pakken din for <br /> å komme i gang
           </h3>
+          <p className="text-center text-black/50 text-[14px] mt-6">
+            Maratonet starter 8. April 2024
+          </p>
           <ProductOptions className="lg:py-10" />
           <IncludedInPlans />
           <BenefitsCard />
