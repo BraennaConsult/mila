@@ -27,9 +27,17 @@ export function WhatYouGet({ className }: Props) {
 
 function BenefitCard({ data }: { data: CardDataSchema }) {
   return (
-    <Card>
+    <Card className="">
       <div className="flex flex-col items-center space-y-8">
-        <Image src={data.src} alt={data.alt} width={245} height={382} />
+        {data.type === "video" && (
+          <video autoPlay width="245" loop>
+            <source src={data.src} type="video/webm" />
+            Sorry, your browser does not support embedded videos.
+          </video>
+        )}
+        {data.type === "image" && (
+          <Image src={data.src} alt={data.alt} width={245} height={382} />
+        )}
         <p className="text-[20px] max-w-[245px] text-center">{data.title}</p>
       </div>
     </Card>
@@ -76,6 +84,7 @@ function BenefitPill({ title }: { title: string }) {
 }
 
 interface CardDataSchema {
+  type: "video" | "image";
   src: string;
   alt: string;
   title: string;
@@ -83,22 +92,27 @@ interface CardDataSchema {
 
 const cardData: CardDataSchema[] = [
   {
-    src: "/what-you-get/pro-in-gym.png",
+    // src: "/what-you-get/pro-in-gym.png",
+    type: "video",
+    src: "/video/pro-in-gym.webm",
     alt: "What you get",
     title: "Become a pro in the gym",
   },
   {
-    src: "/what-you-get/meal-plan.png",
+    type: "video",
+    src: "/video/meal-plan.webm",
     alt: "What you get",
     title: "Personalized meals plans for you to achieve your goals",
   },
   {
+    type: "image",
     src: "/what-you-get/instagram-group.png",
     alt: "What you get",
     title: "Instagram chat where  we get results together",
   },
   {
-    src: "/what-you-get/habbit-tracker.png",
+    type: "video",
+    src: "/video/habbit-tracker.webm",
     alt: "What you get",
     title: "Follow my healthy habbits and reduce stress",
   },

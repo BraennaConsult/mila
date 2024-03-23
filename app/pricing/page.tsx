@@ -7,6 +7,8 @@ import { IncludedInPlans } from "../sections/IncludedInPlans";
 import { MyPath } from "../sections/MyPath";
 import { ProductOptions } from "../sections/ProductOptions";
 import { ProductReview } from "../sections/ProductReview";
+import Link from "next/link";
+import { Logo } from "../components/Logo";
 
 export default function ProductPage() {
   return (
@@ -15,12 +17,15 @@ export default function ProductPage() {
       <main className="bg-[#F7F6F6]">
         <>
           <div className="flex justify-center py-12">
-            <Image
+            {/* <Image
               src={"/my-luck-logo.svg"}
               alt="myLuck"
               width={98}
               height={52}
-            />
+            /> */}
+            <Link href="/">
+              <Logo className={`cursor-pointer w-20 "text-black"`} />
+            </Link>
           </div>
           {/* <h1>myLuck by mila</h1> */}
           <h3 className="text-center font-serif text-[28px] leading-[24px] text-black">
