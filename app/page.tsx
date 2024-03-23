@@ -24,7 +24,7 @@ export default function Home() {
         <CTA className="pt-0 md:pt-0 lg:pt-0" />
         <Testimonials />
         <CTA className="pt-0 md:pt-0 lg:pt-0" />
-        <FAQ />
+        {/* <FAQ /> */}
 
         {/* <MyLuck /> */}
         {/* <AppPreview /> */}
