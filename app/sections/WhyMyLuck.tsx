@@ -80,7 +80,7 @@ export function WhyMyLuck() {
   return (
     <Section>
       <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
-        Why I&apos;ve created MyLuck
+        Hvorfor jeg startet MyLuck
       </h2>
       <div ref={ref} className="keen-slider mb-8">
         {slides.map((slide, index) => (

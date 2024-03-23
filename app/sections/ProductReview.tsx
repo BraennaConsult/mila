@@ -3,7 +3,7 @@ import { StarIcon } from "@heroicons/react/24/outline";
 
 export function ProductReview() {
   return (
-    <Section className="py-16">
+    <Section className="py-16 lg:max-w-[800px] lg:mx-auto">
       <div className="flex justify-center items-center mb-8 ">
         <span>⭐️⭐️⭐️⭐️⭐️</span>
       </div>
