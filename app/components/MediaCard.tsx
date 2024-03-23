@@ -28,10 +28,15 @@ export const MediaCard = ({
           />
         ) : (
           <video
-            // controls
-            autoPlay
-            // onFocus={(e) => e.target.play()}
+            muted
             loop
+            autoPlay
+            playsInline
+            preload="auto"
+            controls={false}
+            id={src}
+            // controls
+            // onFocus={(e) => e.target.play()}
             style={{ transform: "translateY(-20%)" }}
             className="object-cover rounded-project absolute w-full"
           >
