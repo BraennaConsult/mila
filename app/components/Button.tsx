@@ -48,6 +48,7 @@ export interface ButtonProps
   isLoading?: boolean;
   hasIcon?: boolean;
   href?: string;
+  location?: string;
 }
 
 const Button = ({
@@ -59,12 +60,13 @@ const Button = ({
   hasIcon,
   href,
   children,
+  location,
 }: ButtonProps) => {
   return (
     <a
       href={getLink()}
       onClick={() => {
-        track("cta_button");
+        location ? track("cta_button", { location }) : track("cta_button");
       }}
       className={cn(
         buttonProps({ variant, size, fullWidth, className }),

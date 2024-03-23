@@ -28,8 +28,8 @@ export default function ProductPage() {
             </Link>
           </div>
           {/* <h1>myLuck by mila</h1> */}
-          <h3 className="text-center font-serif text-[28px] leading-[24px] text-black">
-            Choose your plan <br /> to get started
+          <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
+            Velg pakken din for <br /> å komme i gang
           </h3>
           <ProductOptions />
           <IncludedInPlans />
@@ -37,7 +37,7 @@ export default function ProductPage() {
           <ProductReview />
           <MyPath />
           <h3 className="text-center font-serif text-[40px] leading-[40px] text-black">
-            Ready for your <br /> dream body?
+            Klar for å få <br /> drømmekroppen din?
           </h3>
           <ProductOptions />
           <Guarantee />

@@ -14,7 +14,7 @@ export const COMPANY_ADDRESS = "Paepargi 43, 28, 11417 Tallinn, Estonia";
 export const COMPANY_NUMBER = "16864978";
 
 export const TEMP_LINK = "/forsalg";
-export const PAYMENT_LINK = "https://milatimaa.net/cart/43243039162545:1";
+export const PAYMENT_LINK = "/pricing";
 export const STRIPE_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
 export const POST_SALE_LINK = "https://forms.gle/1mstHspCBY8nsqs88";
 
@@ -23,6 +23,7 @@ export const ROUTES = {
   PRIVACY_POLICY: "/privacy-policy",
   CONTACT_INFO: "/contact-info",
   RETURNS: "/returns",
+  WARRANTY: "/warranty",
 };
 
 export const SALE_STARTS_AT = "2024-01-01T18:00:00+01:00";

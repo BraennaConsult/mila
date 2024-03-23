@@ -34,7 +34,11 @@ export function Header({ black = false }: { black?: boolean }) {
             }`}
           />
         </Link>
-        <Button size="sm" variant={hasScrolled ? "pink-ghost" : "white"}>
+        <Button
+          size="sm"
+          location="header"
+          variant={hasScrolled ? "pink-ghost" : "white"}
+        >
           <Link href={getLink()}>Bli med</Link>
         </Button>
       </Container>

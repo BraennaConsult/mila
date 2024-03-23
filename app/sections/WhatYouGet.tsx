@@ -12,7 +12,7 @@ export function WhatYouGet({ className }: Props) {
     <Section>
       <Container>
         <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
-          What you get
+          Hva du får
         </h2>
         <div className="space-y-3 lg:space-y-0 lg:grid lg:grid-cols-2">
           {cardData.map((data) => (
@@ -62,7 +62,7 @@ function BenefitCardWintPills() {
       </div>
       <div className="flex flex-col items-center mt-12 z-10 relative">
         <p className="text-[20px] max-w-[245px] text-center text-black/80 font-sans leading-6">
-          Proven results from 100+ women
+          Bli med over 100+ damer som har fått resultater
         </p>
       </div>
     </Card>
@@ -96,45 +96,45 @@ const cardData: CardDataSchema[] = [
     type: "video",
     src: "/video/pro-in-gym.webm",
     alt: "What you get",
-    title: "Become a pro in the gym",
+    title: "Bli trygg på treningssenteret",
   },
   {
     type: "video",
     src: "/video/meal-plan.webm",
     alt: "What you get",
-    title: "Personalized meals plans for you to achieve your goals",
+    title: "Personlige måltidsplaner som hjelper deg nå målene dine",
   },
   {
     type: "image",
     src: "/what-you-get/instagram-group.png",
     alt: "What you get",
-    title: "Instagram chat where  we get results together",
+    title: "Instagram-gruppe for støtte og motivasjon",
   },
   {
     type: "video",
     src: "/video/habbit-tracker.webm",
     alt: "What you get",
-    title: "Follow my healthy habbits and reduce stress",
+    title: "Hold styr på de sunne vanene dine og redusér stress",
   },
 ];
 
 const benefitPerkData = [
   {
-    title: "Toned stomach",
+    title: "Veldefinert mage",
   },
   {
-    title: "Lower body fat",
+    title: "Mindre fettprosent",
   },
   {
-    title: "Reduced swelling & pain",
+    title: "Mindre oppblåst og smerter",
   },
   {
-    title: "Shape up glutes",
+    title: "Veldefinerte glutes",
   },
   {
-    title: "Increased musle mass & strength",
+    title: "Mer muskelmasse og styrke",
   },
   {
-    title: "More energy",
+    title: "Mer energi",
   },
 ];

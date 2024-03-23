@@ -28,7 +28,7 @@ export function CTA({ className, withTitle = true }: Props) {
           </h2>
         )}
 
-        <Card className="overflow-hidden relative">
+        <Card className="overflow-hidden relative mx-0">
           {/* SVG Background */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -60,7 +60,11 @@ export function CTA({ className, withTitle = true }: Props) {
               <Progress className="mx-auto" />
             )}
             <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
-              <Button variant="black" className="w-full lg:w-fit">
+              <Button
+                variant="black"
+                location="cta"
+                className="w-full lg:w-fit"
+              >
                 Bli med
               </Button>
 

@@ -15,7 +15,7 @@ export function IncludedInPlans() {
         /> */}
         <RowsHeader />
         <RowItem
-          text="Myluck fitness app (iOS & Android)"
+          text="MyLuck-appen (iOS & Android)"
           premium={true}
           innerCircle={true}
         />
@@ -30,7 +30,7 @@ function RowsHeader() {
   return (
     <div className="grid grid-cols-5 items-baseline">
       <h3 className="col-span-3 text-black/80 font-sans text-[28px] font-medium">
-        Plans include
+        Pakkene inneholder
       </h3>
       <p className="col-span-1 text-black/80 font-sans text-[14px] font-light">
         Premium
@@ -47,7 +47,7 @@ function MapRows() {
     <div className="">
       {data.map((group) => (
         <div key={group.title} className="my-16">
-          <h3 className="text-black/80 font-sans text-[18px] leading-[24px] font-medium mb-[26px]">
+          <h3 className="text-black/80 font-sans text-[18px] leading-[24px] font-semibold mb-[26px]">
             {group.title}
           </h3>
           <div className="space-y-6">
@@ -114,141 +114,141 @@ type Group = {
 
 const data: Group[] = [
   {
-    title: "Nutrition",
+    title: "Ernæring",
     rows: [
       {
-        text: "I will setup your personalized calorie & macro goals",
+        text: "Jeg setter opp dine personlige kalori- og makro-mål",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "21 unique daily meal plans tailored for your calorie goals",
+        text: "21 unike, daglige måltidsplaner tilpasset dine kalorimål",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Calorie counting lecture",
+        text: "Liveseminar om kaloritelling",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Psychology of over-eating lecture",
+        text: "Liveseminar om overspising",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Grocery shopping lists",
+        text: "Handleliste så du aldri må tenke på hva du skal handle",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Learn more about breakfast, lunch and dinner",
+        text: "Lær hvordan du lager sunne og næringsrike frokoster, lunsjer og middager.",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Learn how you can meal prep to eat healthy in a hectic everyday life",
+        text: "Lær hvordan du kan lage sunn og næringsrik mat i en hektisk hverdag",
         premium: true,
         innerCircle: true,
       },
     ],
   },
   {
-    title: "Training",
+    title: "Trening",
     rows: [
       {
-        text: "6-weeks gym training program",
+        text: "6-ukers treningsprogram",
         premium: true,
         innerCircle: true,
       },
 
       {
-        text: "Guided home workouts",
+        text: "Veiledede hjemmetreningsøkter",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "PMS workouts",
+        text: "PMS-treningsøkter",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Over 75 minutes of guided stretching videos",
+        text: "Over 75 minutter med tøyevideoer",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Adjust the workouts to fit your week",
+        text: "Tilpass treningsøktene etter din uke og timeplan",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Access to fitness app",
+        text: "Tilgang til appen",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Healthy habbits tracker",
+        text: "Habit tracker",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "All questions about training answered 1 to 1 in DMs",
+        text: "Alle treningsspørsmålene dine svarer jeg på 1-til-1 i DM",
         premium: false,
         innerCircle: true,
       },
     ],
   },
   {
-    title: "Community",
+    title: "Fellesskapet",
     rows: [
       {
-        text: "Bi-weekly live seminars and QAs with me",
+        text: "Liveseminarer og Q&A med meg annenhver uke",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Cosy community in Private Instagram groups",
+        text: "Støttende og motiverende fellesskap i private Instagram-grupper",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Motivational videos from me in Private Instagram groups",
+        text: "Motivasjonsvideoer fra meg i private Instagram-grupper",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Weekly check-in in DM",
+        text: "Check-ins fra meg i DM hver uke",
         premium: false,
         innerCircle: true,
       },
       {
-        text: "Progress photo review with you in DM",
+        text: "Tilbakemelding på fremgangsbildene dine i DM",
         premium: false,
         innerCircle: true,
       },
       {
-        text: "Personal motivation in your DM",
+        text: "Personlig motivasjon i DM",
         premium: false,
         innerCircle: true,
       },
       {
-        text: "I am there for you all the way and answer all your questions 1 to 1",
+        text: "Jeg er der for deg hele veien og svarer på alle spørsmålene dine 1-til-1",
         premium: false,
         innerCircle: true,
       },
     ],
   },
   {
-    title: "Habbits",
+    title: "Vaner",
     rows: [
       {
-        text: "Habbit tracker to improve your physical & mental health",
+        text: "Habit tracker for å forbedre din fysiske og mentale helse",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Food log",
+        text: "Loggføring av mat",
         premium: true,
         innerCircle: true,
       },
