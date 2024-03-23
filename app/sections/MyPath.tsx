@@ -3,7 +3,7 @@ import { Section } from "../components/Section";
 
 export function MyPath() {
   return (
-    <Section className="py-0 pb-12">
+    <Section className="py-0 pb-12 lg:pt-0">
       <h3 className="font-sans text-lg text-center mb-8">
         I’ve walked this path myself. <br /> Now I want to walk it with you.
       </h3>

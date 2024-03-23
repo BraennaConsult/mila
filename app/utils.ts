@@ -6,6 +6,7 @@ import {
   TEMP_LINK,
 } from "@/constants";
 import clsx, { ClassValue } from "clsx";
+import { ReadonlyURLSearchParams } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -34,14 +35,14 @@ export function getPercentage(): number {
   };
 
   const now = new Date();
-  if (
-    now.getUTCFullYear() !== 2024 ||
-    now.getUTCMonth() !== 0 ||
-    now.getUTCDate() !== 20 ||
-    now.getUTCDay() !== 6
-  ) {
-    return 100;
-  }
+  // if (
+  //   now.getUTCFullYear() !== 2024 ||
+  //   now.getUTCMonth() !== 0 ||
+  //   now.getUTCDate() !== 20 ||
+  //   now.getUTCDay() !== 6
+  // ) {
+  //   return 100;
+  // }
 
   const hour = now.getUTCHours() + 1;
 

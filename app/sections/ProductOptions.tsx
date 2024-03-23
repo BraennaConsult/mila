@@ -7,7 +7,7 @@ import { Section } from "../components/Section";
 export function ProductOptions() {
   return (
     <Section className="flex py-8">
-      <Container className="w-full space-y-2">
+      <Container className="w-full space-y-2 lg:flex lg:justify-center lg:space-y-0">
         <ProductionOption
           title="Premium"
           price="kr 390"
@@ -34,7 +34,7 @@ function ProductionOption({
   recommended = false,
 }: ProductPros) {
   return (
-    <Card className="!mx-0 w-full lg:justify-center justify-between flex flex-row lg:flex-col space-x-0 lg:space-x-12 lg:py-20 py-6 overflow-hidden relative">
+    <Card className="!mx-0 w-full lg:max-w-[375px] justify-between flex flex-row space-x-0 lg:space-x-12 lg:py-20 py-6 overflow-hidden relative">
       <div className="z-10">
         <h3 className="font-sans text-[20px] text-black/60">{title}</h3>
         <div className="flex items-baseline">

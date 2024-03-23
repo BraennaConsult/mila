@@ -4,8 +4,8 @@ import { Section } from "../components/Section";
 
 export function BenefitsCard() {
   return (
-    <Section className="py-0">
-      <Card className="px-8 py-9">
+    <Section className="py-0 lg:flex lg:justify-center lg:py-0">
+      <Card className="px-8 py-9 lg:max-w-[550px]">
         <div className="space-y-7">
           <BenefitRow
             iconPath="/benefits/benefit-icon-1.svg"
@@ -19,7 +19,6 @@ export function BenefitsCard() {
             iconPath="/benefits/benefit-icon-3.svg"
             text="Stay motivated throughout the marathon with other likeminded women"
           />
-
           <Image
             src="/benefits/benefit-graph.svg"
             alt="icon"

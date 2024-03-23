@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export function Guarantee() {
   return (
-    <Section className="py-0 pb-8">
-      <Card className="px-8 py-8">
+    <Section className="py-0 pb-8 lg:flex lg:justify-center lg:pt-0">
+      <Card className="px-8 py-8 lg:max-w-[550px]">
         <div className="border-[1px] rounded-[24px] border-black/10 px-4 py-8 space-y-5">
           <h3 className="font-sans text-black/80 text-[20px]">
             100% Money-Back Guarantee
