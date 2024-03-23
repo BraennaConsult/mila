@@ -11,7 +11,7 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import { useState } from "react";
-import { MediaCard, MediaCardAutoplay } from "../components/MediaCard";
+import { MediaCardAutoplay, MediaCard } from "../components/MediaCard";
 import { Slide } from "@/lib/types";
 
 export function ParticipantsReview() {
@@ -84,7 +84,7 @@ export function ParticipantsReview() {
       </h2>
       <div ref={ref} className="keen-slider mb-8">
         {slides.map((slide, index) => (
-          <MediaCardAutoplay
+          <MediaCard
             key={index}
             type={slide.type}
             src={slide.src}
@@ -144,12 +144,14 @@ const slides: Slide[] = [
   {
     type: "video",
     src: "/video/testemonial2.mov",
+    poster: "/testemonial2.png",
     alt: "MyLuck 2",
     aspectRatio: 0.75,
   },
   {
     type: "video",
     src: "/video/testemonial1.mov",
+    poster: "/testemonial1.png",
     alt: "MyLuck 2",
     aspectRatio: 0.75,
   },

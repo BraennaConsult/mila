@@ -2,7 +2,7 @@ import { Slide } from "@/lib/types";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import Image from "next/image";
 
-export const MediaCard = ({
+export const MediaCardAutoplay = ({
   type, // 'image' or 'video'
   src,
   alt,
@@ -55,13 +55,14 @@ export const MediaCard = ({
   );
 };
 
-export const MediaCardAutoplay = ({
+export const MediaCard = ({
   type, // 'image' or 'video'
   src,
   alt,
   aspectRatio,
   text,
   position,
+  poster,
 }: Slide) => {
   // Determine CSS for text position
   const positionClass = {
@@ -86,6 +87,7 @@ export const MediaCardAutoplay = ({
             preload="auto"
             controls={true}
             id={src}
+            poster={poster || undefined}
             // controls
             // onFocus={(e) => e.target.play()}
             style={{ transform: "translateY(-20%)" }}

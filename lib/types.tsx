@@ -5,4 +5,6 @@ export interface Slide {
   aspectRatio: number;
   text?: string;
   position?: "top" | "center" | "bottom";
+  poster?: string;
+  autoPlay?: boolean;
 }

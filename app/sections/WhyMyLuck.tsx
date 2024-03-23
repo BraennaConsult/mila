@@ -11,7 +11,7 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import { useState } from "react";
-import { MediaCard, MediaCardAutoplay } from "../components/MediaCard";
+import { MediaCardAutoplay, MediaCard } from "../components/MediaCard";
 import { Slide } from "@/lib/types";
 
 export function WhyMyLuck() {
@@ -83,17 +83,32 @@ export function WhyMyLuck() {
         Hvorfor jeg startet MyLuck
       </h2>
       <div ref={ref} className="keen-slider mb-8">
-        {slides.map((slide, index) => (
-          <MediaCardAutoplay
-            key={index}
-            type={slide.type}
-            src={slide.src}
-            alt={slide.alt}
-            aspectRatio={aspectRatio}
-            text={slide.text}
-            position={slide.position}
-          />
-        ))}
+        {slides.map((slide, index) => {
+          if (slide.autoPlay) {
+            return (
+              <MediaCardAutoplay
+                key={index}
+                type={slide.type}
+                src={slide.src}
+                alt={slide.alt}
+                aspectRatio={aspectRatio}
+                text={slide.text}
+                position={slide.position}
+              />
+            );
+          }
+          return (
+            <MediaCard
+              key={index}
+              type={slide.type}
+              src={slide.src}
+              alt={slide.alt}
+              aspectRatio={aspectRatio}
+              text={slide.text}
+              position={slide.position}
+            />
+          );
+        })}
       </div>
       {loaded && instanceRef.current && (
         <div className="hidden lg:flex space-x-2 items-center justify-end pr-8 lg:absolute lg:right-0">
@@ -144,24 +159,30 @@ const slides: Slide[] = [
   {
     type: "video",
     src: "/video/Videonettsted.mp4",
+    poster: "/Videonettsted.png",
     alt: "MyLuck 1",
     aspectRatio: 0.75,
+    autoPlay: false,
   },
   {
     type: "video",
     src: "/video/in-shower.mp4",
+    poster: "/in-shower.png",
     alt: "MyLuck 2",
     aspectRatio: 0.75,
     text: "Loose wight & shape up",
     position: "center",
+    autoPlay: true,
   },
   {
     type: "video",
     src: "/video/mila-with-child.mp4",
+    poster: "/mila-with-child.png",
     alt: "MyLuck 3",
     aspectRatio: 0.75,
     text: `Have more energy for you family`,
     position: "top",
+    autoPlay: true,
   },
   // {
   //   type: "image",
