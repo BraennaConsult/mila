@@ -10,6 +10,7 @@ import { ProductReview } from "../sections/ProductReview";
 import Link from "next/link";
 import { Logo } from "../components/Logo";
 import { GoToCheckout } from "../sections/GoToCheckout";
+import { SecretHeader } from "../sections/SecretHeader";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -33,10 +34,7 @@ export default function ProductPage({ searchParams }: Props) {
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
           </div>
-          <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
-            Hemmelig link
-          </h3>
-          {/* <h1>myLuck by mila</h1> */}
+          <SecretHeader />
           <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
             Velg pakken din for <br /> å komme i gang
           </h3>

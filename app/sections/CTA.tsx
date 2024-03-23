@@ -64,7 +64,13 @@ export function CTA({
                 <Progress className="lg:order-first" />
               </div>
             ) : (
-              <Progress className="mx-auto" />
+              <>
+                <CountdownTimer
+                  title="Påmeldingen starter om"
+                  targetDate={targetDate}
+                />
+                <Progress className="mx-auto" />
+              </>
             )}
             <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
               <Button

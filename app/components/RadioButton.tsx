@@ -30,7 +30,7 @@ export function CustomRadioButton({ name }: props) {
       />
       <span
         className={`rounded-full w-6 h-6 border-[1px] border-black ${
-          checked ? "bg-pink-primary" : "bg-white"
+          checked ? "bg-black" : "bg-white"
         }`}
       ></span>
     </label>
