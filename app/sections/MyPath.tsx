@@ -9,9 +9,13 @@ export function MyPath() {
       </h3>
       <div className="flex justify-center rounded-[69px] overflow-hidden mx-6">
         <video
-          width="350"
+          muted
           loop
           autoPlay
+          playsInline
+          preload="auto"
+          controls={false}
+          id={"transformation"}
           // onFocus={(e) => e.target.play()}
         >
           <source src="/video/Transformation.mp4" type="video/mp4" />
