@@ -11,7 +11,7 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import { useState } from "react";
-import { MediaCard } from "../components/MediaCard";
+import { MediaCard, MediaCardAutoplay } from "../components/MediaCard";
 import { Slide } from "@/lib/types";
 
 export function WhyMyLuck() {
@@ -84,7 +84,7 @@ export function WhyMyLuck() {
       </h2>
       <div ref={ref} className="keen-slider mb-8">
         {slides.map((slide, index) => (
-          <MediaCard
+          <MediaCardAutoplay
             key={index}
             type={slide.type}
             src={slide.src}
@@ -141,7 +141,12 @@ export function WhyMyLuck() {
 }
 
 const slides: Slide[] = [
-  { type: "image", src: "/myluck-1.JPG", alt: "MyLuck 1", aspectRatio: 0.75 },
+  {
+    type: "video",
+    src: "/video/Videonettsted.mp4",
+    alt: "MyLuck 1",
+    aspectRatio: 0.75,
+  },
   {
     type: "video",
     src: "/video/in-shower.mp4",
