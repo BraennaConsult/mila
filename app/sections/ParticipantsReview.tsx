@@ -144,6 +144,13 @@ export function ParticipantsReview() {
 const slides: Slide[] = [
   {
     type: "video",
+    src: "/video/testemonial3.mp4",
+    poster: "/testemonial3.png",
+    alt: "MyLuck 2",
+    aspectRatio: 0.75,
+  },
+  {
+    type: "video",
     src: "/video/testemonial2.mov",
     poster: "/testemonial2.png",
     alt: "MyLuck 2",
