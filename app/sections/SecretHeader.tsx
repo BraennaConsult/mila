@@ -6,7 +6,7 @@ import { SecretLinkTitle } from "../components/SecretLinkTitle";
 export function SecretHeader() {
   // current time + 12 hours
   const newTargetDate = new Date();
-  newTargetDate.setHours(newTargetDate.getHours() + 12);
+  newTargetDate.setHours(newTargetDate.getHours() + 24);
   const targetAsString = newTargetDate.toISOString();
   const cookieCountdownTime = cookies().get("countdownTime");
 
