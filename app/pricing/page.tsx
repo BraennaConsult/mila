@@ -25,17 +25,20 @@ export default function ProductPage({ searchParams }: Props) {
       {/* <Header /> */}
       <main className="bg-[#F7F6F6]">
         <>
-          <div className="flex justify-center py-12">
-            {/* <Image
+          {/* <div className="flex justify-center py-12"> */}
+          {/* <Image
               src={"/my-luck-logo.svg"}
               alt="myLuck"
               width={98}
               height={52}
             /> */}
-            <Link href="/">
+          {/* <Link href="/">
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
-          </div>
+          </div> */}
+          <h1 className="text-black/60 text-center py-8">
+            250+ jenter har klart målene sine med MyLuck
+          </h1>
           {/* <h1>myLuck by mila</h1> */}
           <BeforeAndAfterComponent />
           <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">

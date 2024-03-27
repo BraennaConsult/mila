@@ -16,8 +16,8 @@ export function BeforeAndAfterComponent() {
               className="rounded-tl-[30px] rounded-bl-[30px]"
             />
             {/* Pill */}
-            <div className="absolute bottom-3 bg-[#F0EDED] py-1 left-3 rounded-full px-4 text-[#7C54BD] text-[14px] font-sans font-medium">
-              Etter 6 uker
+            <div className="absolute bottom-3 bg-[#F0EDED] py-1 left-3 rounded-full px-4 text-black/50 text-[14px] font-sans font-medium">
+              Før
             </div>
           </div>
 
