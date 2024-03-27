@@ -12,6 +12,7 @@ import { Logo } from "../components/Logo";
 import { GoToCheckout } from "../sections/GoToCheckout";
 import { SecretHeader } from "../sections/SecretHeader";
 import { cookies } from "next/headers";
+import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -43,8 +44,11 @@ export default function ProductPage({ searchParams }: Props) {
             </Link>
           </div>
           <SecretHeader />
+
           {!isLinkExpired && (
             <>
+              <BeforeAndAfterComponent />
+
               <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
                 Velg pakken din for <br /> å komme i gang
               </h3>
