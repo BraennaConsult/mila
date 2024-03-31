@@ -33,7 +33,7 @@ interface CardProps {
 
 function Card({ testimonial, image }: CardProps) {
   return (
-    <div className="rounded-[30px] bg-white p-10 border-2 border-pink-light hover:border-pink-intense shadow-sm break-inside-avoid">
+    <div className="rounded-[30px] bg-white p-10 hover:border-2 hover:border-pink-intense shadow-sm break-inside-avoid">
       <div className="flex justify-between items-center mb-10">
         <div className="flex space-x-[-2px]">
           <StarIcon className="w-5 h-5 fill-pink-intense text-pink-intense" />

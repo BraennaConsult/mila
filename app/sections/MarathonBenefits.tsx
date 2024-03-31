@@ -9,7 +9,7 @@ interface Props {
 
 export function MarathonBenefits({ className }: Props) {
   return (
-    <Section className="py-12 flex justify-center items-center">
+    <Section className="py-9 flex justify-center items-center">
       <Container className="lg:w-full px-0">
         <Card className="lg:w-full lg:justify-center flex flex-col lg:flex-col space-x-0 lg:space-x-12 lg:py-20">
           <div className="flex items-center justify-center lg:mb-12">

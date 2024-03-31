@@ -50,13 +50,14 @@ export default function ProductPage({ searchParams }: Props) {
           <ProductOptions className="lg:py-10" />
           <IncludedInPlans />
           <BenefitsCard />
-          <ProductReview />
           <MyPath />
           <h3 className="text-center font-serif text-[40px] leading-[40px] text-black lg:text-2xl">
             Klar for å få <br /> drømmekroppen din?
           </h3>
           <ProductOptions className="lg:pt-10 lg:pb-32" />
           <Guarantee />
+          <ProductReview />
+
           <CTA
             className="pt-0 md:pt-0 lg:pt-0"
             withTitle={false}
