@@ -1,6 +1,8 @@
 import { Slide } from "@/lib/types";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import Image from "next/image";
+import { cn } from "../utils";
+import { Button } from "./Button";
 
 export const MediaCardAutoplay = ({
   type, // 'image' or 'video'
@@ -63,6 +65,8 @@ export const MediaCard = ({
   text,
   position,
   poster,
+  tint,
+  cta,
 }: Slide) => {
   // Determine CSS for text position
   const positionClass = {
@@ -71,15 +75,29 @@ export const MediaCard = ({
     bottom: "bottom-0 mb-16",
   };
   return (
-    <div className="keen-slider__slide rounded-[39px] relative shadow-card">
+    <div
+      className={cn("keen-slider__slide rounded-[39px] relative shadow-card")}
+    >
       <AspectRatio ratio={aspectRatio}>
         {type === "image" ? (
-          <Image
-            className="object-cover rounded-project absolute"
-            src={src}
-            alt={alt || ""}
-            fill
-          />
+          <>
+            <Image
+              className={cn("object-cover rounded-project absolute")}
+              src={src}
+              alt={alt || ""}
+              fill
+            />
+            {tint && (
+              <div className="absolute inset-0 bg-black opacity-30 mix-blend-multiply"></div>
+            )}
+            {cta && (
+              <div className="absolute bottom-8 left left-[20%] flex items-center justify-center">
+                <Button location="hero" hasIcon>
+                  Bli med på maraton
+                </Button>
+              </div>
+            )}
+          </>
         ) : (
           <video
             loop
