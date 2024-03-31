@@ -6,7 +6,7 @@ import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
 import { cn, getSaleHasStarted } from "@/app/utils";
-import { PRICE_AND_DATE, SALE_FINISHES_AT } from "@/constants";
+import { PRICE_AND_DATE, SALE_FINISHES_AT, SALE_STARTS_AT } from "@/constants";
 import Image from "next/image";
 import { Card } from "../components/Card";
 
@@ -23,7 +23,8 @@ export function CTA({
   disabled,
   trackingType,
 }: Props) {
-  const targetDate = SALE_FINISHES_AT;
+  // const targetDate = SALE_FINISHES_AT;
+  const targetDate = SALE_STARTS_AT;
   const saleHasStarted = getSaleHasStarted();
 
   return (
