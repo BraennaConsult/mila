@@ -14,7 +14,7 @@ import { useState } from "react";
 import { MediaCardAutoplay, MediaCard } from "../components/MediaCard";
 import { Slide } from "@/lib/types";
 
-export function WhyMyLuck() {
+export function WhyMyLuckNoCTA() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
 
@@ -212,14 +212,5 @@ const slides: Slide[] = [
     aspectRatio: 0.75,
     text: `Være mindre oppblåst`,
     position: "bottom",
-  },
-  {
-    type: "image",
-    src: "/carusell/carusell4.JPG",
-    alt: "MyLuck 3",
-    aspectRatio: 0.75,
-    text: ``,
-    position: "bottom",
-    cta: true,
   },
 ];
