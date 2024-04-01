@@ -5,7 +5,7 @@ import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { cn, getSaleHasStarted } from "@/app/utils";
+import { cn, getSaleHasEnded, getSaleHasStarted } from "@/app/utils";
 import { PRICE_AND_DATE, SALE_FINISHES_AT, SALE_STARTS_AT } from "@/constants";
 import Image from "next/image";
 import { Card } from "../components/Card";
@@ -25,7 +25,8 @@ export function CTA({
 }: Props) {
   const saleStartsAt = SALE_STARTS_AT;
   const saleEndsAt = SALE_FINISHES_AT;
-  const saleHasStarted = getSaleHasStarted();
+  const hasSaleStarted = getSaleHasStarted();
+  const hasSaleEnded = getSaleHasEnded();
 
   return (
     <Section className={className}>
@@ -45,7 +46,7 @@ export function CTA({
             />
           </div>
           <div className="z-10 relative">
-            {saleHasStarted ? (
+            {hasSaleStarted ? (
               <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto z-2">
                 <CountdownTimer
                   title="Påmeldingen stenger om"
@@ -65,7 +66,8 @@ export function CTA({
             <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
               <Button
                 variant="black"
-                disabled={disabled}
+                // disabled={disabled}
+                disabled={!disabled || !hasSaleStarted || hasSaleEnded}
                 location="cta"
                 trackingType={trackingType}
                 className={cn(
