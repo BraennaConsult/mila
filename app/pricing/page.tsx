@@ -63,7 +63,7 @@ export default function ProductPage({ searchParams }: Props) {
           <CTA
             className="pt-0 md:pt-0 lg:pt-0"
             withTitle={false}
-            disabled={!hasOption || !hasSaleStarted || hasSaleEnded}
+            disabled={!hasOption && !hasSaleStarted && hasSaleEnded}
             trackingType="checkout_button"
           />
           {hasSaleStarted && <GoToCheckout show={hasOption} option={option} />}

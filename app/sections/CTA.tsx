@@ -28,6 +28,8 @@ export function CTA({
   const hasSaleStarted = getSaleHasStarted();
   const hasSaleEnded = getSaleHasEnded();
 
+  console.log(!disabled && !hasSaleStarted && hasSaleEnded);
+
   return (
     <Section className={className}>
       <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
@@ -67,7 +69,7 @@ export function CTA({
               <Button
                 variant="black"
                 // disabled={disabled}
-                disabled={!disabled || !hasSaleStarted || hasSaleEnded}
+                disabled={!disabled && !hasSaleStarted && hasSaleEnded}
                 location="cta"
                 trackingType={trackingType}
                 className={cn(
