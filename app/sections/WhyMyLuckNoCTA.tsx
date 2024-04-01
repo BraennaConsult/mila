@@ -79,9 +79,9 @@ export function WhyMyLuckNoCTA() {
 
   return (
     <Section className="py-9">
-      <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
+      {/* <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
         Hvorfor jeg startet MyLuck
-      </h2>
+      </h2> */}
       <div ref={ref} className="keen-slider mb-8">
         {slides.map((slide, index) => {
           if (slide.autoPlay) {
