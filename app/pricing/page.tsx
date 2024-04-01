@@ -1,20 +1,14 @@
-import Image from "next/image";
-import { Header } from "../components/Header";
+import { WhatYouGet } from "@/app/sections/WhatYouGet";
+import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
 import { BenefitsCard } from "../sections/BenefitsCard";
 import { CTA } from "../sections/CTA";
+import { GoToCheckout } from "../sections/GoToCheckout";
 import { Guarantee } from "../sections/Guarantee";
 import { IncludedInPlans } from "../sections/IncludedInPlans";
 import { MyPath } from "../sections/MyPath";
 import { ProductOptions } from "../sections/ProductOptions";
 import { ProductReview } from "../sections/ProductReview";
-import Link from "next/link";
-import { Logo } from "../components/Logo";
-import { GoToCheckout } from "../sections/GoToCheckout";
-import { getLink, getSaleHasEnded, getSaleHasStarted } from "../utils";
-import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
-import { WhyMyLuck } from "@/app/sections/WhyMyLuck";
-import { WhatYouGet } from "@/app/sections/WhatYouGet";
-import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
+import { getSaleHasEnded, getSaleHasStarted } from "../utils";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };

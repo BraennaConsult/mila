@@ -1,22 +1,13 @@
-import Image from "next/image";
-import { Header } from "../components/Header";
+import { WhatYouGet } from "@/app/sections/WhatYouGet";
+import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
 import { BenefitsCard } from "../sections/BenefitsCard";
 import { CTA } from "../sections/CTA";
+import { GoToCheckout } from "../sections/GoToCheckout";
 import { Guarantee } from "../sections/Guarantee";
 import { IncludedInPlans } from "../sections/IncludedInPlans";
 import { MyPath } from "../sections/MyPath";
 import { ProductOptions } from "../sections/ProductOptions";
 import { ProductReview } from "../sections/ProductReview";
-import Link from "next/link";
-import { Logo } from "../components/Logo";
-import { GoToCheckout } from "../sections/GoToCheckout";
-import { SecretHeader } from "../sections/SecretHeader";
-import { cookies } from "next/headers";
-import { MarathonBenefits } from "../sections/MarathonBenefits";
-import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
-import { WhyMyLuck } from "@/app/sections/WhyMyLuck";
-import { WhatYouGet } from "@/app/sections/WhatYouGet";
-import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
