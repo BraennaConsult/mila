@@ -5,7 +5,7 @@ import { Container } from "@/app/components/Container";
 
 export function BenefitsCard() {
   return (
-    <Section className="py-9 lg:flex lg:justify-center">
+    <Section className="lg:flex lg:justify-center py-0 pt-3">
       <Container>
         <Card className="lg:max-w-[550px]">
           <Image
