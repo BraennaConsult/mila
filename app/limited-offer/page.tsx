@@ -13,7 +13,7 @@ import { GoToCheckout } from "../sections/GoToCheckout";
 import { SecretHeader } from "../sections/SecretHeader";
 import { cookies } from "next/headers";
 import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
-import { SecretHeaderLimitedOffer } from "@/app/sections/SecretHeaderLimitedOffer";
+import { COOKIES } from "@/constants";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -22,7 +22,7 @@ export default function ProductPage({ searchParams }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
 
-  const countDownTime = cookies().get("countdownTime")?.value;
+  const countDownTime = cookies().get(COOKIES.DISCOUNTED_SALE_TIMER)?.value;
 
   const isLinkExpired = countDownTime
     ? new Date(countDownTime) < new Date()
@@ -30,21 +30,14 @@ export default function ProductPage({ searchParams }: Props) {
 
   return (
     <>
-      {/* <Header /> */}
       <main className="bg-[#F7F6F6]">
         <>
           <div className="flex justify-center py-12">
-            {/* <Image
-              src={"/my-luck-logo.svg"}
-              alt="myLuck"
-              width={98}
-              height={52}
-            /> */}
             <Link href="/">
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
           </div>
-          <SecretHeaderLimitedOffer />
+          {/* <SecretHeader /> */}
 
           {!isLinkExpired && (
             <>
@@ -85,7 +78,7 @@ export default function ProductPage({ searchParams }: Props) {
               <CTA
                 className="pt-0 md:pt-0 lg:pt-0"
                 withTitle={false}
-                disabled={!hasOption}
+                disabled={hasOption}
                 trackingType="checkout_button"
               />
             </>

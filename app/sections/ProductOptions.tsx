@@ -1,3 +1,4 @@
+import { cn } from "@/app/utils";
 import Image from "next/image";
 import { Card } from "../components/Card";
 import { Container } from "../components/Container";
@@ -5,8 +6,6 @@ import CustomRadioButton, {
   ProductPageRadioButton,
 } from "../components/RadioButton";
 import { Section } from "../components/Section";
-import { inter } from "@/fonts";
-import { cn } from "@/app/utils";
 
 interface Props {
   className?: string;
