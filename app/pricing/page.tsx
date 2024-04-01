@@ -9,6 +9,7 @@ import { MyPath } from "../sections/MyPath";
 import { ProductOptions } from "../sections/ProductOptions";
 import { ProductReview } from "../sections/ProductReview";
 import { getSaleHasEnded, getSaleHasStarted } from "../utils";
+import { BeforeAndAfterComponent } from "@/app/sections/BeforeAndAfterComponent";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -27,7 +28,7 @@ export default function ProductPage({ searchParams }: Props) {
           {/* <div className="flex justify-center py-12"> */}
           {/* <Image
               src={"/my-luck-logo.svg"}
-              alt="myLuck"
+              alt="myLucke
               width={98}
               height={52}
             /> */}
@@ -39,8 +40,8 @@ export default function ProductPage({ searchParams }: Props) {
             250+ jenter har klart målene sine med MyLuck
           </h1>
           {/* <h1>myLuck by mila</h1> */}
-          {/* <BeforeAndAfterComponent /> */}
-          <WhyMyLuckNoCTA />
+          <BeforeAndAfterComponent />
+          {/* <WhyMyLuckNoCTA /> */}
           <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
             Velg pakken din for <br /> å komme i gang
           </h3>

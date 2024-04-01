@@ -14,6 +14,10 @@ import { SecretHeader } from "../sections/SecretHeader";
 import { cookies } from "next/headers";
 import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
 import { COOKIES } from "@/constants";
+import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
+import { CustomCTA } from "@/app/sections/CustomCTA";
+import CountdownTimer from "@/app/components/CountdownTimer";
+import { SecretHeaderLimitedOffer } from "@/app/sections/SecretHeaderLimitedOffer";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -22,7 +26,8 @@ export default function ProductPage({ searchParams }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
 
-  const countDownTime = cookies().get(COOKIES.DISCOUNTED_SALE_TIMER)?.value;
+  const countDownTime =
+    cookies().get(COOKIES.DISCOUNTED_SALE_TIMER)?.value || "";
 
   const isLinkExpired = countDownTime
     ? new Date(countDownTime) < new Date()
@@ -37,11 +42,13 @@ export default function ProductPage({ searchParams }: Props) {
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
           </div>
-          {/* <SecretHeader /> */}
+          <SecretHeaderLimitedOffer countdownTime={countDownTime} />
+
+          <WhyMyLuckNoCTA />
 
           {!isLinkExpired && (
             <>
-              <BeforeAndAfterComponent />
+              {/* <BeforeAndAfterComponent /> */}
 
               <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
                 Velg pakken din for <br /> å komme i gang
@@ -59,7 +66,10 @@ export default function ProductPage({ searchParams }: Props) {
               </h3>
               <ProductOptions className="lg:pt-10 lg:pb-32" />
               <Guarantee />
-              <CTA
+              <CustomCTA
+                expiresIn={countDownTime}
+                hasExpired={isLinkExpired}
+                hasOption={hasOption}
                 className="pt-0 md:pt-0 lg:pt-0"
                 withTitle={false}
                 disabled={!hasOption}
@@ -75,7 +85,10 @@ export default function ProductPage({ searchParams }: Props) {
                   Beklager, denne linken er utløpt
                 </h3>
               </div>
-              <CTA
+              <CustomCTA
+                expiresIn={countDownTime}
+                hasExpired={isLinkExpired}
+                hasOption={hasOption}
                 className="pt-0 md:pt-0 lg:pt-0"
                 withTitle={false}
                 disabled={hasOption}

@@ -6,6 +6,7 @@ import {
   TEMP_LINK,
 } from "@/constants";
 import clsx, { ClassValue } from "clsx";
+import { cookies } from "next/headers";
 import { ReadonlyURLSearchParams } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 

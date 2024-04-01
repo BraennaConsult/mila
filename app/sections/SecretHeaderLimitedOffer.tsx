@@ -1,39 +1,23 @@
-import { cookies } from "next/headers";
-import CountdownTimer from "../components/CountdownTimer";
-import { setCookie } from "../actions";
-import { SecretLinkTitle } from "../components/SecretLinkTitle";
+"use client";
+
+import { set30MinuteTimer } from "@/app/actions";
 import { COOKIES } from "@/constants";
-import { SecretLinkTitle30Minutes } from "@/app/components/SecretLinkTitle30Minutes";
+import { cookies } from "next/headers";
 
-export function SecretHeaderLimitedOffer() {
-  // current time + 12 hours
-  const newTargetDate = new Date();
-  newTargetDate.setHours(newTargetDate.getHours() + 24);
-  const targetAsString = newTargetDate.toISOString();
-  const cookieCountdownTime = cookies().get(COOKIES.DISCOUNTED_SALE_TIMER);
+export function SecretHeaderLimitedOffer({
+  countdownTime,
+}: {
+  countdownTime: string;
+}) {
+  const isClient = typeof window !== "undefined";
 
-  let targetDate: string;
-  if (!cookieCountdownTime) {
-    targetDate = targetAsString;
-  } else {
-    targetDate = cookieCountdownTime.value;
+  if (isClient) {
+    if (!countdownTime) {
+      setTimeout(() => {
+        set30MinuteTimer();
+      }, 1500);
+    }
   }
-  return (
-    <div className="border-b-2 border-black/30 mb-12 pb-4">
-      <SecretLinkTitle30Minutes
-        cookieCountdownTime={cookieCountdownTime?.value}
-      />
-      <div className="flex justify-center text-center">
-        {!cookieCountdownTime?.value && (
-          <p className="text-mid-grey">Loading...</p>
-        )}
-        {cookieCountdownTime?.value && (
-          <CountdownTimer
-            title="Utgår om:"
-            targetDate={cookieCountdownTime.value}
-          />
-        )}
-      </div>
-    </div>
-  );
+
+  return <></>;
 }
