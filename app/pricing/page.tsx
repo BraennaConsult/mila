@@ -12,6 +12,9 @@ import { Logo } from "../components/Logo";
 import { GoToCheckout } from "../sections/GoToCheckout";
 import { getLink, getSaleHasEnded, getSaleHasStarted } from "../utils";
 import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
+import { WhyMyLuck } from "@/app/sections/WhyMyLuck";
+import { WhatYouGet } from "@/app/sections/WhatYouGet";
+import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -42,7 +45,8 @@ export default function ProductPage({ searchParams }: Props) {
             250+ jenter har klart målene sine med MyLuck
           </h1>
           {/* <h1>myLuck by mila</h1> */}
-          <BeforeAndAfterComponent />
+          {/* <BeforeAndAfterComponent /> */}
+          <WhyMyLuckNoCTA />
           <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
             Velg pakken din for <br /> å komme i gang
           </h3>
@@ -51,6 +55,7 @@ export default function ProductPage({ searchParams }: Props) {
           </p>
           <ProductOptions className="lg:py-10" />
           <IncludedInPlans />
+          <WhatYouGet />
           <BenefitsCard />
           <MyPath />
           <h3 className="text-center font-serif text-[40px] leading-[40px] text-black lg:text-2xl">

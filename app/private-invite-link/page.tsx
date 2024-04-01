@@ -14,6 +14,9 @@ import { SecretHeader } from "../sections/SecretHeader";
 import { cookies } from "next/headers";
 import { MarathonBenefits } from "../sections/MarathonBenefits";
 import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
+import { WhyMyLuck } from "@/app/sections/WhyMyLuck";
+import { WhatYouGet } from "@/app/sections/WhatYouGet";
+import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -39,7 +42,8 @@ export default function ProductPage({ searchParams }: Props) {
             </Link>
           </div> */}
           {/* <SecretHeader /> */}
-          <BeforeAndAfterComponent />
+          {/* <BeforeAndAfterComponent /> */}
+          <WhyMyLuckNoCTA />
 
           <>
             <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
@@ -50,6 +54,7 @@ export default function ProductPage({ searchParams }: Props) {
             </p>
             <ProductOptions className="lg:py-10" />
             <IncludedInPlans />
+            <WhatYouGet />
             <BenefitsCard />
             <ProductReview />
             <MyPath />
