@@ -5,10 +5,16 @@ import { Container } from "@/app/components/Container";
 
 export function BenefitsCard() {
   return (
-    <Section className="py-0 lg:flex lg:justify-center lg:py-0">
+    <Section className="py-9 lg:flex lg:justify-center">
       <Container>
-        <Card className="px-8 py-9 lg:max-w-[550px]">
-          <div className="space-y-7">
+        <Card className="lg:max-w-[550px]">
+          <Image
+            src="/benefit-card.png"
+            height={530}
+            width={371}
+            alt="benefit card"
+          />
+          {/* <div className="space-y-7">
             <BenefitRow
               iconPath="/benefits/benefit-icon-1.svg"
               text="Se synlige resultater før sommeren og få mer energi"
@@ -33,7 +39,7 @@ export function BenefitsCard() {
             <h3 className="text-center font-sans text-[20px] leading-[24px] text-black/80 font-medium">
               Få synlige resultater <br /> innen 19. mai
             </h3>
-          </div>
+          </div> */}
         </Card>
       </Container>
     </Section>

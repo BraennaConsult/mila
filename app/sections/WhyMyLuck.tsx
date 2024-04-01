@@ -78,7 +78,7 @@ export function WhyMyLuck() {
   const aspectRatio = isDesktop ? 1 : 0.75;
 
   return (
-    <Section>
+    <Section className="py-9">
       <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
         Hvorfor jeg startet MyLuck
       </h2>
@@ -108,6 +108,8 @@ export function WhyMyLuck() {
               aspectRatio={aspectRatio}
               text={slide.text}
               position={slide.position}
+              tint={slide.tint}
+              cta={slide.cta}
             />
           );
         })}
@@ -172,7 +174,7 @@ const slides: Slide[] = [
     poster: "/in-shower.png",
     alt: "MyLuck 2",
     aspectRatio: 0.75,
-    text: "Loose wight & shape up",
+    text: "Gå ned i vekt & komme i form",
     position: "center",
     autoPlay: true,
   },
@@ -182,64 +184,42 @@ const slides: Slide[] = [
     poster: "/mila-with-child.png",
     alt: "MyLuck 3",
     aspectRatio: 0.75,
-    text: `Have more energy for you family`,
+    text: `Ha mer energi til familien`,
     position: "top",
     autoPlay: true,
   },
-  // {
-  //   type: "image",
-  //   src: "/carusell/carusell1.JPG",
-  //   alt: "MyLuck 3",
-  //   aspectRatio: 0.75,
-  //   text: `Become stronger & more confident`,
-  //   position: "top",
-  // },
-  // {
-  //   type: "image",
-  //   src: "/carusell/carusell2.JPG",
-  //   alt: "MyLuck 3",
-  //   aspectRatio: 0.75,
-  //   text: `Fit into your old clothes again`,
-  //   position: "center",
-  // },
-  // {
-  //   type: "image",
-  //   src: "/carusell/carusell3.JPG",
-  //   alt: "MyLuck 3",
-  //   aspectRatio: 0.75,
-  //   text: `Reduce swelling`,
-  //   position: "top",
-  // },
-  // {
-  //   type: "image",
-  //   src: "/carusell/carusell4.JPG",
-  //   alt: "MyLuck 3",
-  //   aspectRatio: 0.75,
-  //   text: ``,
-  //   position: "top",
-  // },
-  // {
-  //   type: "image",
-  //   src: "/myluck-1.JPG",
-  //   alt: "MyLuck 4",
-  //   aspectRatio: 0.75,
-  //   text: "Reduce stress",
-  //   position: "top",
-  // },
-  // {
-  //   type: "image",
-  //   src: "/myluck-2.JPG",
-  //   alt: "MyLuck 5",
-  //   aspectRatio: 0.75,
-  //   text: "Fit into your old clothes again",
-  //   position: "center",
-  // },
-  // {
-  //   type: "image",
-  //   src: "/myluck-3.JPG",
-  //   alt: "MyLuck 5",
-  //   aspectRatio: 0.75,
-  //   text: "Fit into your old clothes again",
-  //   position: "bottom",
-  // },
+  {
+    type: "image",
+    src: "/carusell/carusell1.JPG",
+    alt: "MyLuck 3",
+    aspectRatio: 0.75,
+    text: `Become stronger & more confident`,
+    position: "bottom",
+    tint: true,
+  },
+  {
+    type: "image",
+    src: "/carusell/carusell2.JPG",
+    alt: "MyLuck 3",
+    aspectRatio: 0.75,
+    text: `Fit into your old clothes again`,
+    position: "center",
+  },
+  {
+    type: "image",
+    src: "/carusell/carusell3.JPG",
+    alt: "MyLuck 3",
+    aspectRatio: 0.75,
+    text: `Reduce swelling`,
+    position: "bottom",
+  },
+  {
+    type: "image",
+    src: "/carusell/carusell4.JPG",
+    alt: "MyLuck 3",
+    aspectRatio: 0.75,
+    text: ``,
+    position: "bottom",
+    cta: true,
+  },
 ];

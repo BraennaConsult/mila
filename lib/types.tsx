@@ -7,4 +7,6 @@ export interface Slide {
   position?: "top" | "center" | "bottom";
   poster?: string;
   autoPlay?: boolean;
+  tint?: boolean;
+  cta?: boolean;
 }

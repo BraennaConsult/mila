@@ -9,7 +9,7 @@ interface Props {
 
 export function WhatYouGet({ className }: Props) {
   return (
-    <Section>
+    <Section className="py-9">
       <Container>
         <h2 className="lg:max-w-l text-pretty mb-[40px] md:mb-32 text-[28px] lg:text-2xl text-black/80 text-center font-sans ">
           Hva du får

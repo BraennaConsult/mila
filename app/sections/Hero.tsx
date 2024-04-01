@@ -18,7 +18,7 @@ export function Hero() {
         <source src="/video/promo-big.mp4" type="video/mp4" />
       </video>
       <div className="absolute w-full h-full bg-black/20 top-0 left-0 z-1" />
-      <Container className="space-y-6 mb-14 w-full lg:mx-auto mx-6 z-20">
+      <Container className="space-y-8 mb-14 w-full lg:mx-auto mx-6 z-20">
         <h1 className="text-[40px] leading-[50px] lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md ">
           Strammere glutes,
           <br /> Gå ned i vekt, <br /> Form kroppen

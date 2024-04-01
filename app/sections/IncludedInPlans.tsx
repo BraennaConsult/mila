@@ -29,7 +29,7 @@ export function IncludedInPlans() {
 function RowsHeader() {
   return (
     <div className="grid grid-cols-5 items-baseline">
-      <h3 className="col-span-3 text-black/80 font-sans text-[28px] font-medium">
+      <h3 className="col-span-3 text-black/80 font-sans text-[20px] font-medium">
         Pakkene inneholder
       </h3>
       <p className="col-span-1 text-black/80 font-sans text-[14px] font-light">
