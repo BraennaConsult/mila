@@ -15,24 +15,6 @@ export function cn(...inputs: ClassValue[]) {
 
 // For countdown
 export function getPercentage(): number {
-  // const percentageByHour: { [hour: number]: number } = {
-  //   8: 1,
-  //   9: 9,
-  //   10: 10,
-  //   11: 13,
-  //   12: 69,
-  //   13: 70,
-  //   14: 71,
-  //   15: 72,
-  //   16: 73,
-  //   17: 74,
-  //   18: 80,
-  //   19: 81,
-  //   20: 82,
-  //   21: 98,
-  //   22: 98,
-  //   23: 99,
-  // };
   const percentageByHour: { [hour: number]: number } = {
     8: 26,
     9: 26,
@@ -42,25 +24,17 @@ export function getPercentage(): number {
     13: 26,
     14: 26,
     15: 26,
-    16: 26,
-    17: 26,
-    18: 26,
-    19: 26,
-    20: 26,
-    21: 26,
-    22: 26,
-    23: 26,
+    16: 27,
+    17: 35,
+    18: 41,
+    19: 42,
+    20: 45,
+    21: 47,
+    22: 51,
+    23: 52,
   };
 
   const now = new Date();
-  // if (
-  //   now.getUTCFullYear() !== 2024 ||
-  //   now.getUTCMonth() !== 0 ||
-  //   now.getUTCDate() !== 20 ||
-  //   now.getUTCDay() !== 6
-  // ) {
-  //   return 100;
-  // }
 
   const hour = now.getUTCHours() + 1;
 

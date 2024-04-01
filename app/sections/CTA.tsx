@@ -23,8 +23,8 @@ export function CTA({
   disabled,
   trackingType,
 }: Props) {
-  // const targetDate = SALE_FINISHES_AT;
-  const targetDate = SALE_STARTS_AT;
+  const saleStartsAt = SALE_STARTS_AT;
+  const saleEndsAt = SALE_FINISHES_AT;
   const saleHasStarted = getSaleHasStarted();
 
   return (
@@ -35,9 +35,7 @@ export function CTA({
             Vi bygger selvtillit på treningssenteret
           </h2>
         )}
-
         <Card className="overflow-hidden relative mx-0 lg:px-10">
-          {/* SVG Background */}
           <div className="absolute inset-0 z-0">
             <Image
               src={"/cta-background.svg"}
@@ -46,21 +44,12 @@ export function CTA({
               objectFit="cover"
             />
           </div>
-          {/* <div className="absolute z-[0]">
-            <Image
-              src={"/cta-background.svg"}
-              alt="cta"
-              width={500}
-              height={500}
-              // className="absolute inset-0 z-0"
-            />
-          </div> */}
           <div className="z-10 relative">
             {saleHasStarted ? (
               <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto z-2">
                 <CountdownTimer
                   title="Påmeldingen stenger om"
-                  targetDate={targetDate}
+                  targetDate={saleEndsAt}
                 />
                 <Progress className="lg:order-first" />
               </div>
@@ -68,7 +57,7 @@ export function CTA({
               <>
                 <CountdownTimer
                   title="Påmeldingen starter om"
-                  targetDate={targetDate}
+                  targetDate={saleStartsAt}
                 />
                 <Progress className="mx-auto" />
               </>
@@ -91,8 +80,6 @@ export function CTA({
                   NB! Du må velge en pakke før du kan gå videre.
                 </span>
               )}
-
-              {/* <span className="text-md text-mid-grey">{PRICE_AND_DATE}</span> */}
             </div>
           </div>
         </Card>

@@ -10,7 +10,7 @@ import { ProductReview } from "../sections/ProductReview";
 import Link from "next/link";
 import { Logo } from "../components/Logo";
 import { GoToCheckout } from "../sections/GoToCheckout";
-import { getLink, getSaleHasStarted } from "../utils";
+import { getLink, getSaleHasEnded, getSaleHasStarted } from "../utils";
 import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
 
 interface Props {
@@ -20,6 +20,8 @@ export default function ProductPage({ searchParams }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
   const hasSaleStarted = getSaleHasStarted();
+  const hasSaleEnded = getSaleHasEnded();
+
   return (
     <>
       {/* <Header /> */}
@@ -61,7 +63,7 @@ export default function ProductPage({ searchParams }: Props) {
           <CTA
             className="pt-0 md:pt-0 lg:pt-0"
             withTitle={false}
-            disabled={!hasOption || !hasSaleStarted}
+            disabled={!hasOption || !hasSaleStarted || hasSaleEnded}
             trackingType="checkout_button"
           />
           {hasSaleStarted && <GoToCheckout show={hasOption} option={option} />}
