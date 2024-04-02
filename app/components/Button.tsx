@@ -79,8 +79,6 @@ const Button = ({
       ? PREMIUM_CHECKOUT_LINK
       : INNER_CIRCLE_CHECKOUT_LINK;
 
-  console.log(linkHref);
-
   return (
     <a
       href={disabled ? "#" : hasOption ? linkHref : getLink()}

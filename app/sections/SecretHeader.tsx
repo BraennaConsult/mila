@@ -1,6 +1,5 @@
 import { cookies } from "next/headers";
 import CountdownTimer from "../components/CountdownTimer";
-import { setCookie } from "../actions";
 import { SecretLinkTitle } from "../components/SecretLinkTitle";
 
 export function SecretHeader() {

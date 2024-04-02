@@ -1,11 +1,16 @@
 import {
+  INNER_CIRCLE_CHECKOUT_LINK,
+  INNER_CIRCLE_LIMITED_CHECKOUT_LINK,
   PAYMENT_LINK,
   POST_SALE_LINK,
+  PREMIUM_CHECKOUT_LINK,
+  PREMIUM_LIMITED_CHECKOUT_LINK,
   SALE_FINISHES_AT,
   SALE_STARTS_AT,
   TEMP_LINK,
 } from "@/constants";
 import clsx, { ClassValue } from "clsx";
+import { cookies } from "next/headers";
 import { ReadonlyURLSearchParams } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
@@ -75,4 +80,19 @@ export const createUrl = (
   const queryString = `${paramsString.length ? "?" : ""}${paramsString}`;
 
   return `${pathname}${queryString}`;
+};
+
+export const getProductLink = (option: string) => {
+  switch (option) {
+    case "premium":
+      return PREMIUM_CHECKOUT_LINK;
+    case "inner-circle":
+      return INNER_CIRCLE_CHECKOUT_LINK;
+    case "premium-limited":
+      return PREMIUM_LIMITED_CHECKOUT_LINK;
+    case "inner-circle-limited":
+      return INNER_CIRCLE_LIMITED_CHECKOUT_LINK;
+    default:
+      return PREMIUM_CHECKOUT_LINK;
+  }
 };

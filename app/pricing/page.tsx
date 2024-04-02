@@ -28,7 +28,7 @@ export default function ProductPage({ searchParams }: Props) {
           {/* <div className="flex justify-center py-12"> */}
           {/* <Image
               src={"/my-luck-logo.svg"}
-              alt="myLuck"
+              alt="myLucke
               width={98}
               height={52}
             /> */}

@@ -1,8 +1,6 @@
 "use client";
 
 import { useCountdown } from "@/app/useCountdown";
-import { setCookie } from "../actions";
-import { cookies } from "next/headers";
 
 interface Props {
   title: string;
