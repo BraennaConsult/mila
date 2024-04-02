@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, buttonProps } from "@/app/components/Button";
+import { usePlausible } from "next-plausible";
 import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
@@ -12,7 +13,12 @@ import {
   getSaleHasEnded,
   getSaleHasStarted,
 } from "@/app/utils";
-import { PRICE_AND_DATE, SALE_FINISHES_AT, SALE_STARTS_AT } from "@/constants";
+import {
+  ANALYTICS_EVENTS,
+  PRICE_AND_DATE,
+  SALE_FINISHES_AT,
+  SALE_STARTS_AT,
+} from "@/constants";
 import Image from "next/image";
 import { Card } from "../components/Card";
 import { track } from "@vercel/analytics/react";
@@ -43,7 +49,7 @@ export function CustomCTA({
   selectedOption,
   noButton,
 }: Props) {
-  console.log("noButton", noButton);
+  const plausible = usePlausible();
   return (
     <Section className={className}>
       <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
@@ -91,6 +97,7 @@ export function CustomCTA({
                 <a
                   // href={hasOption ? getLink() : "#"}
                   href={selectedOption ? getProductLink(selectedOption) : "#"}
+                  onClick={() => plausible(ANALYTICS_EVENTS.GO_TO_CHECKOUT)}
                   // onClick={() => {
                   //   hasOption ? track(trackingType) : null;
                   // }

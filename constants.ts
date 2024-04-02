@@ -46,3 +46,13 @@ export const TYPEFORM_FUNNEL_ID = "XVvesPK7";
 export const COOKIES = {
   DISCOUNTED_SALE_TIMER: "discountedSaleTimer",
 };
+
+export const ANALYTICS_EVENTS = {
+  GO_TO_CHECKOUT: "go_to_checkout",
+};
+
+// export type AnalyticsEvent = {
+//   event1: { prop1: string }
+//   event2: { prop2: string }
+//   event3: never
+// }
