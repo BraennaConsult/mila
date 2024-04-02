@@ -22,7 +22,7 @@ export default function ProductPage({ searchParams }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
 
-  const countDownTime = cookies().get("countdownTime")?.value;
+  const countDownTime = cookies().get("countdownTime")?.value || "";
 
   const isLinkExpired = countDownTime
     ? new Date(countDownTime) < new Date()
@@ -44,7 +44,7 @@ export default function ProductPage({ searchParams }: Props) {
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
           </div>
-          <SecretHeaderLimitedOffer />
+          <SecretHeaderLimitedOffer countdownTime={countDownTime} />
 
           {!isLinkExpired && (
             <>
