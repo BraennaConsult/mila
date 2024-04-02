@@ -29,6 +29,7 @@ export function ProductOptions({ className, page }: Props) {
           total="kr 2340"
           name={`premium${page ? `-${page}` : ""}`}
           recommended={true}
+          page={page}
         />
         <ProductionOption
           title={"Inner circle"}
@@ -37,6 +38,7 @@ export function ProductOptions({ className, page }: Props) {
           discountedTotal="kr 5049"
           total="kr 5940"
           name={`inner-circle${page ? `-${page}` : ""}`}
+          page={page}
         />
       </Container>
     </Section>
@@ -51,6 +53,7 @@ interface ProductPros {
   recommended?: boolean;
   discountedPrice?: string;
   discountedTotal?: string;
+  page?: string;
 }
 
 function ProductionOption({
@@ -61,6 +64,7 @@ function ProductionOption({
   name,
   discountedPrice,
   discountedTotal,
+  page,
 }: ProductPros) {
   // Gjør at dette bar har totalt i stedet
   return (
@@ -71,15 +75,16 @@ function ProductionOption({
             {title}
           </h3>
           <div className="flex items-baseline">
-            {!discountedPrice && (
-              <>
-                <p className="font-serif text-[30px]">{price}</p>
-                <p className="font-serif text-[14px] ml-1 text-black/70">
-                  per uke
-                </p>
-              </>
-            )}
-            {discountedTotal && (
+            {!discountedPrice ||
+              (!page && (
+                <>
+                  <p className="font-serif text-[30px]">{price}</p>
+                  <p className="font-serif text-[14px] ml-1 text-black/70">
+                    per uke
+                  </p>
+                </>
+              ))}
+            {discountedTotal && page && (
               <div className="flex flex-row items-baseline mt-8 whitespace-nowrap">
                 <p className="font-serif text-[24px] line-through text-gray-400">
                   {total}
@@ -95,7 +100,7 @@ function ProductionOption({
               </div>
             )}
           </div>
-          {!discountedTotal && (
+          {!page && (
             <p className="font-serif text-[14px] text-black/70">
               Totalt {total} for 6 uker
             </p>
