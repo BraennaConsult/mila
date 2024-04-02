@@ -85,11 +85,11 @@ function ProductionOption({
                 </>
               ))}
             {discountedTotal && page && (
-              <div className="flex flex-row items-baseline mt-8 whitespace-nowrap">
+              <div className="flex flex-col items-baseline mt-8 whitespace-nowrap">
                 <p className="font-serif text-[24px] line-through text-gray-400">
                   {total}
                 </p>
-                <div className="flex items-baseline ml-4 mb-0">
+                <div className="flex items-baseline mb-0">
                   <p className="font-serif text-[30px] whitespace-nowrap">
                     {discountedTotal}
                   </p>
