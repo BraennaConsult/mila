@@ -28,6 +28,7 @@ interface Props {
   trackingType?: string;
   title?: string;
   selectedOption?: string;
+  noButton?: boolean;
 }
 
 export function CustomCTA({
@@ -40,7 +41,9 @@ export function CustomCTA({
   trackingType,
   title,
   selectedOption,
+  noButton,
 }: Props) {
+  console.log("noButton", noButton);
   return (
     <Section className={className}>
       <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
@@ -60,8 +63,11 @@ export function CustomCTA({
           </div>
           <div className="z-10 relative">
             {title && (
-              <h3 className="text-center font-sans text-[24px] leading-[24px] text-black lg:text-3xl mx-6 mb-6 text-balance">
-                {title}
+              <h3 className=" font-sans text-[22px] leading-[24px] text-black lg:text-3xl  mb-6">
+                Du passer perfekt for dette maratonet! <br /> Du får
+                <span className="font-bold"> 15% rabatt </span>
+                hvis du blir med de neste{" "}
+                <span className="font-bold">30 minuttene</span>
               </h3>
             )}
             {/* {hasSaleStarted ? (
@@ -80,22 +86,23 @@ export function CustomCTA({
               />
               <Progress className="mx-auto" />
             </>
-            <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
-              <a
-                // href={hasOption ? getLink() : "#"}
-                href={selectedOption ? getProductLink(selectedOption) : "#"}
-                // onClick={() => {
-                //   hasOption ? track(trackingType) : null;
-                // }
-                // onClick={() => {
-                //   location ? track(trackingType, { location }) : track(trackingType);
-                // }}
-                aria-disabled={disabled}
-                className={cn(buttonProps({ variant: "black" }), "relative")}
-              >
-                Bli med på maraton
-              </a>
-              {/* <Button
+            {!noButton && (
+              <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
+                <a
+                  // href={hasOption ? getLink() : "#"}
+                  href={selectedOption ? getProductLink(selectedOption) : "#"}
+                  // onClick={() => {
+                  //   hasOption ? track(trackingType) : null;
+                  // }
+                  // onClick={() => {
+                  //   location ? track(trackingType, { location }) : track(trackingType);
+                  // }}
+                  aria-disabled={disabled}
+                  className={cn(buttonProps({ variant: "black" }), "relative")}
+                >
+                  Bli med på maraton
+                </a>
+                {/* <Button
                 variant="black"
                 disabled={!disabled && !hasSaleStarted && hasSaleEnded}
                 location="cta"
@@ -107,12 +114,13 @@ export function CustomCTA({
               >
                 Bli med på maraton
               </Button> */}
-              {disabled && (
-                <span className="text-md">
-                  NB! Du må velge en pakke før du kan gå videre.
-                </span>
-              )}
-            </div>
+                {disabled && (
+                  <span className="text-md">
+                    NB! Du må velge en pakke før du kan gå videre.
+                  </span>
+                )}
+              </div>
+            )}
           </div>
         </Card>
       </Container>

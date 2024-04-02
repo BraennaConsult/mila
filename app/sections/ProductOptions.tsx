@@ -25,7 +25,7 @@ export function ProductOptions({ className, page }: Props) {
           title={"Premium"}
           price="kr 390"
           discountedPrice="kr 351"
-          discountedTotal="kr 2106"
+          discountedTotal="kr 1990"
           total="kr 2340"
           name={`premium${page ? `-${page}` : ""}`}
           recommended={true}
@@ -34,7 +34,7 @@ export function ProductOptions({ className, page }: Props) {
           title={"Inner circle"}
           price="kr 990"
           discountedPrice="kr 891"
-          discountedTotal="kr 5346"
+          discountedTotal="kr 5049"
           total="kr 5940"
           name={`inner-circle${page ? `-${page}` : ""}`}
         />
@@ -62,9 +62,10 @@ function ProductionOption({
   discountedPrice,
   discountedTotal,
 }: ProductPros) {
+  // Gjør at dette bar har totalt i stedet
   return (
     <ProductPageRadioButton option={name}>
-      <Card className="w-full lg:max-w-[375px] justify-between flex flex-row space-x-0 lg:space-x-12 lg:py-10 lg:px-6 py-6 overflow-hidden relative">
+      <Card className="w-full lg:max-w-[375px] justify-between flex flex-row space-x-0 lg:space-x-12 lg:py-10 lg:px-6 py-[0px] pt-6  pb-[12px] overflow-hidden relative">
         <div className="z-10 flex flex-col items-start">
           <h3 className="font-sans text-left text-[20px] text-black/60">
             {title}
@@ -78,15 +79,17 @@ function ProductionOption({
                 </p>
               </>
             )}
-            {discountedPrice && (
-              <div className="flex flex-row items-baseline">
+            {discountedTotal && (
+              <div className="flex flex-row items-baseline mt-8 whitespace-nowrap">
                 <p className="font-serif text-[24px] line-through text-gray-400">
-                  {price}
+                  {total}
                 </p>
-                <div className="flex items-baseline ml-2">
-                  <p className="font-serif text-[30px]">{discountedPrice}</p>
+                <div className="flex items-baseline ml-4 mb-0">
+                  <p className="font-serif text-[30px] whitespace-nowrap">
+                    {discountedTotal}
+                  </p>
                   <p className="font-serif text-[14px] ml-1 text-black/70">
-                    per uke
+                    for 6 uker
                   </p>
                 </div>
               </div>
@@ -97,7 +100,7 @@ function ProductionOption({
               Totalt {total} for 6 uker
             </p>
           )}
-          {discountedTotal && (
+          {/* {discountedTotal && (
             <p className="font-serif text-[14px] text-black/70">
               Totalt {discountedTotal} for 6 uker
             </p>
@@ -105,13 +108,13 @@ function ProductionOption({
             //   Totalt <span className="line-through">{total}</span>{" "}
             //   {discountedTotal} for 6 uker
             // </p>
-          )}
+          )} */}
         </div>
         <div className="flex z-10">
           {recommended && (
             <div>
               <div className="bg-pink-primary inline-block px-[14px] py-[3px] rounded-[100px]">
-                <p className="font-sans text-black/80 text-[12px]">
+                <p className="font-sans text-black/80 text-[12px] whitespace-nowrap">
                   Mest populær
                 </p>
               </div>
