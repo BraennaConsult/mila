@@ -2,6 +2,7 @@ import { hindVadodara } from "@/fonts";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 const baseUrl =
   process.env.NODE_ENV === "production"
@@ -21,6 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-white ">
+      <head>
+        <script
+          defer
+          data-domain="myluck.no"
+          src="https://plausible.io/js/script.js"
+        />
+      </head>
       <body className={hindVadodara.className}>
         {/* <Header /> */}
         {children}
