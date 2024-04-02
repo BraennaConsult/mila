@@ -3,10 +3,10 @@
 import { INNER_CIRCLE_CHECKOUT_LINK, PREMIUM_CHECKOUT_LINK } from "@/constants";
 import { track } from "@vercel/analytics";
 import Link from "next/link";
+import { getProductLink } from "../utils";
 
 export function CheckoutLink({ option }: { option: string }) {
-  const linkHref =
-    option === "premium" ? PREMIUM_CHECKOUT_LINK : INNER_CIRCLE_CHECKOUT_LINK;
+  const linkHref = getProductLink(option);
   return (
     <Link
       href={linkHref}

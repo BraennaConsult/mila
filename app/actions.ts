@@ -12,7 +12,8 @@ export async function setCookie() {
 
 export async function set30MinuteTimer() {
   const newTargetDate = new Date();
-  newTargetDate.setHours(newTargetDate.getMinutes() + 30);
+  newTargetDate.setMinutes(newTargetDate.getMinutes() + 30);
   const targetAsString = newTargetDate.toISOString();
+  console.log(targetAsString);
   cookies().set(COOKIES.DISCOUNTED_SALE_TIMER, targetAsString);
 }

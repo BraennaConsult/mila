@@ -19,6 +19,7 @@ interface Props {
   withTitle?: boolean;
   disabled?: boolean;
   trackingType?: string;
+  title?: string;
 }
 
 export function CustomCTA({
@@ -29,6 +30,7 @@ export function CustomCTA({
   withTitle = true,
   disabled,
   trackingType,
+  title,
 }: Props) {
   return (
     <Section className={className}>
@@ -48,6 +50,11 @@ export function CustomCTA({
             />
           </div>
           <div className="z-10 relative">
+            {title && (
+              <h3 className="text-center font-sans text-[24px] leading-[24px] text-black lg:text-3xl mx-6 mb-6 text-balance">
+                {title}
+              </h3>
+            )}
             {/* {hasSaleStarted ? (
               <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto z-2">
                 <CountdownTimer

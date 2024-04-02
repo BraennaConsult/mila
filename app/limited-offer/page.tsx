@@ -49,14 +49,24 @@ export default function ProductPage({ searchParams }: Props) {
           {!isLinkExpired && (
             <>
               {/* <BeforeAndAfterComponent /> */}
-
+              <CustomCTA
+                title="Du passer perfekt for dette maratonet! Du får 10% rabatt hvis du blir med de neste 30 minuttene."
+                expiresIn={countDownTime}
+                hasExpired={isLinkExpired}
+                hasOption={hasOption}
+                className="pt-0 md:pt-0 lg:pt-0"
+                withTitle={false}
+                disabled={!hasOption}
+                trackingType="checkout_button"
+              />
               <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
                 Velg pakken din for <br /> å komme i gang
               </h3>
               <p className="text-center text-black/50 text-[14px] mt-6">
                 Maratonet starter 8. April 2024
               </p>
-              <ProductOptions className="lg:py-10" />
+
+              <ProductOptions className="lg:py-10" page="limited" />
               <IncludedInPlans />
               <BenefitsCard />
               <ProductReview />
@@ -64,7 +74,7 @@ export default function ProductPage({ searchParams }: Props) {
               <h3 className="text-center font-serif text-[40px] leading-[40px] text-black lg:text-2xl">
                 Klar for å få <br /> drømmekroppen din?
               </h3>
-              <ProductOptions className="lg:pt-10 lg:pb-32" />
+              <ProductOptions className="lg:pt-10 lg:pb-32" page="limited" />
               <Guarantee />
               <CustomCTA
                 expiresIn={countDownTime}
