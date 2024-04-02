@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-white ">
       <head>
-        <PlausibleProvider domain="myluck.no" />
+        <PlausibleProvider domain="myluck.no" revenue />
       </head>
       <body className={hindVadodara.className}>
         {/* <Header /> */}
