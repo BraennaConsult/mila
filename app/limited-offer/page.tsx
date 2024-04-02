@@ -53,7 +53,7 @@ export default function ProductPage({ searchParams }: Props) {
             <>
               {/* <BeforeAndAfterComponent /> */}
               <CustomCTA
-                // title="Du passer perfekt for dette maratonet! Du får 10% rabatt hvis du blir med de neste 30 minuttene."
+                title="Du " // ikke fjern
                 expiresIn={countDownTime}
                 hasExpired={isLinkExpired}
                 hasOption={hasOption}
