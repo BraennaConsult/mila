@@ -2,6 +2,7 @@ import { hindVadodara } from "@/fonts";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import "./globals.css";
+import PlausibleProvider from "next-plausible";
 import Script from "next/script";
 
 const baseUrl =
@@ -23,11 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-white ">
       <head>
-        <script
-          defer
-          data-domain="myluck.no"
-          src="https://plausible.io/js/script.js"
-        />
+        <PlausibleProvider domain="myluck.no" />
       </head>
       <body className={hindVadodara.className}>
         {/* <Header /> */}
