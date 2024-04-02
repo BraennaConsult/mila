@@ -33,15 +33,16 @@ export default function ProductPage({ searchParams }: Props) {
     ? new Date(countDownTime) < new Date()
     : false;
 
+  // console.log(searchParams);
   return (
     <>
       <main className="bg-[#F7F6F6]">
         <>
-          <div className="flex justify-center py-12">
+          {/* <div className="flex justify-center py-12">
             <Link href="/">
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
-          </div>
+          </div> */}
           <SecretHeaderLimitedOffer countdownTime={countDownTime} />
 
           <WhyMyLuckNoCTA />
@@ -58,6 +59,7 @@ export default function ProductPage({ searchParams }: Props) {
                 withTitle={false}
                 disabled={!hasOption}
                 trackingType="checkout_button"
+                selectedOption={option}
               />
               <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
                 Velg pakken din for <br /> å komme i gang
@@ -103,6 +105,7 @@ export default function ProductPage({ searchParams }: Props) {
                 withTitle={false}
                 disabled={hasOption}
                 trackingType="checkout_button"
+                selectedOption={option}
               />
             </>
           )}

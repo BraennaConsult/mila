@@ -5,11 +5,18 @@ import { Container } from "@/app/components/Container";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
-import { cn, getLink, getSaleHasEnded, getSaleHasStarted } from "@/app/utils";
+import {
+  cn,
+  getLink,
+  getProductLink,
+  getSaleHasEnded,
+  getSaleHasStarted,
+} from "@/app/utils";
 import { PRICE_AND_DATE, SALE_FINISHES_AT, SALE_STARTS_AT } from "@/constants";
 import Image from "next/image";
 import { Card } from "../components/Card";
 import { track } from "@vercel/analytics/react";
+import { get } from "http";
 
 interface Props {
   expiresIn: string;
@@ -20,6 +27,7 @@ interface Props {
   disabled?: boolean;
   trackingType?: string;
   title?: string;
+  selectedOption?: string;
 }
 
 export function CustomCTA({
@@ -31,6 +39,7 @@ export function CustomCTA({
   disabled,
   trackingType,
   title,
+  selectedOption,
 }: Props) {
   return (
     <Section className={className}>
@@ -73,7 +82,8 @@ export function CustomCTA({
             </>
             <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
               <a
-                href={hasOption ? getLink() : "#"}
+                // href={hasOption ? getLink() : "#"}
+                href={selectedOption ? getProductLink(selectedOption) : "#"}
                 // onClick={() => {
                 //   hasOption ? track(trackingType) : null;
                 // }
