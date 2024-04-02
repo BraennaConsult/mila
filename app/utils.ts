@@ -21,22 +21,22 @@ export function cn(...inputs: ClassValue[]) {
 // For countdown
 export function getPercentage(): number {
   const percentageByHour: { [hour: number]: number } = {
-    8: 26,
-    9: 26,
-    10: 26,
-    11: 26,
-    12: 26,
-    13: 26,
-    14: 26,
-    15: 26,
-    16: 27,
-    17: 35,
-    18: 41,
-    19: 42,
-    20: 45,
-    21: 47,
-    22: 51,
-    23: 52,
+    8: 52,
+    9: 52,
+    10: 52,
+    11: 52,
+    12: 52,
+    13: 54,
+    14: 55,
+    15: 57,
+    16: 58,
+    17: 59,
+    18: 60,
+    19: 62,
+    20: 65,
+    21: 66,
+    22: 68,
+    23: 69,
   };
 
   const now = new Date();
