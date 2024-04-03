@@ -36,19 +36,25 @@ export default function ProductPage({ searchParams }: Props) {
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
           </div> */}
-          <h1 className="text-black/60 text-center py-8">
+          {/* <h1 className="text-black/60 text-center py-8">
             250+ jenter har klart målene sine med MyLuck
-          </h1>
+          </h1> */}
           {/* <h1>myLuck by mila</h1> */}
-          <BeforeAndAfterComponent />
+          {/* <BeforeAndAfterComponent /> */}
           {/* <WhyMyLuckNoCTA /> */}
-          <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
+          <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl pt-8">
             Velg pakken din for <br /> å komme i gang
           </h3>
           <p className="text-center text-black/50 text-[14px] mt-6">
             Maratonet starter 8. April 2024
           </p>
-          <ProductOptions className="lg:py-10" />
+          <ProductOptions className="lg:pt-10 py-0 pt-8 pb-2 lg:pb-10" />
+          <CTA
+            className="pt-0 md:pt-0 lg:pt-0"
+            withTitle={false}
+            disabled={!hasOption && !hasSaleStarted && hasSaleEnded}
+            trackingType="checkout_button"
+          />
           <IncludedInPlans />
           <WhatYouGet />
           <BenefitsCard />
