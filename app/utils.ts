@@ -37,8 +37,8 @@ export function getPercentage(): number {
     19: 96,
     20: 96,
     21: 98,
-    22: 98,
-    23: 98,
+    22: 99,
+    23: 99,
   };
 
   const now = new Date();
