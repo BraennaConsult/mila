@@ -14,6 +14,7 @@ import { SecretHeader } from "../sections/SecretHeader";
 import { cookies } from "next/headers";
 import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
 import { SecretHeaderLimitedOffer } from "@/app/sections/SecretHeaderLimitedOffer";
+import { COOKIES } from "@/constants";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -22,7 +23,8 @@ export default function ProductPage({ searchParams }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
 
-  const countDownTime = cookies().get("countdownTime")?.value || "";
+  const countDownTime =
+    cookies().get(COOKIES.DISCOUNTED_SALE_TIMER)?.value || "";
 
   const isLinkExpired = countDownTime
     ? new Date(countDownTime) < new Date()

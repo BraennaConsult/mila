@@ -17,6 +17,7 @@ export default function Home() {
       <Header />
       <main className="bg-[#F7F6F6]">
         <Hero />
+        <CTA className="pt-12 md:pt-0 lg:pt-0" />
         <MarathonBenefits />
         <WhyMyLuck />
         <ParticipantsReview />

@@ -44,6 +44,12 @@ export default function ProductPage({ searchParams }: Props) {
               Maratonet starter 8. April 2024
             </p>
             <ProductOptions className="lg:py-10" />
+            <CTA
+              className="pt-0 md:pt-0 lg:pt-0"
+              withTitle={false}
+              disabled={!hasOption}
+              trackingType="checkout_button"
+            />
             <IncludedInPlans />
             <WhatYouGet />
             <BenefitsCard />
