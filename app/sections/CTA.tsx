@@ -75,7 +75,7 @@ export function CTA({
                   disabled && "cursor-not-allowed bg-black/60"
                 )}
               >
-                Bli med på maraton
+                Få beskjed når neste maraton starter
               </Button>
               {disabled && (
                 <span className="text-md">
