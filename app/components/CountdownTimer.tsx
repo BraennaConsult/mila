@@ -13,10 +13,10 @@ const CountdownTimer = ({ title, targetDate }: Props) => {
   return (
     <div className="flex flex-col">
       <span className="text-mid-grey">{title}</span>
-      <span className="space-x-2 lg:space-x-3 text-[50px] lg:[text-60px] font-serif">
+      {/* <span className="space-x-2 lg:space-x-3 text-[50px] lg:[text-60px] font-serif">
         Stengt
-      </span>
-      {/* <div className="space-x-2 lg:space-x-3 text-[50px] lg:[text-60px] font-serif">
+      </span> */}
+      <div className="space-x-2 lg:space-x-3 text-[50px] lg:[text-60px] font-serif">
         {timeLeft.days > 0 && (
           <span suppressHydrationWarning>{timeLeft.days}d</span>
         )}
@@ -27,7 +27,7 @@ const CountdownTimer = ({ title, targetDate }: Props) => {
           <span suppressHydrationWarning>{timeLeft.minutes}m</span>
         )}
         <span suppressHydrationWarning>{timeLeft.seconds}s</span>
-      </div> */}
+      </div>
     </div>
   );
 };

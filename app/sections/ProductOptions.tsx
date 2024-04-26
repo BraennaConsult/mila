@@ -26,17 +26,18 @@ export function ProductOptions({ className, page }: Props) {
           price="kr 390"
           discountedPrice="kr 351"
           discountedTotal="kr 1990"
-          total="kr 2340"
+          total="kr 4580"
           name={`premium${page ? `-${page}` : ""}`}
-          recommended={true}
+          recommended={false}
           page={page}
         />
         <ProductionOption
           title={"Inner circle"}
-          price="kr 990"
-          discountedPrice="kr 891"
-          discountedTotal="kr 5049"
-          total="kr 5940"
+          price="kr 1990"
+          discountedPrice="kr 1990"
+          discountedTotal="kr 2990"
+          total="kr 9980"
+          recommended={true}
           name={`inner-circle${page ? `-${page}` : ""}`}
           page={page}
         />
@@ -85,16 +86,16 @@ function ProductionOption({
                 </>
               ))}
             {discountedTotal && page && (
-              <div className="flex flex-col items-baseline mt-8 whitespace-nowrap">
+              <div className="flex flex-row items-baseline mt-8 whitespace-nowrap">
                 <p className="font-serif text-[24px] line-through text-gray-400">
                   {total}
                 </p>
-                <div className="flex items-baseline mb-0">
+                <div className="flex items-baseline mb-0 ml-4">
                   <p className="font-serif text-[30px] whitespace-nowrap">
                     {discountedTotal}
                   </p>
                   <p className="font-serif text-[14px] ml-1 text-black/70">
-                    for 6 uker
+                    for 8 uker
                   </p>
                 </div>
               </div>
