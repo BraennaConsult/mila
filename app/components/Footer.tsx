@@ -26,6 +26,9 @@ export function Footer() {
           <li className="mt-5 lg:mt-0">
             <Link href={ROUTES.CONTACT_INFO}>Kontaktinformasjon</Link>
           </li>
+          <li className="mt-5 lg:mt-0">
+            <Link href={ROUTES.WARRANTY}>Garanti</Link>
+          </li>
         </ul>
       </Container>
     </footer>
