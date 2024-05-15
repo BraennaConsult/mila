@@ -35,6 +35,7 @@ interface Props {
   title?: string;
   selectedOption?: string;
   noButton?: boolean;
+  noProgressBar?: boolean;
 }
 
 export function CustomCTA({
@@ -48,6 +49,7 @@ export function CustomCTA({
   title,
   selectedOption,
   noButton,
+  noProgressBar = false,
 }: Props) {
   const plausible = usePlausible();
   return (
@@ -55,10 +57,10 @@ export function CustomCTA({
       <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
         {withTitle && (
           <h2 className="text-center mb-0 text-[28px] lg:text-3xl leading-8 text-black/80 font-sans">
-            Vi bygger selvtillit på treningssenteret
+            Behold tilgangen til
           </h2>
         )}
-        <Card className="overflow-hidden relative mx-0 lg:px-10">
+        <Card className="overflow-hidden relative mx-0 px-6 lg:px-10">
           <div className="absolute inset-0 z-0">
             <Image
               src={"/cta-background.svg"}
@@ -69,12 +71,27 @@ export function CustomCTA({
           </div>
           <div className="z-10 relative">
             {title && (
-              <h3 className=" font-sans text-[22px] leading-[24px] text-black lg:text-3xl  mb-6">
-                Du passer perfekt for dette maratonet! <br /> Du får
-                <span className="font-bold"> 15% rabatt </span>
-                hvis du blir med de neste{" "}
-                <span className="font-bold">30 minuttene</span>
-              </h3>
+              // <h3 className=" font-sans text-[22px] leading-[24px] text-black lg:text-3xl  mb-6">
+              //   Behold tilgangen til <br />
+
+              //   <span className="font-bold"> 15% rabatt </span>
+              //   hvis du blir med de neste{" "}
+              //   <span className="font-bold">30 minuttene</span>
+              // </h3>
+              <div className="mb-8">
+                <h2 className="mb-6 text-md font-sanse font-semibold leading-7">
+                  Behold tilgangen til
+                </h2>
+                <div className="mb-8 ml-2 font-md font-sanse">
+                  <li>MyLuck App</li>
+                  <li>Matplan og oppskrifter</li>
+                  <li>Felleskapet</li>
+                  <li>Live seminarer</li>
+                </div>
+                <span className="font-bold">
+                  og få tilgang til the neste Maratonet til en rabattert pris
+                </span>
+              </div>
             )}
             {/* {hasSaleStarted ? (
               <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto z-2">
@@ -90,7 +107,7 @@ export function CustomCTA({
                 title="Tilbudet ditt utløper om"
                 targetDate={expiresIn}
               />
-              <Progress className="mx-auto" />
+              {!noProgressBar && <Progress className="mx-auto" />}
             </>
             {!noButton && (
               <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">

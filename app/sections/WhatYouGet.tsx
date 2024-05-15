@@ -53,7 +53,7 @@ function BenefitCard({ data }: { data: CardDataSchema }) {
   );
 }
 
-function BenefitCardWintPills() {
+export function BenefitCardWintPills() {
   return (
     <Card className="overflow-hidden relative">
       <div className="absolute inset-0 z-0">
@@ -65,15 +65,15 @@ function BenefitCardWintPills() {
         />
       </div>
       <div className="flex flex-col items-center space-y-2 z-10 relative">
-        {benefitPerkData.map((data) => (
+        {benefitPerkData2.map((data) => (
           <BenefitPill key={data.title} title={data.title} />
         ))}
       </div>
-      <div className="flex flex-col items-center mt-12 z-10 relative">
+      {/* <div className="flex flex-col items-center mt-12 z-10 relative">
         <p className="text-[20px] max-w-[245px] text-center text-black/80 font-sans leading-6">
           Bli med over 100+ damer som har fått resultater
         </p>
-      </div>
+      </div> */}
     </Card>
   );
 }
@@ -145,5 +145,26 @@ const benefitPerkData = [
   },
   {
     title: "Mer energi",
+  },
+];
+
+const benefitPerkData2 = [
+  {
+    title: "Ny mat plan",
+  },
+  {
+    title: "Utbyttbare måltider i matplanen",
+  },
+  {
+    title: "Ny Guided summer workouts",
+  },
+  {
+    title: "Nye temaer på Livestreams",
+  },
+  {
+    title: "Kurs i livstilsendring",
+  },
+  {
+    title: "Fysisk trenings meetup i Oslo",
   },
 ];

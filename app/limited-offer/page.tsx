@@ -19,7 +19,7 @@ import { CustomCTA } from "@/app/sections/CustomCTA";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import { SecretHeaderLimitedOffer } from "@/app/sections/SecretHeaderLimitedOffer";
 import { ParticipantsReview } from "../sections/ParticipantsReview";
-import { WhatYouGet } from "../sections/WhatYouGet";
+import { BenefitCardWintPills, WhatYouGet } from "../sections/WhatYouGet";
 
 interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
@@ -28,33 +28,27 @@ export default function ProductPage({ searchParams }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
 
-  const countDownTime =
-    cookies().get(COOKIES.DISCOUNTED_SALE_TIMER)?.value || "";
+  const expiryDate = new Date("2024-04-29T23:59:00+02:00");
 
-  const isLinkExpired = countDownTime
-    ? new Date(countDownTime) < new Date()
-    : false;
+  const isLinkExpired = expiryDate ? expiryDate < new Date() : false;
 
   // console.log(searchParams);
   return (
     <>
       <main className="bg-[#F7F6F6]">
         <>
-          {/* <div className="flex justify-center py-12">
+          <div className="flex justify-center py-12">
             <Link href="/">
               <Logo className={`cursor-pointer w-20 "text-black"`} />
             </Link>
-          </div> */}
-          <SecretHeaderLimitedOffer countdownTime={countDownTime} />
-
-          <WhyMyLuckNoCTA />
+          </div>
 
           {!isLinkExpired && (
             <>
               {/* <BeforeAndAfterComponent /> */}
               <CustomCTA
                 title="Du " // ikke fjern
-                expiresIn={countDownTime}
+                expiresIn={expiryDate.toString()}
                 hasExpired={isLinkExpired}
                 hasOption={hasOption}
                 className="pt-0 md:pt-0 lg:pt-0"
@@ -63,47 +57,21 @@ export default function ProductPage({ searchParams }: Props) {
                 trackingType="checkout_button"
                 selectedOption={option}
                 noButton={true}
+                noProgressBar={true}
               />
               <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
                 Velg pakken din for <br /> å komme i gang
               </h3>
               <p className="text-center text-black/50 text-[14px] mt-6">
-                Maratonet starter 8. April 2024
+                Maratonet starter 27. Mai 2024
               </p>
 
               <ProductOptions className="lg:py-10" page="limited" />
-              <IncludedInPlans />
-              <ParticipantsReview />
-              <CustomCTA
-                expiresIn={countDownTime}
-                hasExpired={isLinkExpired}
-                hasOption={hasOption}
-                className="pt-0 md:pt-0 lg:pt-0"
-                withTitle={false}
-                disabled={!hasOption}
-                trackingType="checkout_button"
-              />
-              <BenefitsCard />
-              <div className="my-12">
-                <WhatYouGet />
+              <div className="mb-12">
+                <BenefitCardWintPills />
               </div>
 
-              {/* <ProductReview /> */}
-              <MyPath />
-              <h3 className="text-center font-serif text-[40px] leading-[40px] text-black lg:text-2xl">
-                Klar for å få <br /> drømmekroppen din?
-              </h3>
-              <ProductOptions className="lg:pt-10 lg:pb-32" page="limited" />
-              <Guarantee />
-              <CustomCTA
-                expiresIn={countDownTime}
-                hasExpired={isLinkExpired}
-                hasOption={hasOption}
-                className="pt-0 md:pt-0 lg:pt-0"
-                withTitle={false}
-                disabled={!hasOption}
-                trackingType="checkout_button"
-              />
+              <IncludedInPlans />
               <GoToCheckout show={hasOption} option={option} />
             </>
           )}
@@ -115,7 +83,7 @@ export default function ProductPage({ searchParams }: Props) {
                 </h3>
               </div>
               <CustomCTA
-                expiresIn={countDownTime}
+                expiresIn={expiryDate.toString()}
                 hasExpired={isLinkExpired}
                 hasOption={hasOption}
                 className="pt-0 md:pt-0 lg:pt-0"

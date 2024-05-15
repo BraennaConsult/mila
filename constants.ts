@@ -23,9 +23,9 @@ export const PREMIUM_CHECKOUT_LINK =
 export const INNER_CIRCLE_CHECKOUT_LINK =
   "https://milatimaa.net/cart/43560009498801:1";
 export const PREMIUM_LIMITED_CHECKOUT_LINK =
-  "https://milatimaa.net/cart/43630493991089:1";
+  "https://milatimaa.net/cart/43950949925041:1";
 export const INNER_CIRCLE_LIMITED_CHECKOUT_LINK =
-  "https://milatimaa.net/cart/43630494023857:1";
+  "https://milatimaa.net/cart/43950949957809:1";
 
 export const ROUTES = {
   TERMS_OF_SERVICE: "/terms-of-service",
