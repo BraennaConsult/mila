@@ -6,7 +6,12 @@ import CountdownTimer from "@/app/components/CountdownTimer";
 import { Progress } from "@/app/components/Progress";
 import { Section } from "@/app/components/Section";
 import { cn, getSaleHasEnded, getSaleHasStarted } from "@/app/utils";
-import { PRICE_AND_DATE, SALE_FINISHES_AT, SALE_STARTS_AT } from "@/constants";
+import {
+  PRICE_AND_DATE,
+  ROUTES,
+  SALE_FINISHES_AT,
+  SALE_STARTS_AT,
+} from "@/constants";
 import Image from "next/image";
 import { Card } from "../components/Card";
 import Link from "next/link";
@@ -15,16 +20,12 @@ import { usePlausible } from "next-plausible";
 import { PageType } from "@/lib/types";
 
 interface Props {
-  type: PageType;
-  href: string;
   className?: string;
   withTitle?: boolean;
   disabled?: boolean;
 }
 
-export function CTA({
-  type,
-  href,
+export function NavigationalCTA({
   className,
   withTitle = true,
   disabled,
@@ -36,19 +37,18 @@ export function CTA({
   const router = useRouter();
   const plausible = usePlausible();
 
-  const isDisabled = disabled || (!hasSaleStarted && hasSaleEnded);
+  const isDisabled = disabled || !hasSaleStarted || hasSaleEnded;
 
   function handleClick() {
     if (isDisabled) return;
 
-    plausible("checkout_button", {
+    plausible("go_to_pricing_page", {
       props: {
         location: "cta_section",
-        type,
       },
     });
 
-    router.push(href);
+    router.push(ROUTES.PRICING);
   }
 
   return (

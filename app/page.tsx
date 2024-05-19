@@ -10,6 +10,7 @@ import { MarathonBenefits } from "./sections/MarathonBenefits";
 import { WhyMyLuck } from "./sections/WhyMyLuck";
 import { ParticipantsReview } from "./sections/ParticipantsReview";
 import { WhatYouGet } from "./sections/WhatYouGet";
+import { NavigationalCTA } from "@/app/sections/NavigationalCTA";
 
 export default function Home() {
   return (
@@ -17,14 +18,14 @@ export default function Home() {
       <Header />
       <main className="bg-[#F7F6F6]">
         <Hero />
-        <CTA className="pt-12 md:pt-0 lg:pt-20" />
+        <NavigationalCTA className="pt-12 md:pt-0 lg:pt-20" />
         <MarathonBenefits />
         <WhyMyLuck />
         <ParticipantsReview />
         <WhatYouGet />
-        <CTA className="pt-0 md:pt-0 lg:pt-0" />
+        <NavigationalCTA className="pt-0 md:pt-0 lg:pt-0" />
         <Testimonials />
-        <CTA className="pt-0 md:pt-0 lg:pt-0" />
+        <NavigationalCTA className="pt-0 md:pt-0 lg:pt-0" />
         {/* <FAQ /> */}
 
         {/* <MyLuck /> */}

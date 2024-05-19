@@ -9,7 +9,7 @@ import { ProductOptions } from "../sections/ProductOptions";
 import { ProductReview } from "../sections/ProductReview";
 import Link from "next/link";
 import { Logo } from "../components/Logo";
-import { GoToCheckout } from "../sections/GoToCheckout";
+import { GoToCheckoutButton } from "../sections/GoToCheckout";
 import { SecretHeader } from "../sections/SecretHeader";
 import { cookies } from "next/headers";
 import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
@@ -74,7 +74,7 @@ export default function ProductPage({ searchParams }: Props) {
                 disabled={!hasOption}
                 trackingType="checkout_button"
               />
-              <GoToCheckout show={hasOption} option={option} />
+              <GoToCheckoutButton show={hasOption} option={option} />
             </>
           )}
           {isLinkExpired && (

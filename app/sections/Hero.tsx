@@ -1,7 +1,29 @@
-import { Button } from "@/app/components/Button";
-import { Container } from "@/app/components/Container";
+"use client";
 
-export function Hero() {
+import { Button, buttonProps } from "@/app/components/Button";
+import { Container } from "@/app/components/Container";
+import { cn, getLink } from "@/app/utils";
+import { HeartIcon } from "@/app/icons/HeartIcon";
+import { usePlausible } from "next-plausible";
+import Link from "next/link";
+
+interface Props {
+  salesOpen: boolean;
+}
+
+export function Hero({ salesOpen }: Props) {
+  const plausible = usePlausible();
+
+  function handleClick() {
+    if (!salesOpen) return;
+
+    plausible("go_to_pricing_page", {
+      props: {
+        location: "hero",
+      },
+    });
+  }
+
   return (
     <div className="w-full h-[85vh] lg:h-[725px] flex items-end  relative overflow-hidden aspect-[16/9]">
       <video
@@ -27,10 +49,22 @@ export function Hero() {
           Alt du trenger for å oppnå målene dine. I en app.
         </p>
         <div className="flex flex-col space-y-5">
-          <Button className="w-full lg:w-fit" location="hero" hasIcon>
+          <Link
+            href={getLink()}
+            aria-disabled={!salesOpen}
+            onClick={handleClick}
+            className={cn("flex items-center", buttonProps())}
+          >
+            <span className="mr-2">
+              <HeartIcon />
+            </span>
             Bli med
-          </Button>
-          {/* <span className="text-white text-md">{PRICE_AND_DATE}</span> */}
+          </Link>
+          {!salesOpen && (
+            <span className="text-md text-white">
+              Salget åpner mandag 20. mai kl. 16:00
+            </span>
+          )}
         </div>
       </Container>
     </div>

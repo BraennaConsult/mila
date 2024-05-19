@@ -2,7 +2,7 @@ import { WhatYouGet } from "@/app/sections/WhatYouGet";
 import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
 import { BenefitsCard } from "../sections/BenefitsCard";
 import { CTA } from "../sections/CTA";
-import { GoToCheckout } from "../sections/GoToCheckout";
+import { GoToCheckoutButton } from "../sections/GoToCheckout";
 import { Guarantee } from "../sections/Guarantee";
 import { IncludedInPlans } from "../sections/IncludedInPlans";
 import { MyPath } from "../sections/MyPath";
@@ -18,24 +18,9 @@ export default function ProductPage({ searchParams }: Props) {
 
   return (
     <>
-      {/* <Header /> */}
       <main className="bg-[#F7F6F6]">
         <>
-          {/* <div className="flex justify-center py-12"> */}
-          {/* <Image
-              src={"/my-luck-logo.svg"}
-              alt="myLuck"
-              width={98}
-              height={52}
-            /> */}
-          {/* <Link href="/">
-              <Logo className={`cursor-pointer w-20 "text-black"`} />
-            </Link>
-          </div> */}
-          {/* <SecretHeader /> */}
-          {/* <BeforeAndAfterComponent /> */}
           <WhyMyLuckNoCTA />
-
           <>
             <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
               Velg pakken din for <br /> å komme i gang
@@ -66,7 +51,7 @@ export default function ProductPage({ searchParams }: Props) {
               disabled={!hasOption}
               trackingType="checkout_button"
             />
-            <GoToCheckout show={hasOption} option={option} />
+            <GoToCheckoutButton show={hasOption} option={option} />
           </>
         </>
       </main>

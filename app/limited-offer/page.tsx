@@ -9,7 +9,7 @@ import { ProductOptions } from "../sections/ProductOptions";
 import { ProductReview } from "../sections/ProductReview";
 import Link from "next/link";
 import { Logo } from "../components/Logo";
-import { GoToCheckout } from "../sections/GoToCheckout";
+import { GoToCheckoutButton } from "../sections/GoToCheckout";
 import { SecretHeader } from "../sections/SecretHeader";
 import { cookies } from "next/headers";
 import { BeforeAndAfterComponent } from "../sections/BeforeAndAfterComponent";
@@ -28,7 +28,7 @@ export default function ProductPage({ searchParams }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
 
-  const expiryDate = new Date("2024-04-29T23:59:00+02:00");
+  const expiryDate = new Date("2024-05-29T23:59:00+02:00");
 
   const isLinkExpired = expiryDate ? expiryDate < new Date() : false;
 
@@ -72,7 +72,7 @@ export default function ProductPage({ searchParams }: Props) {
               </div>
 
               <IncludedInPlans />
-              <GoToCheckout show={hasOption} option={option} />
+              <GoToCheckoutButton show={hasOption} option={option} />
             </>
           )}
           {isLinkExpired && (

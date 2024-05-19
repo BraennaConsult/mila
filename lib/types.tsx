@@ -10,3 +10,5 @@ export interface Slide {
   tint?: boolean;
   cta?: boolean;
 }
+
+export type PageType = "website" | "funnel" | "sales";

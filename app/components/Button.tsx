@@ -74,6 +74,7 @@ const Button = ({
   const searchParams = useSearchParams();
   const hasOption = searchParams.has("option");
   const option = searchParams.get("option");
+
   const linkHref =
     hasOption && option === "premium"
       ? PREMIUM_CHECKOUT_LINK
@@ -87,10 +88,11 @@ const Button = ({
       }}
       aria-disabled={disabled}
       className={cn(
-        buttonProps({ variant, size, fullWidth, className }),
+        buttonProps({ variant, size, fullWidth }),
         "relative",
         isLoading && "",
-        hasIcon && "flex items-center justify-center"
+        hasIcon && "flex items-center justify-center",
+        className
       )}
     >
       {hasIcon && (

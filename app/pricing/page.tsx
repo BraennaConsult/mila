@@ -2,7 +2,7 @@ import { WhatYouGet } from "@/app/sections/WhatYouGet";
 import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
 import { BenefitsCard } from "../sections/BenefitsCard";
 import { CTA } from "../sections/CTA";
-import { GoToCheckout } from "../sections/GoToCheckout";
+import { GoToCheckoutButton } from "../sections/GoToCheckout";
 import { Guarantee } from "../sections/Guarantee";
 import { IncludedInPlans } from "../sections/IncludedInPlans";
 import { MyPath } from "../sections/MyPath";
@@ -72,7 +72,9 @@ export default function ProductPage({ searchParams }: Props) {
             disabled={!hasOption && !hasSaleStarted && hasSaleEnded}
             trackingType="checkout_button"
           />
-          {hasSaleStarted && <GoToCheckout show={hasOption} option={option} />}
+          {hasSaleStarted && (
+            <GoToCheckoutButton show={hasOption} option={option} />
+          )}
         </>
       </main>
     </>

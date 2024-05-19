@@ -5,7 +5,7 @@ interface Props {
   option?: string;
 }
 
-export function GoToCheckout({ show = false, option }: Props) {
+export function GoToCheckoutButton({ show = false, option }: Props) {
   if (!option) return null;
   return (
     show && (

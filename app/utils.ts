@@ -46,7 +46,7 @@ export function getPercentage(): number {
   const hour = now.getUTCHours() + 1;
 
   // return percentageByHour[hour] || 0;
-  return 100;
+  return 5;
 }
 
 export function getSaleHasStarted() {
@@ -66,11 +66,9 @@ export function getSaleHasEnded() {
 }
 
 export function getLink() {
-  // const saleHasStarted = getSaleHasStarted();
-  const saleHasEnded = getSaleHasEnded();
+  const saleHasStarted = getSaleHasStarted();
 
-  // const link = saleHasStarted ? PAYMENT_LINK : TEMP_LINK;
-  const link = saleHasEnded ? POST_SALE_LINK : PAYMENT_LINK;
+  const link = saleHasStarted ? PAYMENT_LINK : "#";
 
   return link;
 }

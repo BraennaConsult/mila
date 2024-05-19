@@ -71,13 +71,6 @@ export function CustomCTA({
           </div>
           <div className="z-10 relative">
             {title && (
-              // <h3 className=" font-sans text-[22px] leading-[24px] text-black lg:text-3xl  mb-6">
-              //   Behold tilgangen til <br />
-
-              //   <span className="font-bold"> 15% rabatt </span>
-              //   hvis du blir med de neste{" "}
-              //   <span className="font-bold">30 minuttene</span>
-              // </h3>
               <div className="mb-8">
                 <h2 className="mb-6 text-md font-sanse font-semibold leading-7">
                   Behold tilgangen til
@@ -93,15 +86,6 @@ export function CustomCTA({
                 </span>
               </div>
             )}
-            {/* {hasSaleStarted ? (
-              <div className="flex flex-col space-y-5 lg:space-y-0 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-14 mx-auto z-2">
-                <CountdownTimer
-                  title="Påmeldingen stenger om"
-                  targetDate={saleEndsAt}
-                />
-                <Progress className="lg:order-first" />
-              </div>
-            ) : ( */}
             <>
               <CountdownTimer
                 title="Tilbudet ditt utløper om"
@@ -112,32 +96,13 @@ export function CustomCTA({
             {!noButton && (
               <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
                 <a
-                  // href={hasOption ? getLink() : "#"}
                   href={selectedOption ? getProductLink(selectedOption) : "#"}
                   onClick={() => plausible(ANALYTICS_EVENTS.GO_TO_CHECKOUT)}
-                  // onClick={() => {
-                  //   hasOption ? track(trackingType) : null;
-                  // }
-                  // onClick={() => {
-                  //   location ? track(trackingType, { location }) : track(trackingType);
-                  // }}
                   aria-disabled={disabled}
                   className={cn(buttonProps({ variant: "black" }), "relative")}
                 >
                   Bli med på maraton
                 </a>
-                {/* <Button
-                variant="black"
-                disabled={!disabled && !hasSaleStarted && hasSaleEnded}
-                location="cta"
-                trackingType={trackingType}
-                className={cn(
-                  "w-full lg:w-fit",
-                  disabled && "cursor-not-allowed bg-black/60"
-                )}
-              >
-                Bli med på maraton
-              </Button> */}
                 {disabled && (
                   <span className="text-md">
                     NB! Du må velge en pakke før du kan gå videre.

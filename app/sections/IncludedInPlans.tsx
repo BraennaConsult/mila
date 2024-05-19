@@ -7,21 +7,8 @@ export function IncludedInPlans() {
   return (
     <Section className="flex justify-center items-center py-0">
       <Container className="w-full space-y-8 px-2 lg:max-w-[800px]">
-        {/* <h2>Plans include</h2> */}
-        {/* <div className="grid grid-cols-4 gap-4"> */}
-        {/* <RowItem
-          text="I will setup your personalized calorie & macro goals"
-          premium={true}
-          innerCircle={true}
-        /> */}
         <RowsHeader />
-        {/* <RowItem
-          text="MyLuck-appen (iOS & Android)"
-          premium={true}
-          innerCircle={true}
-        /> */}
         <MapRows />
-        {/* </div> */}
       </Container>
     </Section>
   );
@@ -48,9 +35,6 @@ function MapRows() {
     <div className="">
       {data.map((group) => (
         <div key={group.title} className="my-8">
-          {/* <h3 className="text-black/80 font-sans text-[18px] leading-[24px] font-semibold mb-[26px]">
-            {group.title}
-          </h3> */}
           <div className="mb-6">
             <RowItem
               text="MyLuck-appen (iOS & Android)"
@@ -140,7 +124,7 @@ const data: Group[] = [
         innerCircle: true,
       },
       {
-        text: "8-ukers treningsprogram",
+        text: "4-ukers treningsprogram",
         premium: true,
         innerCircle: true,
       },
