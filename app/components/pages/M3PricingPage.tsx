@@ -39,7 +39,7 @@ export function M3PricingPage({
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
 
-  const linkHref = type === "website" ? premiumLink : innerCircleLink;
+  const linkHref = option === "premium" ? premiumLink : innerCircleLink;
 
   return (
     <>
@@ -61,7 +61,9 @@ export function M3PricingPage({
         <WhyMyLuckNoCTA />
         <>
           <>
-            <ProductOptions className="pb-2 md:pb-5" />
+            <div id="options">
+              <ProductOptions className="pb-2 md:pb-5" />
+            </div>
             {!discountHasExpired && showDiscount && (
               <GetLimitedOfferViaDM
                 discountExpirationTime={discountExpirationTime}
@@ -82,7 +84,9 @@ export function M3PricingPage({
             <h3 className="text-center font-serif text-[40px] leading-[40px] text-black lg:text-2xl">
               Klar for å få <br /> drømmekroppen din?
             </h3>
-            <ProductOptions className="lg:pt-10 lg:pb-32" />
+            <div id="options">
+              <ProductOptions className="lg:pt-10 lg:pb-32" />
+            </div>
             {!discountHasExpired && showDiscount && (
               <GetLimitedOfferViaDM
                 discountExpirationTime={discountExpirationTime}
