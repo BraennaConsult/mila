@@ -44,7 +44,7 @@ export function M3PricingPage({
     <>
       <M3DiscountCookieTrigger countdownTime={discountExpirationTime} />
       <main className="bg-[#F7F6F6]">
-        <div className="flex justify-center py-12">
+        <div className="flex justify-center pt-12 pb-6">
           <Link href="/">
             <Logo className={`cursor-pointer w-20 "text-black"`} />
           </Link>
