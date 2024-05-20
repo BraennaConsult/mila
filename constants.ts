@@ -51,7 +51,7 @@ export const SALE_FINISHES_AT = "2024-05-25T23:59:59+02:00";
 export const PRICE_AND_DATE =
   "Maratonet koster kr 5 650 og starter den 29.01.24";
 
-export const TYPEFORM_FUNNEL_ID = "XVvesPK7";
+export const TYPEFORM_FUNNEL_ID = "yzkA0q0N";
 
 export const COOKIES = {
   DISCOUNTED_SALE_TIMER: "discountedSaleTimer",
