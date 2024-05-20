@@ -2,17 +2,14 @@
 
 import { Button, buttonProps } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
-import { cn, getLink } from "@/app/utils";
+import { cn, getLink, getSaleHasStarted } from "@/app/utils";
 import { HeartIcon } from "@/app/icons/HeartIcon";
 import { usePlausible } from "next-plausible";
 import Link from "next/link";
 
-interface Props {
-  salesOpen: boolean;
-}
-
-export function Hero({ salesOpen }: Props) {
+export function Hero() {
   const plausible = usePlausible();
+  const salesOpen = getSaleHasStarted();
 
   function handleClick() {
     if (!salesOpen) return;
