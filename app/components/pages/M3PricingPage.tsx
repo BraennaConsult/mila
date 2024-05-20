@@ -47,7 +47,8 @@ export function M3PricingPage({
           <WhyMyLuckNoCTA />
           <>
             <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
-              Velg pakken din for <br /> å komme i gang
+              {/* Velg pakken din for <br /> å komme i gang */}
+              Bli din egen sommerflørt
             </h3>
             <p className="text-center text-black/50 text-[14px] mt-6">
               Maratonet starter mandag 27. mai 2024

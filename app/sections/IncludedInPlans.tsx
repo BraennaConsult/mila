@@ -114,50 +114,57 @@ const data: Group[] = [
     title: "Ernæring",
     rows: [
       {
-        text: "Jeg setter opp dine personlige kalori- og makro-mål",
+        text: "Jeg setter opp en matplan som gjør at du vil nå målene dine uten at du må telle en eneste kalori",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "21 unike, daglige måltidsplaner tilpasset dine kalorimål",
+        text: "Mange, deilige oppskrifter du kan velge mellom til frokost, lunsj og middag",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "4-ukers treningsprogram",
+        text: "4-ukers treningsprogram (du velger studio- eller hjemmetreningsprogram)",
         premium: true,
         innerCircle: true,
       },
-
       {
-        text: "Veiledede hjemmetreningsøkter",
+        text: "Veiledede treningsøkter så du vet hva, hvordan og hvor mye du skal gjøre når du trener",
         premium: true,
         innerCircle: true,
       },
-
+      {
+        text: "Veiledede tøyevideoer du kan gjøre hvor som helst og løsne opp kroppen din",
+        premium: true,
+        innerCircle: true,
+      },
       {
         text: "Habit tracker for å forbedre din fysiske og mentale helse",
         premium: true,
         innerCircle: true,
       },
-
       {
-        text: "Liveseminarer og Q&A med meg annenhver uke",
+        text: "'Bli din egen sommerflørt'-liveseminarer med fokus på hvordan du kan elske deg selv gjennom hele maratonet",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Støttende og motiverende fellesskap i private Instagram-grupper",
+        text: "Støttende og motiverende fellesskap i private grupper",
         premium: true,
         innerCircle: true,
       },
       {
-        text: "Check-ins fra meg i DM hver uke",
+        text: "Du får en ansvarspartner som hjelper deg nå målene dine",
+        premium: true,
+        innerCircle: true,
+      },
+      {
+        text: "Personlig tilgang til meg i DM",
         premium: false,
         innerCircle: true,
       },
       {
-        text: "Tilbakemelding på fremgangsbildene dine i DM",
+        text: "Personlig tilbakemelding på fremgangsbildene dine i DM",
         premium: false,
         innerCircle: true,
       },
@@ -171,9 +178,13 @@ const data: Group[] = [
         premium: false,
         innerCircle: true,
       },
-
       {
         text: "Alle treningsspørsmålene dine svarer jeg på 1-til-1 i DM",
+        premium: false,
+        innerCircle: true,
+      },
+      {
+        text: "Liten goodie bag fra meg med noen av mine favoritter",
         premium: false,
         innerCircle: true,
       },

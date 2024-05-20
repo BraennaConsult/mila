@@ -38,12 +38,17 @@ export function Hero() {
       </video>
       <div className="absolute w-full h-full bg-black/20 top-0 left-0 z-1" />
       <Container className="space-y-8 mb-14 w-full lg:mx-auto mx-6 z-20">
-        <h1 className="text-[40px] leading-[50px] lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md ">
-          Strammere glutes,
-          <br /> Gå ned i vekt, <br /> Form kroppen
+        <h1 className="text-[40px] leading-[44px] lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md ">
+          Bli din egen sommerflørt
+          {/* Strammere glutes,
+          <br /> Gå ned i vekt, <br /> Form kroppen */}
         </h1>
         <p className="text-md text-white max-w-xs md:max-w-md text-balance">
-          Alt du trenger for å oppnå målene dine. I en app.
+          {/* Alt du trenger for å oppnå målene dine. I en app. */}
+          Lær deg å elske deg selv og bli din egen sommerflørt.
+          <br />
+          Lær deg hvordan du får til varige endringer. <br />
+          Nå målene dine.
         </p>
         <div className="flex flex-col space-y-5">
           <Link

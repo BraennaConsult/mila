@@ -105,13 +105,15 @@ const cardData: CardDataSchema[] = [
     type: "video",
     src: "/video/pro-in-gym.mp4",
     alt: "What you get",
-    title: "Bli trygg på treningssenteret",
+    title:
+      "Bli trygg på treningssenteret. Du får vite hva, hvordan og hvor mye du skal gjøre når du trener",
   },
   {
     type: "video",
     src: "/video/meal-plan.mp4",
     alt: "What you get",
-    title: "Personlige måltidsplaner som hjelper deg nå målene dine",
+    title:
+      "Personlige måltidsplaner som hjelper deg nå målene dine (du trenger ikke telle en eneste kalori)",
   },
   {
     type: "image",
