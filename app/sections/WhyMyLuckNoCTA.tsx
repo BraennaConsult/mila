@@ -199,7 +199,7 @@ const slides: Slide[] = [
   },
   {
     type: "image",
-    src: "/carusell/carusell2.JPG",
+    src: "/carusell/carusell2.jpg",
     alt: "MyLuck 3",
     aspectRatio: 0.75,
     text: `Passe inn i favorittklærne mine`,
