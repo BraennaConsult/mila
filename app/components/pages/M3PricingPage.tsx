@@ -14,6 +14,7 @@ import { WhatYouGet } from "@/app/sections/WhatYouGet";
 import { WhyMyLuckNoCTA } from "@/app/sections/WhyMyLuckNoCTA";
 import { getSaleHasEnded, getSaleHasStarted } from "@/app/utils";
 import { usePlausible } from "next-plausible";
+import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
@@ -46,14 +47,13 @@ export function M3PricingPage({
       <main className="bg-[#F7F6F6]">
         <div className="flex justify-center pt-12 pb-6">
           <Link href="/">
-            <Logo className={`cursor-pointer w-20 "text-black"`} />
+            <Image src="/logo.png" alt="logo" width={98} height={52} />
           </Link>
         </div>
         <>
           <WhyMyLuckNoCTA />
           <>
             <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
-              {/* Velg pakken din for <br /> å komme i gang */}
               Bli din egen sommerflørt
             </h3>
             <p className="text-center text-black/50 text-[14px] mt-6">
