@@ -39,8 +39,8 @@ export default function Warrenty() {
                 as completed for 30 consecutive days.
               </li>
               <li>
-                You have logged food for 30 consecutive days and haven’t
-                exceeded your target calorie intake.
+                You have checked off breakfast, lunch and dinner every day for
+                30 days.
               </li>
               <li>
                 You have reached your “steps” goal for 30 consecutive days.
