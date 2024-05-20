@@ -55,7 +55,7 @@ export function GetLimitedOfferViaDM({ discountExpirationTime }: Props) {
           </div>
         )}
         <Link
-          href="https://www.instagram.com/direct/t/17848453169767578"
+          href="https://www.instagram.com/milatimaa/"
           target="_blank"
           className={buttonProps({ variant: "black" })}
         >

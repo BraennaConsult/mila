@@ -1,4 +1,5 @@
 import { GetLimitedOfferViaDM } from "@/app/components/GetLimitedOfferViaDM";
+import { Logo } from "@/app/components/Logo";
 import { M3DiscountCookieTrigger } from "@/app/components/M3DiscountCookieTrigger";
 import { BenefitsCard } from "@/app/sections/BenefitsCard";
 import { CTA } from "@/app/sections/CTA";
@@ -43,6 +44,11 @@ export function M3PricingPage({
     <>
       <M3DiscountCookieTrigger countdownTime={discountExpirationTime} />
       <main className="bg-[#F7F6F6]">
+        <div className="flex justify-center py-12">
+          <Link href="/">
+            <Logo className={`cursor-pointer w-20 "text-black"`} />
+          </Link>
+        </div>
         <>
           <WhyMyLuckNoCTA />
           <>
