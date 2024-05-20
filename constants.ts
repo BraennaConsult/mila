@@ -45,7 +45,7 @@ export const ROUTES = {
   PRICING: "/pris",
 };
 
-export const SALE_STARTS_AT = "2024-05-20T16:00:00+02:00";
+export const SALE_STARTS_AT = "2024-05-20T14:00:00+02:00";
 export const SALE_FINISHES_AT = "2024-05-25T23:59:59+02:00";
 
 export const PRICE_AND_DATE =

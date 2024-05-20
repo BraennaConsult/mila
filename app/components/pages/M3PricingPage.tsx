@@ -22,6 +22,7 @@ interface Props {
   searchParams?: { [key: string]: string | string[] | undefined };
   discountHasExpired: boolean;
   discountExpirationTime: string;
+  showDiscount?: boolean;
 }
 
 export function M3PricingPage({
@@ -31,6 +32,7 @@ export function M3PricingPage({
   searchParams,
   discountHasExpired,
   discountExpirationTime,
+  showDiscount,
 }: Props) {
   const option = searchParams?.option as string | undefined;
   const hasOption = searchParams?.option ? true : false;
@@ -51,7 +53,7 @@ export function M3PricingPage({
               Maratonet starter mandag 27. mai 2024
             </p>
             <ProductOptions className="lg:py-10" />
-            {!discountHasExpired && (
+            {!discountHasExpired && showDiscount && (
               <GetLimitedOfferViaDM
                 discountExpirationTime={discountExpirationTime}
               />
@@ -71,7 +73,7 @@ export function M3PricingPage({
               Klar for å få <br /> drømmekroppen din?
             </h3>
             <ProductOptions className="lg:pt-10 lg:pb-32" />
-            {!discountHasExpired && (
+            {!discountHasExpired && showDiscount && (
               <GetLimitedOfferViaDM
                 discountExpirationTime={discountExpirationTime}
               />

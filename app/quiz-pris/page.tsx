@@ -25,6 +25,7 @@ export default function Page({ searchParams }: Props) {
       searchParams={searchParams}
       discountExpirationTime={discountExpirationTime}
       discountHasExpired={discountHasExpired}
+      showDiscount={true}
     />
   );
 }
