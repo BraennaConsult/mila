@@ -28,11 +28,11 @@ export const INNER_CIRCLE_LIMITED_CHECKOUT_LINK =
   "https://milatimaa.net/cart/43950949957809:1";
 
 export const CHECKOUT_LINKS = {
-  PREMIUM_WEBSITE: "https://milatimaa.net/cart/44085088649393:1",
-  INNER_CIRCLE_WEBSITE: "https://milatimaa.net/cart/44085087502513:1",
+  PREMIUM_WEBSITE: "https://milatimaa.net/cart/44085087502513:1",
+  INNER_CIRCLE_WEBSITE: "https://milatimaa.net/cart/44085087830193:1",
   PREMIUM_FUNNEL: "https://milatimaa.net/cart/44085083963569:1",
   INNER_CIRCLE_FUNNEL: "https://milatimaa.net/cart/44085083996337:1",
-  PREMIUM_SALES: "https://milatimaa.net/cart/44085087830193:1",
+  PREMIUM_SALES: "https://milatimaa.net/cart/44085088649393:1",
   INNER_CIRCLE_SALES: "https://milatimaa.net/cart/44085089009841:1",
 };
 
