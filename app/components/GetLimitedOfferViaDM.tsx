@@ -37,7 +37,8 @@ export function GetLimitedOfferViaDM({ discountExpirationTime }: Props) {
         <h2 className="mb-3">Få 15% rabatt</h2>
         <p className="mb-5 max-w-md text-center text-md text-gray-700">
           Hvis du sender meg en melding på Instagram i løpet av de neste 30
-          minuttene så gir jeg deg 15% rabatt ❤️🤩
+          minuttene så gir jeg deg 15% rabatt ❤️🤩 (si at du har tatt
+          quiz&rsquo;en når du sender meg melding)
         </p>
         {!discountHasExpired && (
           <div className="space-x-2 lg:space-x-3 text-[50px] lg:[text-60px] font-serif mb-3">
