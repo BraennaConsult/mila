@@ -84,9 +84,7 @@ export function M3PricingPage({
             <h3 className="text-center font-serif text-[40px] leading-[40px] text-black lg:text-2xl">
               Klar for å få <br /> drømmekroppen din?
             </h3>
-            <div id="options">
-              <ProductOptions className="lg:pt-10 lg:pb-32" />
-            </div>
+            <ProductOptions className="lg:pt-10 lg:pb-32" />
             {!discountHasExpired && showDiscount && (
               <GetLimitedOfferViaDM
                 discountExpirationTime={discountExpirationTime}

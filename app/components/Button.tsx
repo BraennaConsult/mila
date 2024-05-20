@@ -26,7 +26,7 @@ const buttonProps = cva({
       white:
         "border-white text-black hover:bg-black hover:border-black bg-white hover:text-white focus:bg-black focus:border-black focus:text-white",
       black:
-        "bg-black text-white hover:text-black focus:text-black hover:bg-white focus:bg-white hover:border-black focus:border-black",
+        "bg-black text-white hover:text-black focus:text-black hover:bg-white focus:bg-white hover:border-black focus:border-black disabled:border-none",
       "ghost-white":
         "border-white bg-transparent text-white hover:bg-white hover:text-black",
     },

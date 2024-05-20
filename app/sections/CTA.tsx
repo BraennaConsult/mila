@@ -41,7 +41,13 @@ export function CTA({
   const isDisabled = disabled || (!hasSaleStarted && hasSaleEnded);
 
   function handleClick() {
-    if (isDisabled) return;
+    if (isDisabled) {
+      const optionsElement = document.getElementById("options");
+      if (optionsElement) {
+        optionsElement.scrollIntoView({ behavior: "smooth" });
+      }
+      return;
+    }
 
     plausible("checkout_button", {
       props: {
@@ -95,7 +101,7 @@ export function CTA({
             )}
             <div className="space-y-3 lg:mx-auto flex flex-col items-center mt-12">
               <button
-                disabled={isDisabled}
+                // disabled={isDisabled}
                 onClick={handleClick}
                 className={cn(
                   "w-full lg:w-fit disabled:cursor-not-allowed disabled:bg-black/60",
