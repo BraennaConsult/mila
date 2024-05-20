@@ -18,6 +18,7 @@ interface Props {
   type: PageType;
   href: string;
   className?: string;
+  containerClassName?: string;
   withTitle?: boolean;
   disabled?: boolean;
 }
@@ -26,6 +27,7 @@ export function CTA({
   type,
   href,
   className,
+  containerClassName,
   withTitle = true,
   disabled,
 }: Props) {
@@ -53,7 +55,12 @@ export function CTA({
 
   return (
     <Section className={className}>
-      <Container className="flex flex-col justify-center space-y-14 lg:max-w-3xl">
+      <Container
+        className={cn(
+          "flex flex-col justify-center space-y-14 lg:max-w-3xl",
+          containerClassName
+        )}
+      >
         {withTitle && (
           <h2 className="text-center mb-0 text-[28px] lg:text-3xl leading-8 text-black/80 font-sans">
             Vi bygger selvtillit på treningssenteret

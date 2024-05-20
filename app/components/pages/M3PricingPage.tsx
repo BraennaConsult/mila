@@ -45,28 +45,31 @@ export function M3PricingPage({
     <>
       <M3DiscountCookieTrigger countdownTime={discountExpirationTime} />
       <main className="bg-[#F7F6F6]">
-        <div className="flex justify-center pt-12 pb-6">
+        <div className="flex justify-center pt-3 pb-6">
           <Link href="/">
             <Image src="/logo.png" alt="logo" width={98} height={52} />
           </Link>
         </div>
+        <div className="mb-5 lg:mb-10">
+          <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
+            Bli din egen sommerflørt
+          </h3>
+          <p className="text-center text-black/50 text-[14px] mt-3 lg:mt-6">
+            Maratonet starter mandag 27. mai 2024
+          </p>
+        </div>
+        <WhyMyLuckNoCTA />
         <>
-          <WhyMyLuckNoCTA />
           <>
-            <h3 className="text-center font-serif text-[28px] leading-[24px] text-black lg:text-3xl">
-              Bli din egen sommerflørt
-            </h3>
-            <p className="text-center text-black/50 text-[14px] mt-6">
-              Maratonet starter mandag 27. mai 2024
-            </p>
-            <ProductOptions className="lg:py-10" />
+            <ProductOptions className="pb-2 md:pb-5" />
             {!discountHasExpired && showDiscount && (
               <GetLimitedOfferViaDM
                 discountExpirationTime={discountExpirationTime}
               />
             )}
             <CTA
-              className="pt-0 md:pt-0 lg:pt-0"
+              className="pt-0 md:pt-0 lg:pt-0 md:px-0"
+              containerClassName="lg:px-0"
               withTitle={false}
               disabled={!hasOption}
               href={linkHref}

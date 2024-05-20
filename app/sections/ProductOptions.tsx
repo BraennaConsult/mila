@@ -72,7 +72,7 @@ function ProductionOption({
       <Card className="w-full lg:max-w-[375px] justify-between flex flex-row space-x-0 lg:space-x-12 lg:py-10 lg:px-6 py-[0px] pt-6  pb-[12px] overflow-hidden relative">
         <div className="flex flex-col w-full">
           <div className="flex justify-between w-full">
-            <h3 className="font-sans text-left text-[20px] text-black/60">
+            <h3 className="font-sans text-left text-[20px] text-black/60 z-10">
               {title}
             </h3>
             <div className="flex justify-end">
