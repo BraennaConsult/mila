@@ -20,33 +20,33 @@ export function cn(...inputs: ClassValue[]) {
 
 // For countdown
 export function getPercentage(): number {
-  // const percentageByHour: { [hour: number]: number } = {
-  //   6: 98,
-  //   7: 98,
-  //   8: 98,
-  //   9: 98,
-  //   10: 98,
-  //   11: 98,
-  //   12: 98,
-  //   13: 98,
-  //   14: 98,
-  //   15: 98,
-  //   16: 98,
-  //   17: 96,
-  //   18: 96,
-  //   19: 96,
-  //   20: 96,
-  //   21: 98,
-  //   22: 99,
-  //   23: 99,
-  // };
+  const percentageByHour: { [hour: number]: number } = {
+    6: 55,
+    7: 55,
+    8: 55,
+    9: 55,
+    10: 55,
+    11: 55,
+    12: 55,
+    13: 55,
+    14: 55,
+    15: 55,
+    16: 56,
+    17: 57,
+    18: 58,
+    19: 59,
+    20: 60,
+    21: 61,
+    22: 62,
+    23: 63,
+  };
 
   const now = new Date();
 
   const hour = now.getUTCHours() + 1;
 
-  // return percentageByHour[hour] || 0;
-  return 5;
+  return percentageByHour[hour] || 0;
+  // return 5;
 }
 
 export function getSaleHasStarted() {

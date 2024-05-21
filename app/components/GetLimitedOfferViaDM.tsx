@@ -4,6 +4,7 @@ import { buttonProps } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import { Section } from "@/app/components/Section";
 import { TimeLeft } from "@/app/useCountdown";
+import { usePlausible } from "next-plausible";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -12,6 +13,8 @@ interface Props {
 }
 
 export function GetLimitedOfferViaDM({ discountExpirationTime }: Props) {
+  const plausible = usePlausible();
+
   const discountHasExpired = discountExpirationTime
     ? new Date(discountExpirationTime) < new Date()
     : false;
@@ -56,6 +59,9 @@ export function GetLimitedOfferViaDM({ discountExpirationTime }: Props) {
         )}
         <Link
           href="https://www.instagram.com/milatimaa/"
+          onClick={() => {
+            plausible("dm_button");
+          }}
           target="_blank"
           className={buttonProps({ variant: "black" })}
         >
