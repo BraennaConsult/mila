@@ -183,11 +183,6 @@ const data: Group[] = [
         premium: false,
         innerCircle: true,
       },
-      {
-        text: "Liten goodie bag fra meg med noen av mine favoritter",
-        premium: false,
-        innerCircle: true,
-      },
     ],
   },
 ];
