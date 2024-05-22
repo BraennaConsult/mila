@@ -46,7 +46,7 @@ export const ROUTES = {
 };
 
 export const SALE_STARTS_AT = "2024-05-20T16:00:00+02:00";
-export const SALE_FINISHES_AT = "2024-05-25T23:59:59+02:00";
+export const SALE_FINISHES_AT = "2024-05-24T23:59:59+02:00";
 
 export const PRICE_AND_DATE =
   "Maratonet koster kr 5 650 og starter den 29.01.24";
