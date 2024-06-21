@@ -1,6 +1,7 @@
 import { GetLimitedOfferViaDM } from "@/app/components/GetLimitedOfferViaDM";
 import { Logo } from "@/app/components/Logo";
 import { M3DiscountCookieTrigger } from "@/app/components/M3DiscountCookieTrigger";
+import { SignUpClosed } from "@/app/components/SignUpClosed";
 import { BenefitsCard } from "@/app/sections/BenefitsCard";
 import { CTA } from "@/app/sections/CTA";
 import { ControlledGoToCheckoutButton } from "@/app/sections/ControlledGoToCheckoutButton";
@@ -61,22 +62,23 @@ export function M3PricingPage({
         <WhyMyLuckNoCTA />
         <>
           <>
-            <div id="options">
+            {/* <div id="options">
               <ProductOptions className="pb-2 md:pb-5" />
-            </div>
-            {!discountHasExpired && showDiscount && (
+            </div> */}
+            {/* {!discountHasExpired && showDiscount && (
               <GetLimitedOfferViaDM
                 discountExpirationTime={discountExpirationTime}
               />
-            )}
-            <CTA
+            )} */}
+            <SignUpClosed />
+            {/* <CTA
               className="pt-0 md:pt-0 lg:pt-0 md:px-0"
               containerClassName="lg:px-0"
               withTitle={false}
               disabled={!hasOption}
               href={linkHref}
               type={type}
-            />
+            /> */}
             <IncludedInPlans />
             <WhatYouGet />
             <ProductReview />
@@ -84,26 +86,27 @@ export function M3PricingPage({
             <h3 className="text-center font-serif text-[40px] leading-[40px] text-black lg:text-2xl">
               Klar for å få <br /> drømmekroppen din?
             </h3>
-            <ProductOptions className="lg:pt-10 lg:pb-32" />
-            {!discountHasExpired && showDiscount && (
+            {/* <ProductOptions className="lg:pt-10 lg:pb-32" /> */}
+            <SignUpClosed />
+            {/* {!discountHasExpired && showDiscount && (
               <GetLimitedOfferViaDM
                 discountExpirationTime={discountExpirationTime}
               />
-            )}
+            )} */}
             <Guarantee />
-            <CTA
+            {/* <CTA
               className="pt-0 md:pt-0 lg:pt-0"
               disabled={!hasOption}
               href={linkHref}
               type={type}
-            />
-            {hasOption && (
+            /> */}
+            {/* {hasOption && (
               <ControlledGoToCheckoutButton
                 href={linkHref}
                 type={type}
                 option={option}
               />
-            )}
+            )} */}
           </>
         </>
       </main>

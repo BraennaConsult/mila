@@ -17,6 +17,7 @@ export const TEMP_LINK = "/forsalg";
 export const PAYMENT_LINK = "/pris";
 export const STRIPE_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
 export const POST_SALE_LINK = "https://forms.gle/1mstHspCBY8nsqs88";
+export const M4_REMINDER_LINK = "https://0czi3htb7r8.typeform.com/to/sGHmTd8j";
 
 export const PREMIUM_CHECKOUT_LINK =
   "https://milatimaa.net/cart/43560009466033:1";
