@@ -43,7 +43,7 @@ export function getPercentageSpotsTaken(): number {
   // const hour = now.getUTCHours() + 1;
 
   // return percentageByHour[hour] || 0;
-  return 15;
+  return 19;
 }
 
 export function getSaleHasStarted() {
