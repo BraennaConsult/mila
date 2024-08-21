@@ -1,9 +1,9 @@
 "use client";
 
-import { Button, buttonProps } from "@/app/components/Button";
+import { buttonProps } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
 import { Logo } from "@/app/components/Logo";
-import { cn, getLink } from "@/app/utils";
+import { cn } from "@/app/utils";
 import { PAYMENT_LINK } from "@/constants";
 import { usePlausible } from "next-plausible";
 import Link from "next/link";
@@ -26,6 +26,7 @@ export function Header({ black = false }: { black?: boolean }) {
     });
   }
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -45,7 +46,7 @@ export function Header({ black = false }: { black?: boolean }) {
           />
         </Link>
         <Link
-          href={getLink()}
+          href={PAYMENT_LINK}
           onClick={handleClick}
           className={cn(
             "",

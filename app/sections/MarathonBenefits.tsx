@@ -9,8 +9,8 @@ interface Props {
 
 export function MarathonBenefits({ className }: Props) {
   return (
-    <Section className="py-9 flex justify-center items-center">
-      <Container className="lg:w-full px-0">
+    <section className="flex justify-center items-center mb-3 lg:max-w-[800px] mx-auto">
+      <Container className="lg:w-full w-full">
         <Card className="lg:w-full lg:justify-center flex flex-col lg:flex-col space-x-0 lg:space-x-12 lg:py-20">
           <div className="flex items-center justify-center lg:mb-12">
             <h2 className="text-[22px] text-black/80 text-center font-sans font-medium leading-7 mb-6 lg:text-xl">
@@ -27,7 +27,7 @@ export function MarathonBenefits({ className }: Props) {
           </div>
         </Card>
       </Container>
-    </Section>
+    </section>
   );
 }
 

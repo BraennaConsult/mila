@@ -1,13 +1,11 @@
 import { Container } from "@/app/components/Container";
-import { Section } from "@/app/components/Section";
-import testimonials from "@/data/testimonials";
 import testimonialsWithImages from "@/data/testimonialsWithImages";
 import { StarIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export function Testimonials() {
   return (
-    <Section className="bg-light-grey">
+    <section className="bg-light-grey mb-3">
       <Container>
         <h2 className="mb-10 text-center lg:text-left">Hva folk sier</h2>
         <div className="columns-1 lg:columns-3 space-y-4 ">
@@ -22,7 +20,7 @@ export function Testimonials() {
           ))}
         </div>
       </Container>
-    </Section>
+    </section>
   );
 }
 

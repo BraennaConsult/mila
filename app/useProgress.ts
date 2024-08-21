@@ -1,13 +1,14 @@
 "use client";
 
-import { getPercentage } from "@/app/utils";
+import { getPercentageSpotsTaken } from "@/app/utils";
 import { useEffect, useState } from "react";
 
 export function useProgress() {
   const [progress, setProgress] = useState<number>(0);
 
-  const currentProgress = getPercentage();
+  const currentProgress = getPercentageSpotsTaken();
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     setProgress(currentProgress);
   }, []);

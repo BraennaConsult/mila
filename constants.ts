@@ -19,6 +19,9 @@ export const STRIPE_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
 export const POST_SALE_LINK = "https://forms.gle/1mstHspCBY8nsqs88";
 export const M4_REMINDER_LINK = "https://0czi3htb7r8.typeform.com/to/sGHmTd8j";
 
+/**
+ * Old
+ */
 export const PREMIUM_CHECKOUT_LINK =
   "https://milatimaa.net/cart/43560009466033:1";
 export const INNER_CIRCLE_CHECKOUT_LINK =
@@ -28,6 +31,9 @@ export const PREMIUM_LIMITED_CHECKOUT_LINK =
 export const INNER_CIRCLE_LIMITED_CHECKOUT_LINK =
   "https://milatimaa.net/cart/43950949957809:1";
 
+/**
+ * Old
+ */
 export const CHECKOUT_LINKS = {
   PREMIUM_WEBSITE: "https://milatimaa.net/cart/44085087502513:1",
   INNER_CIRCLE_WEBSITE: "https://milatimaa.net/cart/44085087830193:1",
@@ -46,8 +52,11 @@ export const ROUTES = {
   PRICING: "/pris",
 };
 
-export const SALE_STARTS_AT = "2024-05-20T16:00:00+02:00";
-export const SALE_FINISHES_AT = "2024-05-24T23:59:59+02:00";
+export const M4_INNER_CIRCLE_LINK =
+  "https://milatimaa.net/cart/44524803195057:1";
+export const M4_PREMIUM_LINK = "https://milatimaa.net/cart/44524799885489:1";
+export const SALE_STARTS_AT = "2024-08-28T14:00:00+02:00";
+export const SALE_FINISHES_AT = "2024-08-28T22:00:00+02:00";
 
 export const PRICE_AND_DATE =
   "Maratonet koster kr 5 650 og starter den 29.01.24";

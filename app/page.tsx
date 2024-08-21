@@ -1,19 +1,18 @@
-'use client';
+"use client";
 
+import { Container } from "@/app/components/Container";
 import { Footer } from "@/app/components/Footer";
 import { Header } from "@/app/components/Header";
-import { AppPreview } from "@/app/sections/AppPreview";
-import { CTA } from "@/app/sections/CTA";
-import { FAQ } from "@/app/sections/FAQ";
+import { MarathonIncludes } from "@/app/components/pages/M4PricingPage/marathon-includes";
+import { BenefitsCard } from "@/app/sections/BenefitsCard";
 import { Hero } from "@/app/sections/Hero";
-import { MyLuck } from "@/app/sections/MyLuck";
+import { NavigationalCTA } from "@/app/sections/NavigationalCTA";
 import { Testimonials } from "@/app/sections/Testimonials";
 import { MarathonBenefits } from "./sections/MarathonBenefits";
-import { WhyMyLuck } from "./sections/WhyMyLuck";
 import { ParticipantsReview } from "./sections/ParticipantsReview";
 import { WhatYouGet } from "./sections/WhatYouGet";
-import { NavigationalCTA } from "@/app/sections/NavigationalCTA";
-import { useEffect } from 'react';
+import { WhyMyLuck } from "./sections/WhyMyLuck";
+import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -25,30 +24,39 @@ export default function Home() {
       app_id: APP_ID,
     };
 
-    (function() {
+    (function () {
       var w = window as any;
       var ic = w.Intercom;
       if (typeof ic === "function") {
-        ic('reattach_activator');
-        ic('update', w.intercomSettings);
+        ic("reattach_activator");
+        ic("update", w.intercomSettings);
       } else {
         var d = document;
-        var i: any = function(...args: any[]) { i.c(args); };
+        var i: any = function (...args: any[]) {
+          i.c(args);
+        };
         i.q = [];
-        i.c = function(args: any) { i.q.push(args); };
+        i.c = function (args: any) {
+          i.q.push(args);
+        };
         w.Intercom = i;
-        var l = function() {
-          var s = d.createElement('script');
-          s.type = 'text/javascript'; s.async = true;
-          s.src = 'https://widget.intercom.io/widget/' + APP_ID;
-          var x = d.getElementsByTagName('script')[0];
+        var l = function () {
+          var s = d.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://widget.intercom.io/widget/" + APP_ID;
+          var x = d.getElementsByTagName("script")[0];
           if (x && x.parentNode) {
             x.parentNode.insertBefore(s, x);
           }
         };
-        if (document.readyState === 'complete') { l(); }
-        else if (w.attachEvent) { w.attachEvent('onload', l); }
-        else { w.addEventListener('load', l, false); }
+        if (document.readyState === "complete") {
+          l();
+        } else if (w.attachEvent) {
+          w.attachEvent("onload", l);
+        } else {
+          w.addEventListener("load", l, false);
+        }
       }
     })();
   }, []);
@@ -58,14 +66,18 @@ export default function Home() {
       <Header />
       <main className="bg-[#F7F6F6]">
         <Hero />
-        <NavigationalCTA className="pt-12 md:pt-0 lg:pt-20" />
+        <NavigationalCTA className="pt-12 md:pt-0 lg:pt-20 pb-3 lg:pb-3" />
         <MarathonBenefits />
         <WhyMyLuck />
-        <ParticipantsReview />
+        <Container className="!max-w-[800px] mb-3">
+          <MarathonIncludes className="max-w-[800px]" />
+        </Container>
         <WhatYouGet />
+        <ParticipantsReview />
         <NavigationalCTA className="pt-0 md:pt-0 lg:pt-0" />
         <Testimonials />
-        <NavigationalCTA className="pt-0 md:pt-0 lg:pt-0" />
+        <BenefitsCard />
+        <NavigationalCTA className="pt-10 md:pt-10 lg:pt-10" />
         {/* <FAQ /> */}
         {/* <MyLuck /> */}
         {/* <AppPreview /> */}

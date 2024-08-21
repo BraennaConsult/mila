@@ -1,19 +1,17 @@
 "use client";
 
-import { Button, buttonProps } from "@/app/components/Button";
+import { buttonProps } from "@/app/components/Button";
 import { Container } from "@/app/components/Container";
-import { cn, getLink, getSaleHasStarted } from "@/app/utils";
 import { HeartIcon } from "@/app/icons/HeartIcon";
+import { cn } from "@/app/utils";
+import { PAYMENT_LINK } from "@/constants";
 import { usePlausible } from "next-plausible";
 import Link from "next/link";
 
 export function Hero() {
   const plausible = usePlausible();
-  const salesOpen = getSaleHasStarted();
 
   function handleClick() {
-    if (!salesOpen) return;
-
     plausible("go_to_pricing_page", {
       props: {
         location: "hero",
@@ -39,34 +37,27 @@ export function Hero() {
       <div className="absolute w-full h-full bg-black/20 top-0 left-0 z-1" />
       <Container className="space-y-8 mb-14 w-full lg:mx-auto mx-6 z-20">
         <h1 className="text-[40px] leading-[44px] lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md ">
-          Bli din egen sommerflørt
-          {/* Strammere glutes,
-          <br /> Gå ned i vekt, <br /> Form kroppen */}
+          Ab-out time maraton
         </h1>
         <p className="text-md text-white max-w-xs md:max-w-md text-balance">
-          {/* Alt du trenger for å oppnå målene dine. I en app. */}
-          Lær deg å elske deg selv og bli din egen sommerflørt.
+          Salger starter 28. august
           <br />
-          Lær deg hvordan du får til varige endringer. <br />
-          Nå målene dine.
+          Maraton starter 2. september
         </p>
         <div className="flex flex-col space-y-5">
           <Link
-            href={getLink()}
-            aria-disabled={!salesOpen}
+            href={PAYMENT_LINK}
             onClick={handleClick}
-            className={cn("flex items-center", buttonProps())}
+            className={cn(
+              "flex items-center !w-full max-w-[400px]",
+              buttonProps()
+            )}
           >
             <span className="mr-2">
               <HeartIcon />
             </span>
             Bli med
           </Link>
-          {!salesOpen && (
-            <span className="text-md text-white">
-              Salget åpner mandag 20. mai kl. 16:00
-            </span>
-          )}
         </div>
       </Container>
     </div>
