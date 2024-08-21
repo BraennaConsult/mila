@@ -14,34 +14,25 @@ interface Props {
 
 export function ProductOptions({ className, page }: Props) {
   return (
-    <Section className={cn("flex py-8 w-full", className)}>
-      <Container
-        className={
-          "w-full space-y-2 lg:flex lg:justify-center lg:space-y-0 lg:gap-x-5"
-        }
-      >
-        <ProductionOption
-          title={"Premium"}
-          // price="kr 390"
-          // discountedPrice="kr 351"
-          // discountedTotal="kr 2290"
-          total="kr 2290"
-          name={`premium${page ? `-${page}` : ""}`}
-          recommended={false}
-          page={page}
-        />
-        <ProductionOption
-          title={"Inner circle"}
-          // price="kr 1990"
-          // discountedPrice="kr 1990"
-          // discountedTotal="kr 2990"
-          total="kr 4990"
-          recommended={true}
-          name={`inner-circle${page ? `-${page}` : ""}`}
-          page={page}
-        />
-      </Container>
-    </Section>
+    <Container
+      className={
+        "w-full space-y-2 lg:flex lg:justify-center lg:space-y-0 lg:gap-x-5"
+      }
+    >
+      <ProductionOption
+        title={"Premium"}
+        total="kr 2 490"
+        name={`premium${page ? `-${page}` : ""}`}
+        recommended
+        page={page}
+      />
+      <ProductionOption
+        title={"Inner circle"}
+        total="kr 5 990"
+        name={`inner-circle${page ? `-${page}` : ""}`}
+        page={page}
+      />
+    </Container>
   );
 }
 
@@ -80,7 +71,7 @@ function ProductionOption({
                 <div>
                   <div className="bg-pink-primary inline-block px-[14px] py-[3px] rounded-[100px]">
                     <p className="font-sans text-black/80 text-[12px] whitespace-nowrap">
-                      Best deal
+                      Beste deal
                     </p>
                   </div>
                 </div>

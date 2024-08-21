@@ -5,16 +5,43 @@ import { Container } from "@/app/components/Container";
 
 export function BenefitsCard() {
   return (
-    <Section className="lg:flex lg:justify-center py-0 pt-3">
+    <section className="lg:flex lg:justify-center py-0">
       <Container>
-        <Card className="lg:max-w-[550px]">
+        <Card className="lg:max-w-[800px]">
           <Image
             src="/benefit-card.png"
             height={530}
             width={371}
             alt="benefit card"
           />
-          {/* <div className="space-y-7">
+        </Card>
+      </Container>
+    </section>
+  );
+}
+
+// interface BenefitRowProps {
+//   iconPath: string;
+//   text: string;
+// }
+
+// function BenefitRow({ iconPath, text }: BenefitRowProps) {
+//   return (
+//     <div className="flex items-start">
+//       <Image
+//         src={iconPath}
+//         alt="icon"
+//         width={32}
+//         height={32}
+//         className="mt-1"
+//       />
+//       <p className="font-sans text-black/70 text-base ml-5">{text}</p>
+//     </div>
+//   );
+// }
+
+{
+  /* <div className="space-y-7">
             <BenefitRow
               iconPath="/benefits/benefit-icon-1.svg"
               text="Se synlige resultater før sommeren og få mer energi"
@@ -39,29 +66,5 @@ export function BenefitsCard() {
             <h3 className="text-center font-sans text-[20px] leading-[24px] text-black/80 font-medium">
               Få synlige resultater <br /> innen 19. mai
             </h3>
-          </div> */}
-        </Card>
-      </Container>
-    </Section>
-  );
-}
-
-interface BenefitRowProps {
-  iconPath: string;
-  text: string;
-}
-
-function BenefitRow({ iconPath, text }: BenefitRowProps) {
-  return (
-    <div className="flex items-start">
-      <Image
-        src={iconPath}
-        alt="icon"
-        width={32}
-        height={32}
-        className="mt-1"
-      />
-      <p className="font-sans text-black/70 text-base ml-5">{text}</p>
-    </div>
-  );
+          </div> */
 }

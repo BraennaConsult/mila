@@ -1,16 +1,15 @@
+import { Container } from "@/app/components/Container";
 import { Footer } from "@/app/components/Footer";
 import { Header } from "@/app/components/Header";
-import { AppPreview } from "@/app/sections/AppPreview";
-import { CTA } from "@/app/sections/CTA";
-import { FAQ } from "@/app/sections/FAQ";
+import { MarathonIncludes } from "@/app/components/pages/M4PricingPage/marathon-includes";
+import { BenefitsCard } from "@/app/sections/BenefitsCard";
 import { Hero } from "@/app/sections/Hero";
-import { MyLuck } from "@/app/sections/MyLuck";
+import { NavigationalCTA } from "@/app/sections/NavigationalCTA";
 import { Testimonials } from "@/app/sections/Testimonials";
 import { MarathonBenefits } from "./sections/MarathonBenefits";
-import { WhyMyLuck } from "./sections/WhyMyLuck";
 import { ParticipantsReview } from "./sections/ParticipantsReview";
 import { WhatYouGet } from "./sections/WhatYouGet";
-import { NavigationalCTA } from "@/app/sections/NavigationalCTA";
+import { WhyMyLuck } from "./sections/WhyMyLuck";
 
 export default function Home() {
   return (
@@ -18,14 +17,18 @@ export default function Home() {
       <Header />
       <main className="bg-[#F7F6F6]">
         <Hero />
-        <NavigationalCTA className="pt-12 md:pt-0 lg:pt-20" />
+        <NavigationalCTA className="pt-12 md:pt-0 lg:pt-20 pb-3 lg:pb-3" />
         <MarathonBenefits />
         <WhyMyLuck />
-        <ParticipantsReview />
+        <Container className="!max-w-[800px] mb-3">
+          <MarathonIncludes className="max-w-[800px]" />
+        </Container>
         <WhatYouGet />
+        <ParticipantsReview />
         <NavigationalCTA className="pt-0 md:pt-0 lg:pt-0" />
         <Testimonials />
-        <NavigationalCTA className="pt-0 md:pt-0 lg:pt-0" />
+        <BenefitsCard />
+        <NavigationalCTA className="pt-10 md:pt-10 lg:pt-10" />
         {/* <FAQ /> */}
 
         {/* <MyLuck /> */}
