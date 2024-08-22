@@ -17,33 +17,32 @@ export function cn(...inputs: ClassValue[]) {
 
 // For countdown
 export function getPercentageSpotsTaken(): number {
-  // const percentageByHour: { [hour: number]: number } = {
-  //   6: 100,
-  //   7: 100,
-  //   8: 100,
-  //   9: 100,
-  //   10: 100,
-  //   11: 100,
-  //   12: 100,
-  //   13: 100,
-  //   14: 100,
-  //   15: 100,
-  //   16: 100,
-  //   17: 100,
-  //   18: 100,
-  //   19: 100,
-  //   20: 100,
-  //   21: 100,
-  //   22: 100,
-  //   23: 100,
-  // };
+  const percentageByHour: { [hour: number]: number } = {
+    6: 87,
+    7: 87,
+    8: 87,
+    9: 87,
+    10: 87,
+    11: 87,
+    12: 87,
+    13: 87,
+    14: 71,
+    15: 71,
+    16: 75,
+    17: 77,
+    18: 79,
+    19: 81,
+    20: 83,
+    21: 85,
+    22: 87,
+    23: 87,
+  };
 
-  // const now = new Date();
+  const now = new Date();
 
-  // const hour = now.getUTCHours() + 1;
+  const hour = now.getUTCHours() + 1;
 
-  // return percentageByHour[hour] || 0;
-  return 19;
+  return percentageByHour[hour] || 0;
 }
 
 export function getSaleHasStarted() {
