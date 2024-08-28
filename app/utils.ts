@@ -32,8 +32,8 @@ export function getPercentageSpotsTaken(): number {
     17: 96,
     18: 97,
     19: 97,
-    20: 98,
-    21: 98,
+    20: 99,
+    21: 99,
     22: 99,
     23: 99,
   };
