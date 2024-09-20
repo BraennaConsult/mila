@@ -91,7 +91,7 @@ function ProductionOption({
                 {discountedTotal}
               </p> */}
               <p className="font-serif text-[14px] ml-4 text-black/70">
-                for 4 uker
+                for 7 uker
               </p>
             </div>
           </div>

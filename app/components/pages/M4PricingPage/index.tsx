@@ -39,8 +39,8 @@ export function M4PricingPage({ searchParams }: Props) {
           </h1>
           <p className="uppercase text-black/60 text-[16px] z-20">
             {salesStatus.status === "pre-sale"
-              ? "Salget åpner 28 aug"
-              : "Salget stenger 22:00"}
+              ? "Salget åpner 28 aug 14:00"
+              : "Maratonet starter 2. september"}
           </p>
           <span className="text-[16px] text-black/70 rounded-[100px] border border-black/30 w-fit py-2 px-6 z-20 uppercase">
             7 ukers
