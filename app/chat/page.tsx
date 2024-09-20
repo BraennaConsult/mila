@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from 'react';
 import Intercom from '@intercom/messenger-js-sdk';
 
