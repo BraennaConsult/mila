@@ -54,8 +54,8 @@ export const ROUTES = {
 };
 
 export const M4_INNER_CIRCLE_LINK =
-  "https://milatimaa.net/cart/44524803195057:1";
-export const M4_PREMIUM_LINK = "https://milatimaa.net/cart/44524799885489:1";
+  "https://milatimaa.net/cart/44750787969201:1";
+export const M4_PREMIUM_LINK = "https://milatimaa.net/cart/44750787969201:1";
 export const SALE_STARTS_AT = "2024-10-14T18:00:00+02:00";
 export const SALE_FINISHES_AT = "2024-10-18T23:59:59+02:00";
 
