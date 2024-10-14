@@ -37,12 +37,12 @@ export function Hero() {
       <div className="absolute w-full h-full bg-black/20 top-0 left-0 z-1" />
       <Container className="space-y-8 mb-14 w-full lg:mx-auto mx-6 z-20">
         <h1 className="text-[40px] leading-[44px] lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md ">
-          Ab-out time maraton
+          Glute Up - 10 ukers maraton
         </h1>
         <p className="text-md text-white max-w-xs md:max-w-md text-balance">
-          Salger starter 28. august
+          Salger slutter 18. oktober
           <br />
-          Maraton starter 2. september
+          Maraton starter 21. oktober
         </p>
         <div className="flex flex-col space-y-5">
           <Link
