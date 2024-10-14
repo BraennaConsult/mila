@@ -24,13 +24,13 @@ export const BC_LINK = "https://braenna.com";
  * Old
  */
 export const PREMIUM_CHECKOUT_LINK =
-  "https://milatimaa.net/cart/43560009466033:1";
+  "https://milatimaa.net/cart/44750787969201:1";
 export const INNER_CIRCLE_CHECKOUT_LINK =
-  "https://milatimaa.net/cart/43560009498801:1";
+  "https://milatimaa.net/cart/44750796980401:1";
 export const PREMIUM_LIMITED_CHECKOUT_LINK =
-  "https://milatimaa.net/cart/43950949925041:1";
+  "https://milatimaa.net/cart/44750787969201:1";
 export const INNER_CIRCLE_LIMITED_CHECKOUT_LINK =
-  "https://milatimaa.net/cart/43950949957809:1";
+  "https://milatimaa.net/cart/44750796980401:1";
 
 /**
  * Old
