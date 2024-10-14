@@ -39,9 +39,9 @@ export const CHECKOUT_LINKS = {
   PREMIUM_WEBSITE: "https://milatimaa.net/cart/44750787969201:1",
   INNER_CIRCLE_WEBSITE: "https://milatimaa.net/cart/44750796980401:1",
   PREMIUM_FUNNEL: "https://milatimaa.net/cart/44750787969201:1",
-  INNER_CIRCLE_FUNNEL: "https://milatimaa.net/cart/44750787969201:1",
+  INNER_CIRCLE_FUNNEL: "https://milatimaa.net/cart/44750796980401:1",
   PREMIUM_SALES: "https://milatimaa.net/cart/44750787969201:1",
-  INNER_CIRCLE_SALES: "https://milatimaa.net/cart/44750787969201:1",
+  INNER_CIRCLE_SALES: "https://milatimaa.net/cart/44750796980401:1",
 };
 
 export const ROUTES = {
