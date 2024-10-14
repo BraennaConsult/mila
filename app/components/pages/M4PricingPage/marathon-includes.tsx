@@ -48,18 +48,18 @@ export function MarathonIncludes({ className }: { className?: string }) {
             <span className="text-[16px]">{item.text}</span>
           </li>
         ))}
-        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-20 uppercase bg-white bg-opacity-30 text-center w-fit sm:w-[90%] mx-auto">
+        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-30 uppercase bg-white bg-opacity-20 text-center w-fit sm:w-[90%] mx-auto">
             Forme, bygge og shape rumpe
         </span>
-        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-20 uppercase bg-white bg-opacity-30 text-center w-fit sm:w-[90%] mx-auto">
+        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-30 uppercase bg-white bg-opacity-20 text-center w-fit sm:w-[90%] mx-auto">
             Ikke streve med mat i julen
         </span>
-        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-20 uppercase bg-white bg-opacity-30 text-center w-fit sm:w-[90%] mx-auto">
+        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-30 uppercase bg-white bg-opacity-20 text-center w-fit sm:w-[90%] mx-auto">
             Redusere vekt
         </span>
       </ul>
       <Image
-        src="/marathon-includes-background.png"
+        src="/m5.png"
         fill
         alt="includes"
         className="absolute w-full h-full object-cover rounded-[24px]"

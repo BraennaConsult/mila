@@ -35,7 +35,33 @@ export function Hero() {
         <source src="/video/promo-big.mp4" type="video/mp4" />
       </video>
       <div className="absolute w-full h-full bg-black/20 top-0 left-0 z-1" />
-      <Container className="space-y-8 mb-14 w-full lg:mx-auto mx-6 z-20">
+      <Container className="mb-14 w-full lg:mx-auto mx-6 z-20">
+        <h1 className="text-[40px] leading-[44px] lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md mb-4">
+          Glute Up - 10 ukers maraton
+        </h1>
+        <p className="text-md text-white max-w-xs md:max-w-md text-balance mb-6">
+          Salget slutter 18. oktober
+          <br />
+          Maraton starter 21. oktober
+        </p>
+        <div className="flex flex-col">
+          <Link
+            href={PAYMENT_LINK}
+            onClick={handleClick}
+            className={cn(
+              "flex items-center !w-full max-w-[400px]",
+              buttonProps()
+            )}
+          >
+            <span className="mr-2">
+              <HeartIcon />
+            </span>
+            Bli med
+          </Link>
+        </div>
+      </Container>
+
+      {/* <Container className="space-y-8 mb-14 w-full lg:mx-auto mx-6 z-20">
         <h1 className="text-[40px] leading-[44px] lg:text-2xl text-pink-primary font-bold max-w-xs md:max-w-md ">
           Glute Up - 10 ukers maraton
         </h1>
@@ -59,7 +85,7 @@ export function Hero() {
             Bli med
           </Link>
         </div>
-      </Container>
+      </Container> */}
     </div>
   );
 }

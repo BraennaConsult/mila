@@ -21,7 +21,7 @@ export function ProductOptions({ className, page }: Props) {
     >
       <ProductionOption
         title={"Premium"}
-        total="kr 2 490"
+        total="kr 2 990"
         name={`premium${page ? `-${page}` : ""}`}
         recommended
         page={page}
@@ -91,7 +91,7 @@ function ProductionOption({
                 {discountedTotal}
               </p> */}
               <p className="font-serif text-[14px] ml-4 text-black/70">
-                for 7 uker
+                for 10 uker
               </p>
             </div>
           </div>

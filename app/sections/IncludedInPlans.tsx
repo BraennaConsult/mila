@@ -108,7 +108,7 @@ const data: Group[] = [
         innerCircle: true,
       },
       {
-        text: "8-ukers treningsprogram",
+        text: "10-ukers treningsprogram",
         premium: true,
         innerCircle: true,
       },
