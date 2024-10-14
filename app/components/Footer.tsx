@@ -1,5 +1,5 @@
 import { Container } from "@/app/components/Container";
-import { COMPANY_NAME, CONTACT_EMAIL, ROUTES } from "@/constants";
+import { COMPANY_NAME, CONTACT_EMAIL, ROUTES, BC_LINK } from "@/constants";
 import Link from "next/link";
 
 export function Footer() {
@@ -28,6 +28,9 @@ export function Footer() {
           </li>
           <li className="mt-5 lg:mt-0">
             <Link href={ROUTES.WARRANTY}>Garanti</Link>
+          </li>
+          <li className="mt-5 lg:mt-0">
+            <Link href={BC_LINK}>Siden drives av Brænna Consult</Link>
           </li>
         </ul>
       </Container>

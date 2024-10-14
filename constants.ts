@@ -18,6 +18,7 @@ export const PAYMENT_LINK = "/pris";
 export const STRIPE_LINK = "https://buy.stripe.com/5kA03oaHl9T24MgeUU";
 export const POST_SALE_LINK = "https://forms.gle/1mstHspCBY8nsqs88";
 export const M4_REMINDER_LINK = "https://0czi3htb7r8.typeform.com/to/sGHmTd8j";
+export const BC_LINK = "https://braenna.com";
 
 /**
  * Old
@@ -55,11 +56,11 @@ export const ROUTES = {
 export const M4_INNER_CIRCLE_LINK =
   "https://milatimaa.net/cart/44524803195057:1";
 export const M4_PREMIUM_LINK = "https://milatimaa.net/cart/44524799885489:1";
-export const SALE_STARTS_AT = "2024-08-28T14:00:00+02:00";
-export const SALE_FINISHES_AT = "2024-08-28T22:00:00+02:00";
+export const SALE_STARTS_AT = "2024-10-14T18:00:00+02:00";
+export const SALE_FINISHES_AT = "2024-10-18T23:59:59+02:00";
 
 export const PRICE_AND_DATE =
-  "Maratonet koster kr 5 650 og starter den 29.01.24";
+  "Maratonet koster kr 2 490 og starter den 21.10.24";
 
 export const TYPEFORM_FUNNEL_ID = "yzkA0q0N";
 

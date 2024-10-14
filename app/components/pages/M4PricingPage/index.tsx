@@ -35,15 +35,15 @@ export function M4PricingPage({ searchParams }: Props) {
         </Link>
         <div className="flex flex-col gap-6 items-center">
           <h1 className="text-[50px] leading-[50px] font-sans text-center uppercase text-black">
-            AB - Out Time Maraton
+            Glute Up - 10 ukers maraton
           </h1>
           <p className="uppercase text-black/60 text-[16px] z-20">
             {salesStatus.status === "pre-sale"
-              ? "Salget åpner 28 aug 14:00"
-              : "Maratonet starter 2. september"}
+              ? "Salget åpner 14 okt 18:00"
+              : "Maratonet starter 21. oktober"}
           </p>
           <span className="text-[16px] text-black/70 rounded-[100px] border border-black/30 w-fit py-2 px-6 z-20 uppercase">
-            7 ukers
+            10 uker
           </span>
         </div>
         <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-[#F7F6F6]/50 to-[#F7F6F6]" />
