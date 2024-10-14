@@ -8,7 +8,7 @@ const items = [
   },
   {
     icon: "🤸🏻",
-    text: "Daglig vakuum og magetrening",
+    text: "12 Ekstra tøynings-, mage- og vakuumøvelser",
   },
   {
     icon: "💪",
@@ -23,8 +23,8 @@ const items = [
     text: "200+ proteinrike oppskrifter",
   },
   {
-    icon: "🧠",
-    text: "Fokus på psykologien bak overspising",
+    icon: "🤩",
+    text: "8 webinarer med gjester",
   },
 ];
 
@@ -48,6 +48,15 @@ export function MarathonIncludes({ className }: { className?: string }) {
             <span className="text-[16px]">{item.text}</span>
           </li>
         ))}
+        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-20 uppercase bg-white bg-opacity-30 text-center w-fit sm:w-[90%] mx-auto">
+            Forme, bygge og shape rumpe
+        </span>
+        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-20 uppercase bg-white bg-opacity-30 text-center w-fit sm:w-[90%] mx-auto">
+            Ikke streve med mat i julen
+        </span>
+        <span className="text-[16px] text-white/70 rounded-[100px] border border-white/30 py-2 px-6 z-20 uppercase bg-white bg-opacity-30 text-center w-fit sm:w-[90%] mx-auto">
+            Redusere vekt
+        </span>
       </ul>
       <Image
         src="/marathon-includes-background.png"
