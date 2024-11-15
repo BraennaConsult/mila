@@ -13,6 +13,7 @@ import { ParticipantsReview } from "./sections/ParticipantsReview";
 import { WhatYouGet } from "./sections/WhatYouGet";
 import { WhyMyLuck } from "./sections/WhyMyLuck";
 import { useEffect } from "react";
+import LifeStyleCards from "./sections/lifeStyleCards/LifeStyleCards";
 
 export default function Home() {
   useEffect(() => {
@@ -67,6 +68,7 @@ export default function Home() {
       <main className="bg-[#F7F6F6]">
         <Hero />
         <NavigationalCTA className="pt-12 md:pt-0 lg:pt-20 pb-3 lg:pb-3" />
+        <LifeStyleCards />
         <MarathonBenefits />
         <WhyMyLuck />
         <Container className="!max-w-[800px] mb-3">

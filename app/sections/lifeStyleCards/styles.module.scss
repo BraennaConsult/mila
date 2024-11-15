@@ -1,0 +1,89 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.scrollingContent {
+    display: flex;
+    gap: 50px;
+    flex-wrap: nowrap;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer og Edge */
+    scroll-snap-type: x mandatory;
+}
+
+.scrollingContent::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari og Edge */
+}
+
+.overskrift {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 5%;
+}
+
+.tierCard {
+    min-width: 300px;
+    height: 50vh;
+    border-radius: 20px;
+    border: 3px solid rgb(252, 196, 254);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+}
+
+.subCard {
+    width: 75%;
+    height: 75%;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    padding: 30px;
+}
+
+.cardOverskrift {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.subC1, .subC2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardPoints {
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bullseyeIcon {
+    fill: lightcoral;
+    width: 10%;
+}
+
+.cardPercentage {
+    font-size: 2em;
+}
