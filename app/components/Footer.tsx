@@ -9,7 +9,7 @@ export function Footer() {
       <Container>
         <ul className="flex items-center gap-x-5 list-none flex-wrap">
           <li className="mt-5 lg:mt-0">
-            &copy; {copyRightYear}, {COMPANY_NAME}
+            &copy; {copyRightYear}, Tifra AS
           </li>
           <li className="mt-5 lg:mt-0">
             <Link href={ROUTES.TERMS_OF_SERVICE}>Brukervilkår</Link>
@@ -29,9 +29,9 @@ export function Footer() {
           <li className="mt-5 lg:mt-0">
             <Link href={ROUTES.WARRANTY}>Garanti</Link>
           </li>
-          <li className="mt-5 lg:mt-0">
+          {/* <li className="mt-5 lg:mt-0">
             <Link href={BC_LINK}>Siden drives av Brænna Consult</Link>
-          </li>
+          </li> */}
         </ul>
       </Container>
     </footer>

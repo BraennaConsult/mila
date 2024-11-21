@@ -78,7 +78,7 @@ export default function Home() {
         <ParticipantsReview />
         <NavigationalCTA className="pt-0 md:pt-0 lg:pt-0" />
         <Testimonials />
-        <BenefitsCard />
+        {/* <BenefitsCard /> */}
         <NavigationalCTA className="pt-10 md:pt-10 lg:pt-10" />
         {/* <FAQ /> */}
         {/* <MyLuck /> */}
