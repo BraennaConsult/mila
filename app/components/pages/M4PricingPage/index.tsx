@@ -59,9 +59,9 @@ export function M4PricingPage({ searchParams }: Props) {
         <WhyMyLuckNoCTA />
         <Countdown className="mt-10" />
         <Options />
-        <Container className="mx-3 mt-10 mb-20">
+        {/* <Container className="mx-3 mt-10 mb-20">
           <MyPath />
-        </Container>
+        </Container> */}
       </div>
       {hasOption && salesStatus.status === "sale" && (
         <GoToCheckoutButton href={linkHref} />
