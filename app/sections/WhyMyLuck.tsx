@@ -197,14 +197,14 @@ const slides: Slide[] = [
     position: "bottom",
     tint: true,
   },
-  {
-    type: "image",
-    src: "/carusell/carusell2.JPG",
-    alt: "MyLuck 3",
-    aspectRatio: 0.75,
-    text: `Passe inn i favorittklærne mine`,
-    position: "center",
-  },
+  // {
+  //   type: "image",
+  //   src: "/carusell/carusell2.JPG",
+  //   alt: "MyLuck 3",
+  //   aspectRatio: 0.75,
+  //   text: `Passe inn i favorittklærne mine`,
+  //   position: "center",
+  // },
   {
     type: "image",
     src: "/carusell/carusell3.JPG",
