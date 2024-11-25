@@ -46,7 +46,6 @@ export default function Page() {
               <p>
                 ***
                 <br></br>
-                <br></br>
                 Alle ekstra rabatter Mila er så snill å gir ut vil ikke bety at du tilhører en høyere tier.
                 Om du har mottatt en høyere rabatt så er dette ekstra og utenom den rabatten du har gjennom Lifestyle
                 programmet. 
