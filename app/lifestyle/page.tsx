@@ -44,6 +44,8 @@ export default function Page() {
               </p>
 
               <p>
+                <br></br>
+                <br></br>
                 ***
                 <br></br>
                 Alle ekstra rabatter Mila er så snill å gir ut vil ikke bety at du tilhører en høyere tier.
