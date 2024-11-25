@@ -87,3 +87,14 @@
 .cardPercentage {
     font-size: 2em;
 }
+
+.buttonDiv {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    
+    @media (min-width:720px) {
+        width: 25%;
+    }
+}

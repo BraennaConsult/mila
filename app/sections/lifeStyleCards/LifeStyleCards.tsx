@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 // import { ReactComponent as BullsEye } from '../../../public/visuals/icons/bullseye.svg';
 import BullsEye from '../../../public/visuals/icons/bullseye.png';
 import Image from 'next/image';
+import { Button } from '@/app/components/Button';
 // import img2 from '../../../public/visuals/images/bali.jpeg'; 
 // import img3 from '../../../public/visuals/images/diva.png';
 // import img4 from '../../../public/visuals/images/hut.jpeg';
@@ -18,11 +19,11 @@ interface Card {
 
 const LifeStyleCards: React.FC = () => {
     const cards: Card[] = [
-        { image: '/visuals/images/bali.jpeg', tier: 'Step', points: '1,000 Points', discount: '15%' },
-        { image: '/visuals/images/diva.png', tier: 'Sprint', points: '2,500 Points', discount: '25%' },
-        { image: '/visuals/images/hut.jpeg', tier: 'Soar', points: '5,000 Points', discount: '45%' },
-        { image: '/visuals/images/boat.png', tier: 'Flight', points: '7,500 Points', discount: '60%' },
-        { image: '/visuals/images/looking.png', tier: 'Ascend', points: '10,000 Points', discount: '85%' }, 
+        { image: '/visuals/images/img1.png', tier: 'Step', points: '1,000 Points', discount: '15%' },
+        { image: '/visuals/images/img2.png', tier: 'Sprint', points: '2,500 Points', discount: '25%' },
+        { image: '/visuals/images/img3.png', tier: 'Soar', points: '5,000 Points', discount: '45%' },
+        { image: '/visuals/images/img4.png', tier: 'Flight', points: '7,500 Points', discount: '60%' },
+        { image: '/visuals/images/img5.png', tier: 'Ascend', points: '10,000 Points', discount: '85%' }, 
     ];
 
     return (
@@ -51,6 +52,15 @@ const LifeStyleCards: React.FC = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className={styles.buttonDiv}>
+                <Button
+                    variant="black"
+                    size="default"
+                    fullWidth={true}
+                    href="/lifestyle"
+                    trackingType="navigate_to_lifestyle"
+                >Lær mer</Button>
             </div>
         </div>
     );
