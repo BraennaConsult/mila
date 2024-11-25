@@ -53,6 +53,10 @@ export default function Page() {
                 <br></br>
                 Når du skal kjøpe Maraton ved hjelp av Lifestyle programmet må dette gjøres gjennom en spesiell
                 link som tilhører deg og din tier, den vil du motta via Mail eller sms fra MyLuck Teamet.
+                <br></br>
+                Disse linkene blir ikke sendt ut via DMs så om du mangler din link må du først sjekke søppelposten din
+                om du enda ikke finner linken kan du ta kontakt på ask@myluck.no<br></br>
+                Disse linkene blir sendt ut når salget starter eller kampanjer er aktive.
               </p>
             </article>
           </Container>
