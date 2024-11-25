@@ -1,9 +1,12 @@
+"use client";
+
 import React from 'react';
 import styles from './styles.module.scss'; 
 // import { ReactComponent as BullsEye } from '../../../public/visuals/icons/bullseye.svg';
 import BullsEye from '../../../public/visuals/icons/bullseye.png';
 import Image from 'next/image';
 import { Button } from '@/app/components/Button';
+import Link from "next/link";
 // import img2 from '../../../public/visuals/images/bali.jpeg'; 
 // import img3 from '../../../public/visuals/images/diva.png';
 // import img4 from '../../../public/visuals/images/hut.jpeg';
@@ -25,6 +28,12 @@ const LifeStyleCards: React.FC = () => {
         { image: '/visuals/images/img4.png', tier: 'Flight', points: '7,500 Points', discount: '60%' },
         { image: '/visuals/images/img5.png', tier: 'Ascend', points: '10,000 Points', discount: '85%' }, 
     ];
+
+    // const router = useRouter();
+
+    // const handleLearnMoreClick = () => {
+    //     router.push('/lifestyle');
+    // };
 
     return (
         <div className={styles.container}>
@@ -59,7 +68,6 @@ const LifeStyleCards: React.FC = () => {
                     size="default"
                     fullWidth={true}
                     href="/lifestyle"
-                    trackingType="navigate_to_lifestyle"
                 >Lær mer</Button>
             </div>
         </div>
